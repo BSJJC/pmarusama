@@ -35,8 +35,8 @@
       </li>
 
       <!-- more info -->
-      <a href="" class="bg-[#ff5872] rounded-full py-2 px-6">
-        <button id="more-info" class="font-bold text-white text-[1.5rem]">もっと見る</button>
+      <a href="" class="bg-[#ff5872] rounded-full py-2 px-8">
+        <button id="more-info" class="font-bold text-white text-[1.3rem]">もっと見る</button>
       </a>
     </div>
   </div>
@@ -60,8 +60,6 @@ const data = [
 </script>
   
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=M+PLUS+Rounded+1c:wght@800&display=swap');
-
 #more-info {
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
