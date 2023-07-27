@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full  py-8 my-5 flex justify-center items-center bg-[#ffffffb3]">
+  <div id="p-info-container" class="w-full  py-8 my-5 flex justify-center items-center relative">
     <div class="w-full py-[20px] flex justify-center items-center flex-col">
       <!-- information title -->
       <img src="../../assets/imgs/title-info.png" alt="title information" class="w-[95%] mb-4">
@@ -30,9 +30,14 @@
 
         <!-- news title -->
         <div class="w-[70%]  border-l-[1px] border-r-[1px] border-[#f60] px-3">
-          <a href="">{{ i.title }}</a>
+          <a href="" class="text-[#3865e0] font-bold">{{ i.title }}</a>
         </div>
       </li>
+
+      <!-- more info -->
+      <a href="" class="bg-[#ff5872] rounded-full py-2 px-6">
+        <button id="more-info" class="font-bold text-white text-[1.5rem]">もっと見る</button>
+      </a>
     </div>
   </div>
 </template>
@@ -55,18 +60,41 @@ const data = [
 </script>
   
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=M+PLUS+Rounded+1c:wght@800&display=swap');
+
+#more-info {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
 span {
   font-family: Fredoka;
 }
 
-#p-info-container ::before {
+#p-info-container {
+  background: rgba(255, 255, 255, .7) url(../../assets//imgs/parts1.png) bottom 6vw right 4vw/24vw auto no-repeat;
+}
+
+#p-info-container::before {
   position: absolute;
   content: "";
-  top: -12px;
-  right: 0;
-  left: 0;
-  width: 200px;
-  height: 200px;
+  margin: auto;
+  box-sizing: border-box;
+  vertical-align: middle;
+  top: -10px;
+  width: 100%;
+  height: 10px;
   background-image: url(../../assets/imgs/section-bg-top.png);
+}
+
+#p-info-container::after {
+  position: absolute;
+  content: "";
+  margin: auto;
+  box-sizing: border-box;
+  vertical-align: middle;
+  bottom: -10px;
+  width: 100%;
+  height: 10px;
+  background-image: url(../../assets/imgs/section-bg-bottom.png);
 }
 </style>
