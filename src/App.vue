@@ -20,5 +20,6 @@ import Profile from "./components/Profile/index.vue"
 <style scoped>
 #body {
   background-image: url(./assets/imgs/body-bg.png);
+  background-size: 100% auto;
 }
 </style>

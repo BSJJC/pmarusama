@@ -6,19 +6,19 @@
       <img src="../../assets/imgs/title-profile.png" alt="profile title" class="w-[250px] px-4 py-3">
     </h2>
 
-    <div id="profile-main" class="w-[95%] h-full ml-[5%] p-14 pr-6 pt-12">
-      <div class="bg-[#ffda55]">
-
+    <div id="p-profile-main" class="w-[95%] h-full ml-[5%] pb-16 pl-10 pr-4 pt-12">
+      <div id="p-profile-inner" class=" relative z-[2]">
         <!-- profile intro -->
-        <div class="mb-3 font-bold text-[#787878] p-4">
-          <h3>P丸様。</h3>
+        <div class="pb-3 text-[#787878] pt-6 px-3 leading-3 bg-[#ffda55]">
+          <h3 class="text-[1.5rem] font-bold">P丸様。</h3>
+          <br />
           <span class="text-sm">YouTubeやTikTok等の動画投稿サイトで活動中のマルチエンターテイナー！</span>
           <br />
           <span class="text-sm">癖になる短編アニメ動画が大人気で、現在YouTubeチャンネルの登録者数は255万人、動画総再生数は20億回を突破。</span>
         </div>
 
         <!-- profile image -->
-        <div class="flex justify-end items-center">
+        <div class="flex justify-end items-center bg-[#ffda55]">
           <img src="../../assets/imgs/profile-img.png" alt="profile image" class="w-[80%]">
         </div>
       </div>
@@ -46,9 +46,21 @@ h3 {
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-
-#profile-main {
+#p-profile-main {
   background-image: url(../../assets/imgs/profile-bg-sp.png);
-  background-size: cover;
+  background-size: 100% 100%;
+}
+
+#p-profile-inner:after {
+  position: absolute;
+  content: "";
+  right: -5px;
+  bottom: -5px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: linear-gradient(135deg, #ffd0de 25%, #fff 25%, #fff 50%, #ffd0de 50%, #ffd0de 75%, #fff 75%, #fff 100%);
+  background-size: 24px 24px;
+  background-attachment: fixed;
 }
 </style>
