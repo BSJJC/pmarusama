@@ -51,7 +51,7 @@ h3 {
   background-size: 100% 100%;
 }
 
-#p-profile__inner:after {
+#p-profile__inner::before {
   position: absolute;
   content: "";
   right: -5px;
