@@ -1,14 +1,16 @@
 <template>
   <div id="p-youtube-container">
+    <!-- youtube title -->
+    <div id="p-youtube__title" class="absolute z-[2] -top-[13%] ml-[16%] pl-[4vw] py-[10px] pb-[10px]">
+      <img src="../../assets/imgs/title-youtube.png" alt="title youtube" class="w-[70%]">
+    </div>
 
-    <div id="p-youtube-title"></div>
-
-    <div id="p-youtube__main">
+    <!-- youtube player -->
+    <div id="p-youtube__main" class="relative mr-[5%] z-[+1]">
       <div id="p-youtube__main-inner" class="relative box-border bg-[#c0ecee] p-[5px]">
         <YoutubePlayer url="3V9952osjnc" class="w-full h-full "></YoutubePlayer>
       </div>
     </div>
-
   </div>
 </template>
   
@@ -18,15 +20,18 @@ import YoutubePlayer from "../Common/YoutubePlayer.vue"
   
 <style scoped>
 #p-youtube-container {
+  position: relative;
   background: url(../../assets/imgs/parts3.png) center right -5vw/20vw auto no-repeat;
 }
 
+#p-youtube__title {
+  background-image: url(../../assets/imgs/youtube-bg2.png);
+  background-size: 100% 100%;
+}
+
 #p-youtube__main {
-  position: relative;
-  margin-right: 5%;
   background: url(../../assets/imgs/youtube-bg-sp.png) right center/100% 100% no-repeat;
-  padding: 5vh 11vw 5vh 6vw;
-  z-index: +1;
+  padding: 6vh 11vw 5vh 6vw;
 }
 
 #p-youtube__main-inner::before {
