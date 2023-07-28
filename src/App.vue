@@ -6,8 +6,10 @@
 
     <Profile></Profile>
 
+    
+    <Youtube></Youtube>
+    
     <Inforemation></Inforemation>
-
   </div>
 </template>
   
@@ -15,6 +17,7 @@
 import Top from "./components/Top/index.vue"
 import Inforemation from "./components/Infomation/index.vue"
 import Profile from "./components/Profile/index.vue"
+import Youtube from "./components/Youtube/index.vue"
 </script>
   
 <style scoped>
