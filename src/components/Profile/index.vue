@@ -2,14 +2,14 @@
   <div id="p-profile-container" class="relative my-14">
 
     <!--profile title -->
-    <h2 class="w-[75vw] mb-10 flex justify-end items-center absolute -top-[5%]">
+    <h2 class="w-[75vw] mb-10 flex justify-end items-center absolute -top-[5%] z-[+2]">
       <img src="../../assets/imgs/title-profile.png" alt="profile title" class="w-[250px] px-4 py-3">
     </h2>
 
     <div id="p-profile__main" class="w-[95%] h-full ml-[5%] pb-16 pl-10 pr-4 pt-12">
-      <div id="p-profile__inner" class=" relative z-[2]">
+      <div id="p-profile__inner" class="bg-[#ffda55] relative">
         <!-- profile intro -->
-        <div class="pb-3 text-[#787878] pt-6 px-3 leading-3 bg-[#ffda55]">
+        <div class="pb-3 text-[#787878] pt-6 px-3 leading-3">
           <h3 class="text-[1.5rem] font-bold">P丸様。</h3>
           <br />
           <span class="text-sm">YouTubeやTikTok等の動画投稿サイトで活動中のマルチエンターテイナー！</span>
@@ -18,7 +18,7 @@
         </div>
 
         <!-- profile image -->
-        <div class="flex justify-end items-center bg-[#ffda55]">
+        <div class="flex justify-end items-center">
           <img src="../../assets/imgs/profile-img.png" alt="profile image" class="w-[80%]">
         </div>
       </div>
@@ -49,13 +49,15 @@ h3 {
 #p-profile__main {
   background-image: url(../../assets/imgs/profile-bg-sp.png);
   background-size: 100% 100%;
+  position: relative;
+  z-index: +1;
 }
 
 #p-profile__inner::before {
   position: absolute;
   content: "";
-  right: -5px;
-  bottom: -5px;
+  top: 5px;
+  left: 5px;
   width: 100%;
   height: 100%;
   z-index: -1;
