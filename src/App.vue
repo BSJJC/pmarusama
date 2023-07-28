@@ -6,9 +6,11 @@
 
     <Profile></Profile>
 
-    
+
     <Youtube></Youtube>
-    
+
+    <Discography></Discography>
+
     <Inforemation></Inforemation>
   </div>
 </template>
@@ -18,6 +20,7 @@ import Top from "./components/Top/index.vue"
 import Inforemation from "./components/Infomation/index.vue"
 import Profile from "./components/Profile/index.vue"
 import Youtube from "./components/Youtube/index.vue"
+import Discography from "./components/Discography/index.vue"
 </script>
   
 <style scoped>
