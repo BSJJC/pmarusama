@@ -6,8 +6,8 @@
       <img src="../../assets/imgs/title-profile.png" alt="profile title" class="w-[250px] px-4 py-3">
     </h2>
 
-    <div id="p-profile-main" class="w-[95%] h-full ml-[5%] pb-16 pl-10 pr-4 pt-12">
-      <div id="p-profile-inner" class=" relative z-[2]">
+    <div id="p-profile__main" class="w-[95%] h-full ml-[5%] pb-16 pl-10 pr-4 pt-12">
+      <div id="p-profile__inner" class=" relative z-[2]">
         <!-- profile intro -->
         <div class="pb-3 text-[#787878] pt-6 px-3 leading-3 bg-[#ffda55]">
           <h3 class="text-[1.5rem] font-bold">P丸様。</h3>
@@ -46,12 +46,12 @@ h3 {
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-#p-profile-main {
+#p-profile__main {
   background-image: url(../../assets/imgs/profile-bg-sp.png);
   background-size: 100% 100%;
 }
 
-#p-profile-inner:after {
+#p-profile__inner:after {
   position: absolute;
   content: "";
   right: -5px;
