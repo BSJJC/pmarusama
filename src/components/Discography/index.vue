@@ -1,6 +1,6 @@
 <template>
   <div id="p-discography-container">
-    
+
     <!-- discography title -->
     <h2 id="p-discogtaphy-title" class="w-full flex justify-center items-center">
       <img src="../../assets/imgs/title-discography.png" alt="discography title" class="w-[95%]">
@@ -34,6 +34,10 @@ interface IDiscographyStruct {
 const discographyData: Ref<IDiscographyStruct[]> = ref([])
 const discographyCoverUrls: Ref<string[]> = ref([])
 
+/**
+ * get discographies data
+ * @param callback the function that fetches the cover of discography
+ */
 async function fetchData(callback: Function): Promise<void> {
   await axios.get
     ("http://localhost:5000/api/discography/get")
@@ -54,6 +58,9 @@ async function fetchData(callback: Function): Promise<void> {
     })
 }
 
+/**
+ * get discography cover url by the coverID
+ */
 function fetchCover(): void {
   discographyData.value.forEach(item => {
     axios.get(
