@@ -1,14 +1,19 @@
 <template>
   <div id="p-discography-container">
+    
     <!-- discography title -->
     <h2 id="p-discogtaphy-title" class="w-full flex justify-center items-center">
       <img src="../../assets/imgs/title-discography.png" alt="discography title" class="w-[95%]">
     </h2>
 
     <!-- discographies -->
-    <div v-for="(i, index) in discographyData" :key="index">
-      <h3>{{ i.title }}</h3>
-      <img :src="discographyCoverUrls[index]" alt="pmarusama discography cover">
+    <div class="w-full flex items-baseline flex-row flex-wrap mt-4">
+      <div v-for="(i, index) in discographyData" :key="index" class="w-1/2 p-2 flex flex-col-reverse">
+        <a href="#" class="text-center text-[0.8rem] font-bold p-2 text-[#6e5be4]">{{ i.title }}</a>
+
+        <img v-if="discographyCoverUrls.length === discographyData.length" :src="discographyCoverUrls[index]"
+          alt="pmarusama discography cover">
+      </div>
     </div>
     <div>
 
@@ -17,7 +22,7 @@
 </template>
   
 <script setup lang='ts'>
-import { ref, Ref } from "vue"
+import { ref, Ref, onBeforeMount } from "vue"
 import axios from "axios"
 import type { DiscographyType } from "../../types/discographyTypes"
 
@@ -35,8 +40,8 @@ async function fetchData(callback: Function): Promise<void> {
     .then(res => {
       const data = res.data.discographies
 
-      data.forEach((item: DiscographyType) => {
-        discographyData.value.push(
+      data.forEach((item: DiscographyType, index: number) => {
+        discographyData.value[index] = (
           {
             title: item.name,
             coverID: item.coverObjectIDs[0]
@@ -44,11 +49,12 @@ async function fetchData(callback: Function): Promise<void> {
         )
       });
     })
-
-  callback()
+    .then(() => {
+      callback()
+    })
 }
 
-async function fetchCover(): Promise<void> {
+function fetchCover(): void {
   discographyData.value.forEach(item => {
     axios.get(
       `http://localhost:5000/api/discographyCover/${item.coverID}`
@@ -63,5 +69,7 @@ async function init(): Promise<void> {
   fetchData(fetchCover)
 }
 
-init()
+onBeforeMount(() => {
+  init()
+})
 </script>
