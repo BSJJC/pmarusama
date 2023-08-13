@@ -11,6 +11,8 @@
 
     <Discography></Discography>
 
+    <Sns></Sns>
+
     <Inforemation></Inforemation>
   </div>
 </template>
@@ -21,6 +23,7 @@ import Inforemation from "./components/Infomation/index.vue"
 import Profile from "./components/Profile/index.vue"
 import Youtube from "./components/Youtube/index.vue"
 import Discography from "./components/Discography/index.vue"
+import Sns from "./components/Sns/index.vue"
 </script>
   
 <style scoped>
