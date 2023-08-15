@@ -78,10 +78,10 @@ span {
   margin: auto;
   box-sizing: border-box;
   vertical-align: middle;
-  top: -10px;
+  top: -6px;
   width: 100%;
-  height: 10px;
-  background-image: url(../../assets/imgs/section-bg-top.png);
+  height: 6px;
+  background: url(../../assets/imgs/section-bg-top.png) center bottom/auto 100%;
 }
 
 #p-info-container::after {
@@ -90,9 +90,9 @@ span {
   margin: auto;
   box-sizing: border-box;
   vertical-align: middle;
-  bottom: -10px;
+  bottom: -6px;
   width: 100%;
-  height: 10px;
-  background-image: url(../../assets/imgs/section-bg-bottom.png);
+  height: 6px;
+  background: url(../../assets/imgs/section-bg-bottom.png) center bottom/auto 100%;
 }
 </style>

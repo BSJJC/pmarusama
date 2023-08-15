@@ -1,5 +1,5 @@
 <template>
-  <div id="body">
+  <div id="body" class="flex flex-col gap-10">
     <Top></Top>
 
     <Inforemation></Inforemation>

@@ -1,5 +1,5 @@
 <template>
-  <div id="p-top-container" class="flex justify-center items-center relative mb-5 bg-fixed">
+  <div id="p-top-container" class="flex justify-center items-center relative bg-fixed">
     <div class="w-[95%] my-3 relative">
       <!-- logo -->
       <img src="../../assets/imgs/logo.png" alt="pmarusama logo" class="absolute top-5 left-7 w-[48%]">

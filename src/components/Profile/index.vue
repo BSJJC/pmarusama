@@ -1,5 +1,5 @@
 <template>
-  <div id="p-profile-container" class="relative my-14">
+  <div id="p-profile-container" class="relative">
 
     <!--profile title -->
     <h2 class="w-[75vw] mb-10 flex justify-end items-center absolute -top-[5%] z-[+2]">
