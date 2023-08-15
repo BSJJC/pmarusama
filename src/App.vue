@@ -13,6 +13,8 @@
 
     <Sns></Sns>
 
+    <Contact></Contact>
+
     <Inforemation></Inforemation>
   </div>
 </template>
@@ -24,6 +26,7 @@ import Profile from "./components/Profile/index.vue"
 import Youtube from "./components/Youtube/index.vue"
 import Discography from "./components/Discography/index.vue"
 import Sns from "./components/Sns/index.vue"
+import Contact from "./components/Contact/index.vue"
 </script>
   
 <style scoped>
