@@ -3,7 +3,7 @@
 
         <img src="../../assets/imgs/title-contact.png" alt="contact title image">
 
-        <span class="text-center text-[#787878] font-bold">
+        <span class="m-plus-rounded-1c text-center text-[#787878] font-bold">
             内容によっては、ご連絡にお時間がかかる場合や、お答えできない場合がございます。
             <br>
             あらかじめご了承ください。
@@ -11,16 +11,26 @@
 
         <div class="w-full flex justify-center items-center flex-col gap-4">
 
-            <div v-for="(i, index) in entries" :key="index" class="w-full bg-red-200">
+            <div v-for="(i, index) in entries" :key="index" class="w-full flex justify-center items-center flex-col gap-2">
 
-                <div class="m-plush-rounded-1c w-full flex justify-start items-center gap-4">
-                    <div>{{ i.title }}</div>
+                <!-- title -->
+                <div class="m-plus-rounded-1c w-full flex justify-start items-center gap-4 font-bold">
+                    <div class="text-[#787878]">{{ i.title }}</div>
 
-                    <div class="text-white font-bold bg-[#ff5889] px-2 rounded-full">必须 </div>
+                    <div class="text-white bg-[#ff5889] px-2 rounded-full">必须 </div>
                 </div>
 
+                <!-- input area -->
+                <input v-if="i.inputType === 'text'" type="text"
+                    class="w-full border-[#00d991] border-[1.5px] rounded-lg p-2 text-sm focus:outline-none">
+
+                <textarea v-else-if="i.inputType === 'textarea'" :rows="i.textArea!.rows"
+                    class="w-full border-[#00d991] border-[1.5px] rounded-lg p-2 text-sm focus:outline-none"
+                    :style="{ resize: i.textArea!.resize ? undefined : 'none' }"></textarea>
             </div>
 
+            <button
+                class="m-plus-rounded-1c bg-[#ff5872] text-white font-bold text-[1.5rem] p-3 px-10 rounded-full">送信</button>
         </div>
 
     </div>
@@ -31,7 +41,8 @@
 interface IEntries {
     title: string,
     reuired: boolean,
-    textArea: {
+    inputType: "text" | "textarea",
+    textArea?: {
         resize: boolean,
         rows: number
     }
@@ -41,32 +52,24 @@ const entries: Array<IEntries> = [
     {
         title: "お名前",
         reuired: true,
-        textArea: {
-            resize: false,
-            rows: 1
-        }
+        inputType: "text"
     },
     {
         title: "件名",
         reuired: true,
-        textArea: {
-            resize: false,
-            rows: 1
-        }
+        inputType: "text"
     },
     {
         title: "メールアドレス",
         reuired: true,
-        textArea: {
-            resize: false,
-            rows: 1
-        }
+        inputType: "text"
     },
     {
         title: "お問い合わせ内容",
         reuired: true,
+        inputType: "textarea",
         textArea: {
-            resize: true,
+            resize: false,
             rows: 7
         }
     },
@@ -102,7 +105,8 @@ const entries: Array<IEntries> = [
     background: url(../../assets/imgs/section-bg-bottom.png) center bottom/auto 100%;
 }
 
-.m-plush-rounded-1c>* {
+.m-plus-rounded-1c,
+.m-plus-rounded-1c>* {
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 </style> 
