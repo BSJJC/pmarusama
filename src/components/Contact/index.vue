@@ -30,7 +30,7 @@
             </div>
 
             <button
-                class="m-plus-rounded-1c bg-[#ff5872] text-white font-bold text-[1.5rem] p-3 px-10 rounded-full">送信</button>
+                class="m-plus-rounded-1c bg-[#ff5872] text-white font-bold text-[1.5rem] p-3 px-10 rounded-full mt-2">送信</button>
         </div>
 
     </div>
