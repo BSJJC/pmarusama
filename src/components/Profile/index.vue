@@ -12,9 +12,9 @@
         <div class="pb-3 text-[#787878] pt-6 px-3 leading-3">
           <h3 class="text-[1.5rem] font-bold">P丸様。</h3>
           <br />
-          <span class="text-sm">YouTubeやTikTok等の動画投稿サイトで活動中のマルチエンターテイナー！</span>
+          <span class=" text-sm font-bold">YouTubeやTikTok等の動画投稿サイトで活動中のマルチエンターテイナー！</span>
           <br />
-          <span class="text-sm">癖になる短編アニメ動画が大人気で、現在YouTubeチャンネルの登録者数は255万人、動画総再生数は20億回を突破。</span>
+          <span class=" text-sm font-bold">癖になる短編アニメ動画が大人気で、現在YouTubeチャンネルの登録者数は255万人、動画総再生数は20億回を突破。</span>
         </div>
 
         <!-- profile image -->

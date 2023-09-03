@@ -14,8 +14,6 @@
     <Sns></Sns>
 
     <Contact></Contact>
-
-    <Inforemation></Inforemation>
   </div>
 </template>
   
