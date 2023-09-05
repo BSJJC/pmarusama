@@ -11,7 +11,6 @@
             あらかじめご了承ください。
         </span>
 
-
         <!-- form -->
         <div class="w-full flex justify-center items-center flex-col gap-4">
 
@@ -25,7 +24,7 @@
                 </div>
 
                 <!-- input area -->
-                <input type="text" id="input-area">
+                <input type="text" id="input-area" v-model="name" @change="nameCheck">
             </div>
 
             <!-- subject -->
@@ -38,7 +37,7 @@
                 </div>
 
                 <!-- input area -->
-                <input type="text" id="input-area">
+                <input type="text" id="input-area" v-model="subject" @change="subjectCheck">
             </div>
 
             <!-- email address -->
@@ -51,20 +50,22 @@
                 </div>
 
                 <!-- input area -->
-                <input type="text" id="input-area">
+                <input type="text" id="input-area" v-model="email" @change="emailCheck"
+                    @keydown.space="(event) => event.preventDefault()">
             </div>
 
             <!-- content of inquiry -->
             <div class="input-entries">
                 <!-- title -->
                 <div id="title-area">
-                    <div id="title">お名前</div>
+                    <div id="title">お問い合わせ内容</div>
 
                     <div id="required">必须 </div>
                 </div>
 
                 <!-- input area -->
-                <textarea id="input-area" rows="7" style="resize: none;"></textarea>
+                <textarea id="input-area" rows="7" style="resize: none;" v-model="inquiry"
+                    @change="inquiryCheck"></textarea>
             </div>
 
         </div>
@@ -72,6 +73,28 @@
 </template>
   
 <script setup lang='ts'>
+import { ref, Ref } from "vue"
+
+const name: Ref<string> = ref("")
+const subject: Ref<string> = ref("")
+const email: Ref<string> = ref("")
+const inquiry: Ref<string> = ref("")
+
+function nameCheck(): void {
+    console.log(name.value);
+}
+
+function subjectCheck(): void {
+    console.log(subject.value);
+}
+
+function emailCheck(): void {
+    
+}
+
+function inquiryCheck(): void {
+    console.log(inquiry.value);
+}
 </script>
   
 <style lang="less" scoped>
@@ -101,11 +124,6 @@
     width: 100%;
     height: 6px;
     background: url(../../assets/imgs/section-bg-bottom.png) center bottom/auto 100%;
-}
-
-.m-plus-rounded-1c,
-.m-plus-rounded-1c>* {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .input-entries {
