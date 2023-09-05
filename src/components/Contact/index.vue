@@ -1,82 +1,80 @@
 <template>
     <div id="p-contact-container" class="relative flex justify-center items-center flex-col  gap-8 py-10 px-3 mb-20">
 
+        <!-- title image -->
         <img src="../../assets/imgs/title-contact.png" alt="contact title image">
 
+        <!-- intro -->
         <span class="m-plus-rounded-1c text-center text-[#787878] font-bold">
             内容によっては、ご連絡にお時間がかかる場合や、お答えできない場合がございます。
             <br>
             あらかじめご了承ください。
         </span>
 
+
+        <!-- form -->
         <div class="w-full flex justify-center items-center flex-col gap-4">
 
-            <div v-for="(i, index) in entries" :key="index" class="w-full flex justify-center items-center flex-col gap-2">
-
+            <!-- name -->
+            <div class="input-entries">
                 <!-- title -->
-                <div class="m-plus-rounded-1c w-full flex justify-start items-center gap-4 font-bold">
-                    <div class="text-[#787878]">{{ i.title }}</div>
+                <div id="title-area">
+                    <div id="title">お名前</div>
 
-                    <div class="text-white bg-[#ff5889] px-2 rounded-full">必须 </div>
+                    <div id="required">必须 </div>
                 </div>
 
                 <!-- input area -->
-                <input v-if="i.inputType === 'text'" type="text"
-                    class="w-full border-[#00d991] border-[1.5px] rounded-lg p-2 text-sm focus:outline-none">
-
-                <textarea v-else-if="i.inputType === 'textarea'" :rows="i.textArea!.rows"
-                    class="w-full border-[#00d991] border-[1.5px] rounded-lg p-2 text-sm focus:outline-none"
-                    :style="{ resize: i.textArea!.resize ? undefined : 'none' }"></textarea>
+                <input type="text" id="input-area">
             </div>
 
-            <button
-                class="m-plus-rounded-1c bg-[#ff5872] text-white font-bold text-[1.5rem] p-3 px-10 rounded-full mt-2">送信</button>
-        </div>
+            <!-- subject -->
+            <div class="input-entries">
+                <!-- title -->
+                <div id="title-area">
+                    <div id="title">件名</div>
 
+                    <div id="required">必须 </div>
+                </div>
+
+                <!-- input area -->
+                <input type="text" id="input-area">
+            </div>
+
+            <!-- email address -->
+            <div class="input-entries">
+                <!-- title -->
+                <div id="title-area">
+                    <div id="title">メールアドレス</div>
+
+                    <div id="required">必须 </div>
+                </div>
+
+                <!-- input area -->
+                <input type="text" id="input-area">
+            </div>
+
+            <!-- content of inquiry -->
+            <div class="input-entries">
+                <!-- title -->
+                <div id="title-area">
+                    <div id="title">お名前</div>
+
+                    <div id="required">必须 </div>
+                </div>
+
+                <!-- input area -->
+                <textarea id="input-area" rows="7" style="resize: none;"></textarea>
+            </div>
+
+        </div>
     </div>
 </template>
   
 <script setup lang='ts'>
-
-interface IEntries {
-    title: string,
-    reuired: boolean,
-    inputType: "text" | "textarea",
-    textArea?: {
-        resize: boolean,
-        rows: number
-    }
-}
-
-const entries: Array<IEntries> = [
-    {
-        title: "お名前",
-        reuired: true,
-        inputType: "text"
-    },
-    {
-        title: "件名",
-        reuired: true,
-        inputType: "text"
-    },
-    {
-        title: "メールアドレス",
-        reuired: true,
-        inputType: "text"
-    },
-    {
-        title: "お問い合わせ内容",
-        reuired: true,
-        inputType: "textarea",
-        textArea: {
-            resize: false,
-            rows: 7
-        }
-    },
-];
 </script>
   
-<style scoped>
+<style lang="less" scoped>
 #p-contact-container {
     background: rgba(255, 255, 255, .7);
 }
@@ -108,5 +106,48 @@ const entries: Array<IEntries> = [
 .m-plus-rounded-1c,
 .m-plus-rounded-1c>* {
     font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.input-entries {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    #title-area {
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-weight: 700;
+
+        #title {
+            color: #787878;
+        }
+
+        #required {
+            color: white;
+            background-color: #ff5889;
+            padding: 0px 0.5rem 0px 0.5rem;
+            border-radius: 9999px;
+        }
+    }
+
+    #input-area {
+        width: 100%;
+        border-width: 1.5px;
+        border-color: #00d991;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+
+        &:focus {
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+        }
+    }
 }
 </style> 
