@@ -1,5 +1,5 @@
 <template>
-  <div id="p-info-container" class="w-full  py-8 my-5 flex justify-center items-center relative">
+  <div id="p-info-container" class="w-full  py-8 mb-5 flex justify-center items-center relative">
     <div class="w-full py-[20px] flex justify-center items-center flex-col">
       <!-- information title -->
       <img src="../../assets/imgs/title-info.png" alt="title information" class="w-[95%] mb-4">

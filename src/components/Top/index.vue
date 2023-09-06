@@ -5,7 +5,7 @@
       <img src="../../assets/imgs/logo.png" alt="pmarusama logo" class="absolute top-5 left-7 w-[48%]">
 
       <!-- index visual -->
-      <img src="../../assets/imgs/index-visual.png" alt="index visual image" class="">
+      <img src="../../assets/imgs/index-visual.png" alt="index visual image">
     </div>
   </div>
 </template>

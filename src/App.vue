@@ -1,11 +1,12 @@
 <template>
   <div id="body" class="flex flex-col gap-10">
+    <Header></Header>
+
     <Top></Top>
 
     <Inforemation></Inforemation>
 
     <Profile></Profile>
-
 
     <Youtube></Youtube>
 
@@ -18,6 +19,7 @@
 </template>
   
 <script setup lang='ts'>
+import Header from "./components/Header/index.vue"
 import Top from "./components/Top/index.vue"
 import Inforemation from "./components/Infomation/index.vue"
 import Profile from "./components/Profile/index.vue"
