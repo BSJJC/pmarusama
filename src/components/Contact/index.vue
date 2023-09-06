@@ -14,58 +14,18 @@
         <!-- form -->
         <div class="w-full flex justify-center items-center flex-col gap-4">
 
-            <!-- name -->
-            <div class="input-entries">
-                <!-- title -->
-                <div id="title-area">
-                    <div id="title">お名前</div>
-
-                    <div id="required">必须 </div>
+            <div v-for="(i, index) in formData" :key="index" class="w-full flex items-center flex-col gap-2">
+                <div class=" relative w-full flex items-center gap-4 font-bold" style="font-family: 'M PLUS Rounded 1c';">
+                    <div class="text-[#787878]">{{ i.title }}</div>
+                    <div v-if="i.required" class="text-white bg-[#ff5889] px-2 rounded-full">必须</div>
                 </div>
 
-                <!-- input area -->
-                <input type="text" id="input-area" v-model="name" @change="nameCheck">
-            </div>
+                <input v-if="i.inputType === 'input'" type="text"
+                    class="w-full border-[1.5px] border-[#00d991] rounded-lg p-2 text-sm focus:outline-none"
+                    v-model="i.text" @change="i.checkFunction">
 
-            <!-- subject -->
-            <div class="input-entries">
-                <!-- title -->
-                <div id="title-area">
-                    <div id="title">件名</div>
-
-                    <div id="required">必须 </div>
-                </div>
-
-                <!-- input area -->
-                <input type="text" id="input-area" v-model="subject" @change="subjectCheck">
-            </div>
-
-            <!-- email address -->
-            <div class="input-entries">
-                <!-- title -->
-                <div id="title-area">
-                    <div id="title">メールアドレス</div>
-
-                    <div id="required">必须 </div>
-                </div>
-
-                <!-- input area -->
-                <input type="text" id="input-area" v-model="email" @change="emailCheck"
-                    @keydown.space="(event) => event.preventDefault()">
-            </div>
-
-            <!-- content of inquiry -->
-            <div class="input-entries">
-                <!-- title -->
-                <div id="title-area">
-                    <div id="title">お問い合わせ内容</div>
-
-                    <div id="required">必须 </div>
-                </div>
-
-                <!-- input area -->
-                <textarea id="input-area" rows="7" style="resize: none;" v-model="inquiry"
-                    @change="inquiryCheck"></textarea>
+                <textarea v-else-if="i.inputType === 'textarea'" rows="10"
+                    class="w-full border-[1.5px] border-[#00d991] rounded-lg p-2 text-sm focus:outline-none"></textarea>
             </div>
 
         </div>
@@ -75,29 +35,64 @@
 <script setup lang='ts'>
 import { ref, Ref } from "vue"
 
-const name: Ref<string> = ref("")
-const subject: Ref<string> = ref("")
-const email: Ref<string> = ref("")
-const inquiry: Ref<string> = ref("")
+interface IFormData {
+    title: string,
+    required: boolean,
+    text: string,
+    verificationPassed: boolean | undefined,
+    inputType: "input" | "textarea",
+    checkFunction: Function
+}
+
+const formData: Ref<IFormData[]> = ref([
+    {
+        title: "お名前",
+        required: true,
+        text: "",
+        verificationPassed: undefined,
+        inputType: "input",
+        checkFunction: nameCheck
+    },
+    {
+        title: "件名",
+        required: true,
+        text: "",
+        verificationPassed: undefined,
+        inputType: "input",
+        checkFunction: subjectCheck
+    },
+    {
+        title: "メールアドレス",
+        required: true,
+        text: "",
+        verificationPassed: undefined,
+        inputType: "input",
+        checkFunction: emailCheck
+    },
+    {
+        title: "お問い合わせ内容",
+        required: true,
+        text: "",
+        verificationPassed: undefined,
+        inputType: "textarea",
+        checkFunction: inquiryCheck
+    }
+])
 
 function nameCheck(): void {
-    console.log(name.value);
 }
 
 function subjectCheck(): void {
-    console.log(subject.value);
 }
 
 function emailCheck(): void {
-    
 }
 
 function inquiryCheck(): void {
-    console.log(inquiry.value);
 }
 </script>
   
-<style lang="less" scoped>
+<style scoped>
 #p-contact-container {
     background: rgba(255, 255, 255, .7);
 }
@@ -124,48 +119,5 @@ function inquiryCheck(): void {
     width: 100%;
     height: 6px;
     background: url(../../assets/imgs/section-bg-bottom.png) center bottom/auto 100%;
-}
-
-.input-entries {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 0.5rem;
-
-    #title-area {
-        font-family: 'M PLUS Rounded 1c', sans-serif;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        font-weight: 700;
-
-        #title {
-            color: #787878;
-        }
-
-        #required {
-            color: white;
-            background-color: #ff5889;
-            padding: 0px 0.5rem 0px 0.5rem;
-            border-radius: 9999px;
-        }
-    }
-
-    #input-area {
-        width: 100%;
-        border-width: 1.5px;
-        border-color: #00d991;
-        border-radius: 0.5rem;
-        padding: 0.5rem;
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-
-        &:focus {
-            outline: 2px solid transparent;
-            outline-offset: 2px;
-        }
-    }
 }
 </style> 
