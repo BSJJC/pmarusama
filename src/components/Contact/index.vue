@@ -22,7 +22,8 @@
 
                     <Transition name="fade-up">
                         <div v-show="i.verificationPassed === false"
-                            class="absolute right-[5px] text-white bg-[#ff5889] px-2 rounded-full">ダメです！</div>
+                            class="absolute right-[5px] text-white bg-[#ff5889] px-2 rounded-full animate-bounce">ダメです！
+                        </div>
                     </Transition>
                 </div>
 
@@ -38,11 +39,15 @@
             </div>
 
         </div>
+
+        <button class="text-white bg-[#ff5872] text-[1.5rem] font-bold px-10 py-4 rounded-full"
+            style="font-family: 'M PLUS Rounded 1c';" @click="submit">送信</button>
     </div>
 </template>
   
 <script setup lang='ts'>
 import { ref, Ref } from "vue"
+import _ from "lodash"
 import validateEmail from "../../utils/validateEmail"
 
 interface IFormData {
@@ -122,6 +127,23 @@ function inquiryCheck(): void {
     if (formData.value[3].text.trim().length === 0) formData.value[3].verificationPassed = false
     else formData.value[3].verificationPassed = true
 }
+
+/**
+ * submit form
+ */
+function submit(): void {
+    const status = _.map(formData.value, 'verificationPassed')
+
+    if (status.every(el => el === true)) {
+        console.log("OK");
+    }
+    else {
+        _.forEach(formData.value, item => {
+            if (item.verificationPassed === undefined) item.verificationPassed = false
+        })
+    }
+}
+
 </script>
   
 <style scoped>
