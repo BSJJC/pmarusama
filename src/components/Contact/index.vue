@@ -1,7 +1,6 @@
 <template>
     <div id="p-contact-container" class="relative flex justify-center items-center flex-col  gap-8 py-10 px-3">
-
-        <!-- title  -->
+        title 
         <Titlte></Titlte>
 
         <!-- intro -->
@@ -9,7 +8,6 @@
 
         <!-- form -->
         <Form></Form>
-
     </div>
 </template>
   
@@ -48,16 +46,5 @@ const Form = defineAsyncComponent(() => import("./components/form.vue"))
     width: 100%;
     height: 6px;
     background: url(../../assets/imgs/section-bg-bottom.png) center bottom/auto 100%;
-}
-
-.fade-up-enter-active,
-.fade-up-leave-active {
-    transition: all 0.3s ease-in-out;
-}
-
-.fade-up-enter-from,
-.fade-up-leave-to {
-    opacity: 0;
-    transform: translateY(10px);
 }
 </style> 

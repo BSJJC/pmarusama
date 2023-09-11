@@ -133,4 +133,15 @@ function submit(): void {
 }
 </script>
   
-<style></style>
+<style scoped>
+.fade-up-enter-active,
+.fade-up-leave-active {
+  transition: all 0.3s ease-in-out;
+}
+
+.fade-up-enter-from,
+.fade-up-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
+</style>
