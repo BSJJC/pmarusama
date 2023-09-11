@@ -10,7 +10,7 @@
   
 <style scoped>
 #p-youtube__title {
-  background-image: url(../../assets/imgs/youtube-bg2.png);
+  background-image: url(../../../assets/imgs/youtube-bg2.png);
   background-size: 100% 100%;
 }
 </style>
