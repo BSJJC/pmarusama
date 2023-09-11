@@ -9,8 +9,8 @@
     <div id="p-profile__main" class="w-[95%] h-full ml-[5%] pb-16 pl-10 pr-4 pt-12">
       <div id="p-profile__inner" class="bg-[#ffda55] relative">
         <!-- profile intro -->
-        <div class="pb-3 text-[#787878] pt-6 px-3 leading-3">
-          <h3 class="text-[1.5rem] font-bold">P丸様。</h3>
+        <div class="m-plus-rounded-1c pb-3 text-[#787878] pt-6 px-3 leading-3">
+          <h3 class="text-[1.5rem] font-[900]">P丸様。</h3>
           <br />
           <span class=" text-sm font-bold">YouTubeやTikTok等の動画投稿サイトで活動中のマルチエンターテイナー！</span>
           <br />

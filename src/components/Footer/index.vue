@@ -11,7 +11,7 @@
     </Transition>
 
     <!-- copy right lable -->
-    <p class="text-[#787878] font-bold text-xs">©︎ P丸様。</p>
+    <p class="m-plus-rounded-1c text-[#787878] font-bold text-xs">©︎ P丸様。</p>
   </footer>
 </template>
   

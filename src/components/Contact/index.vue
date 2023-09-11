@@ -12,7 +12,7 @@
         </span>
 
         <!-- form -->
-        <div class="w-full flex justify-center items-center flex-col gap-4">
+        <div class="m-plus-rounded-1c w-full flex justify-center items-center flex-col gap-4">
 
             <div v-for="(i, index) in formData" :key="index" class="w-full flex items-center flex-col gap-2">
                 <div class=" relative w-full flex items-center gap-4 font-bold">
@@ -40,7 +40,8 @@
 
         </div>
 
-        <button class="text-white bg-[#ff5872] text-[1.5rem] font-bold px-10 py-4 rounded-full" @click="submit">送信</button>
+        <button class="m-plus-rounded-1c text-white bg-[#ff5872] text-[1.5rem] font-bold px-10 py-4 rounded-full"
+            @click="submit">送信</button>
     </div>
 </template>
   

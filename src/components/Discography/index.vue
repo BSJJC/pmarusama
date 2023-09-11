@@ -9,7 +9,7 @@
     <!-- discographies -->
     <div class="w-full flex items-baseline flex-row flex-wrap mt-4">
       <div v-for="(i, index) in discographyData" :key="index" class="w-1/2 p-2 flex flex-col-reverse">
-        <a href="#" class="text-center text-[0.8rem] font-bold p-2 text-[#6e5be4]">{{ i.title }}</a>
+        <a href="#" class="m-plus-rounded-1c text-center text-[0.8rem] font-bold p-2 text-[#6e5be4]">{{ i.title }}</a>
 
         <img v-if="discographyCoverUrls.length === discographyData.length" :src="discographyCoverUrls[index]"
           alt="pmarusama discography cover">

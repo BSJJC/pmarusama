@@ -6,10 +6,10 @@
 
       <!-- published news -->
       <li v-for="(i, index) in data" :key="index"
-        class="flex justify-center items-center mx-3 mb-4 border-l-[1px] border-[#f60]">
+        class="flex justify-center items-center w-[97%] mx-3 mb-4 border-l-[1px] border-[#f60]">
 
         <!-- news publish date -->
-        <div class="flex justify-center items-center w-[30%] text-[#f60] font-bold">
+        <div class="fredoka-one flex justify-center items-center w-[30%] text-[#f60] font-bold">
           <div class="flex justify-center items-center flex-col text-[0.5rem] pr-2">
             <span class="w-full text-right leading-3">
               <!-- year -->
@@ -29,14 +29,14 @@
         </div>
 
         <!-- news title -->
-        <div class="w-[70%]  border-l-[1px] border-r-[1px] border-[#f60] px-3">
-          <a href="" class="text-[#3865e0] font-bold">{{ i.title }}</a>
+        <div class="m-plus-rounded-1c w-[70%]  border-l-[1px] border-r-[1px] border-[#f60] px-3">
+          <a href="" class="text-[#3865e0] font-bold">{{ i.title }}123</a>
         </div>
       </li>
 
       <!-- more info -->
       <a href="" class="bg-[#ff5872] rounded-full py-2 px-8">
-        <button class="font-bold text-white text-[1.3rem]">もっと見る</button>
+        <button class="m-plus-rounded-1c font-bold text-white text-[1.3rem]">もっと見る</button>
       </a>
     </div>
   </div>
