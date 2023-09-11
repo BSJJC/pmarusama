@@ -8,7 +8,7 @@
     <!-- youtube player -->
     <div id="p-youtube__main" class="relative mr-[5%] z-[+1]">
       <div id="p-youtube__main-inner" class="relative box-border bg-[#c0ecee] p-[5px]">
-        <YoutubePlayer url="3V9952osjnc" class="w-full h-full "></YoutubePlayer>
+        <YoutubePlayer url="3V9952osjnc" class="w-full h-[240px] "></YoutubePlayer>
       </div>
     </div>
   </div>
