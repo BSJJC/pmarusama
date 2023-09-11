@@ -1,6 +1,6 @@
 <template>
     <div id="p-contact-container" class="relative flex justify-center items-center flex-col  gap-8 py-10 px-3">
-        title 
+        <!-- title -->
         <Titlte></Titlte>
 
         <!-- intro -->
