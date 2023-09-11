@@ -9,7 +9,7 @@
         class="flex justify-center items-center mx-3 mb-4 border-l-[1px] border-[#f60]">
 
         <!-- news publish date -->
-        <div class="flex justify-center items-center w-[30%] text-[#f60]">
+        <div class="flex justify-center items-center w-[30%] text-[#f60] font-bold">
           <div class="flex justify-center items-center flex-col text-[0.5rem] pr-2">
             <span class="w-full text-right leading-3">
               <!-- year -->
@@ -36,7 +36,7 @@
 
       <!-- more info -->
       <a href="" class="bg-[#ff5872] rounded-full py-2 px-8">
-        <button id="more-info" class="font-bold text-white text-[1.3rem]">もっと見る</button>
+        <button class="font-bold text-white text-[1.3rem]">もっと見る</button>
       </a>
     </div>
   </div>
@@ -60,14 +60,6 @@ const data = [
 </script>
   
 <style scoped>
-#more-info {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-}
-
-span {
-  font-family: Fredoka;
-}
-
 #p-information-container {
   background: rgba(255, 255, 255, .7) url(../../assets//imgs/parts1.png) bottom 6vw right 4vw/24vw auto no-repeat;
 }

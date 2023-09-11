@@ -42,10 +42,6 @@ h2 {
   background-size: 100% 100%;
 }
 
-h3 {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-}
-
 #p-profile__main {
   background-image: url(../../assets/imgs/profile-bg-sp.png);
   background-size: 100% 100%;

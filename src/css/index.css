@@ -1,7 +1,12 @@
 * {
   -webkit-user-drag: none;
+  font-family: 'M PLUS Rounded 1c';
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
 }

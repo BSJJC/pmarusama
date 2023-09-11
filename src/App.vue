@@ -1,5 +1,5 @@
 <template>
-  <div id="body" class="flex flex-col gap-10">
+  <div id="body" class="flex flex-col ">
     <Header></Header>
 
     <Top></Top>
@@ -34,7 +34,6 @@ import Footer from "./components/Footer/index.vue"
   
 <style scoped>
 #body {
-  background-image: url(./assets/imgs/body-bg.png);
-  background-size: 100% auto;
+  background: #fff8a9 url(./assets//imgs//body-bg.png) center top/100% auto;
 }
 </style>

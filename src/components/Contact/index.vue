@@ -1,5 +1,5 @@
 <template>
-    <div id="p-contact-container" class="relative flex justify-center items-center flex-col  gap-8 py-10 px-3 mb-20">
+    <div id="p-contact-container" class="relative flex justify-center items-center flex-col  gap-8 py-10 px-3">
 
         <!-- title image -->
         <img src="../../assets/imgs/title-contact.png" alt="contact title image">
@@ -15,7 +15,7 @@
         <div class="w-full flex justify-center items-center flex-col gap-4">
 
             <div v-for="(i, index) in formData" :key="index" class="w-full flex items-center flex-col gap-2">
-                <div class=" relative w-full flex items-center gap-4 font-bold" style="font-family: 'M PLUS Rounded 1c';">
+                <div class=" relative w-full flex items-center gap-4 font-bold">
                     <div class="text-[#787878]">{{ i.title }}</div>
 
                     <div v-if="i.required" class="text-white bg-[#ff5889] px-2 rounded-full">必须</div>
@@ -33,15 +33,14 @@
                     v-model="i.text" @input="i.checkFunction" @blur="i.checkFunction">
 
                 <textarea v-else-if="i.inputType === 'textarea'" v-model="i.text" rows="10"
-                    class="w-full border-[1.5px] border-[#00d991] rounded-lg p-2 text-sm focus:outline-none"
+                    class="w-full border-[1.5px] border-[#00d991] rounded-lg p-2 text-sm resize-none focus:outline-none"
                     :style="{ borderColor: i.verificationPassed || i.verificationPassed === undefined ? '' : '#ff5889' }"
                     @input="i.checkFunction" @blur="i.checkFunction"></textarea>
             </div>
 
         </div>
 
-        <button class="text-white bg-[#ff5872] text-[1.5rem] font-bold px-10 py-4 rounded-full"
-            style="font-family: 'M PLUS Rounded 1c';" @click="submit">送信</button>
+        <button class="text-white bg-[#ff5872] text-[1.5rem] font-bold px-10 py-4 rounded-full" @click="submit">送信</button>
     </div>
 </template>
   
