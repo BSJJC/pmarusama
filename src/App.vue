@@ -15,6 +15,8 @@
     <Sns></Sns>
 
     <Contact></Contact>
+
+    <Footer></Footer>
   </div>
 </template>
   
@@ -27,6 +29,7 @@ import Youtube from "./components/Youtube/index.vue"
 import Discography from "./components/Discography/index.vue"
 import Sns from "./components/Sns/index.vue"
 import Contact from "./components/Contact/index.vue"
+import Footer from "./components/Footer/index.vue"
 </script>
   
 <style scoped>

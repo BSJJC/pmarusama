@@ -68,11 +68,11 @@ span {
   font-family: Fredoka;
 }
 
-#p-info-container {
+#p-information-container {
   background: rgba(255, 255, 255, .7) url(../../assets//imgs/parts1.png) bottom 6vw right 4vw/24vw auto no-repeat;
 }
 
-#p-info-container::before {
+#p-information-container::before {
   position: absolute;
   content: "";
   margin: auto;
@@ -84,7 +84,7 @@ span {
   background: url(../../assets/imgs/section-bg-top.png) center bottom/auto 100%;
 }
 
-#p-info-container::after {
+#p-information-container::after {
   position: absolute;
   content: "";
   margin: auto;
