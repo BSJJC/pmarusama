@@ -10,10 +10,10 @@
     </div>
 
 
-    <Transition name="test">
+    <Transition name="show-nav">
       <nav v-show="status"
-        class="px-5 py-2 bg-[#ff5872] flex justify-center items-end flex-col absolute top-[55px] right-0 rounded-3xl transition-all overflow-hidden">
-        <a v-for="(i, index) in herfs" :key="index" href=""
+        class="px-5 py-2 bg-[#ff5872] flex justify-center items-end flex-col absolute top-[55px] right-0 rounded-3xl overflow-hidden border-[3px] border-white">
+        <a v-for="(i, index) in herfs" :key="index" :href="`#p-${i.toLocaleLowerCase()}-container`"
           class=" text-white text-lg font-bold my-1 hover:text-[#fff8a9]" style="font-family: 'M PLUS Rounded 1c';">{{ i
           }}</a>
       </nav>
@@ -66,14 +66,19 @@ p {
   transition: all .3s ease-out;
 }
 
-.test-enter-active,
-.test-leave-active {
+.show-nav-enter-active,
+.show-nav-leave-active {
   transition: all 0.3s ease-in-out;
 }
 
-.test-enter-from,
-.test-leave-to {
-  width: auto;
-  padding: 0px;
+.show-nav-enter-from,
+.show-nav-leave-to {
+  height: 0px;
+  opacity: 0;
+}
+
+.show-nav-enter-to,
+.show-nav-leave-from {
+  height: 304px;
 }
 </style>

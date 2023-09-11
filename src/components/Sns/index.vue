@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-wrap px-3">
+  <div id="p-sns-container" class="w-full flex flex-wrap px-3">
     <div v-for="(i, index) in socialMedias" :key="index" class="w-1/2">
       <a :href="i.url" class=" block mt-3 mr-3 overflow-hidden" target="_blank">
         <img v-if="socialMedias.length === socialMediaImgs.length" :src="socialMediaImgs[index]" alt="social medias"
