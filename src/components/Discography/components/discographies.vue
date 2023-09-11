@@ -1,29 +1,27 @@
 <template>
-  <div id="p-discography-container" class="relative py-14">
+  <div class="w-full flex items-baseline flex-row flex-wrap mt-4">
+    <div v-for="(i, index) in discographyData" :key="index" class="w-1/2 p-2 flex flex-col-reverse">
+      <!-- discographie's title -->
+      <a href="#" class="m-plus-rounded-1c text-center text-[0.8rem] font-bold p-2 text-[#6e5be4]">
+        {{ i.title }}
+      </a>
 
-    <!-- discography title -->
-    <Title></Title>
-
-    <!-- discographies -->
-    <Discographies></Discographies>
-    <div>
-
+      <!-- discographie's cover -->
+      <img v-if="discographyCoverUrls.length === discographyData.length" :src="discographyCoverUrls[index]"
+        alt="pmarusama discography cover">
     </div>
   </div>
 </template>
   
 <script setup lang='ts'>
-import { ref, Ref, onBeforeMount, defineAsyncComponent } from "vue"
+import { ref, Ref, onBeforeMount } from "vue"
 import axios from "axios"
-import type { DiscographyType } from "../../types/discographyTypes"
+import type { DiscographyType } from "../../../types/discographyTypes"
 
 interface IDiscographyStruct {
   title: string,
   coverID: string
 }
-
-const Title = defineAsyncComponent(() => import("./components/title.vue"))
-const Discographies = defineAsyncComponent(() => import("./components/discographies.vue"))
 
 const discographyData: Ref<IDiscographyStruct[]> = ref([])
 const discographyCoverUrls: Ref<string[]> = ref([])
@@ -74,33 +72,5 @@ onBeforeMount(() => {
   init()
 })
 </script>
-
-<style scoped>
-#p-discography-container {
-  background: rgba(255, 255, 255, .7);
-}
-
-#p-discography-container::before {
-  position: absolute;
-  content: "";
-  margin: auto;
-  box-sizing: border-box;
-  vertical-align: middle;
-  top: -6px;
-  width: 100%;
-  height: 6px;
-  background: url(../../assets/imgs/section-bg-top.png) center bottom/auto 100%;
-}
-
-#p-discography-container::after {
-  position: absolute;
-  content: "";
-  margin: auto;
-  box-sizing: border-box;
-  vertical-align: middle;
-  bottom: -6px;
-  width: 100%;
-  height: 6px;
-  background: url(../../assets/imgs/section-bg-bottom.png) center top/auto 100%;
-}
-</style>
+  
+<style></style>
