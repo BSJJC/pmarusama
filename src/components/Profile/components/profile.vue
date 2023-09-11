@@ -1,18 +1,17 @@
 <template>
-  <div id="p-profile__main" class="w-[95%] h-full ml-[5%] pb-16 pl-10 pr-4 pt-12">
-    <div id="p-profile__inner" class="bg-[#ffda55] relative">
+  <div id="p-profile__main" class="w-[95%] h-full ml-[5%] pb-[15%] pl-[11%] pr-4 pt-12">
+    <div id="p-profile__inner" class="bg-[#ffda55] relative md:flex md:justify-center md:items-center   md:mt-4">
       <!-- profile intro -->
-      <div class="m-plus-rounded-1c pb-3 text-[#787878] pt-6 px-3 leading-3">
-        <h3 class="text-[1.5rem] font-[900]">P丸様。</h3>
+      <div class="m-plus-rounded-1c pb-3 text-[#787878] pt-6 px-3 leading-3 md:w-1/2 md:px-10">
+        <h3 class="text-3xl font-bold">P丸様。</h3>
+        <span class=" text-sm font-bold md:text-lg">YouTubeやTikTok等の動画投稿サイトで活動中のマルチエンターテイナー！</span>
         <br />
-        <span class=" text-sm font-bold">YouTubeやTikTok等の動画投稿サイトで活動中のマルチエンターテイナー！</span>
-        <br />
-        <span class=" text-sm font-bold">癖になる短編アニメ動画が大人気で、現在YouTubeチャンネルの登録者数は255万人、動画総再生数は20億回を突破。</span>
+        <span class=" text-sm font-bold md:text-lg">癖になる短編アニメ動画が大人気で、現在YouTubeチャンネルの登録者数は255万人、動画総再生数は20億回を突破。</span>
       </div>
 
       <!-- profile image -->
-      <div class="flex justify-end items-center">
-        <img src="../../../assets/imgs/profile-img.png" alt="profile image" class="w-[80%]">
+      <div class="flex justify-end items-center md:w-1/2">
+        <img src="../../../assets/imgs/profile-img.png" alt="profile image" class="w-[60%] md:w-full">
       </div>
     </div>
   </div>
@@ -30,10 +29,16 @@
 }
 
 #p-profile__main {
-  background-image: url(../../../assets/imgs/profile-bg-sp.png);
+  background: url(../../../assets/imgs/profile-bg-sp.png) left center/100% 100% no-repeat;
   background-size: 100% 100%;
   position: relative;
   z-index: +1;
+}
+
+@media (min-width: 768px) {
+  #p-profile__main {
+    background: url(../../../assets/imgs/profile-bg.png) left center/auto 105% no-repeat;
+  }
 }
 
 #p-profile__inner::before {
