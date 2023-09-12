@@ -1,7 +1,8 @@
 <template>
-  <div id="p-youtube__main" class="relative mr-[5%] mt-6 p-[20px] pt-[40px] pr-[30px]">
-    <div id="p-youtube__main-inner" class="relative box-border bg-[#c0ecee] p-[5px]">
-      <YoutubePlayer url="3V9952osjnc" class="w-full h-full "></YoutubePlayer>
+  <div id="p-youtube__main" class="flex justify-center items-center relative z-[+1] mt-8 w-[96vw]"
+    style="padding: 12vw 13vw 12vw 4vw;">
+    <div id="p-youtube__main-inner" class="relative w-full bg-[#c0ecee] pb-[56.25%]">
+      <YoutubePlayer url="3V9952osjnc" class="absolute top-0 left-0 w-full h-full p-[5px]"></YoutubePlayer>
     </div>
   </div>
 </template>

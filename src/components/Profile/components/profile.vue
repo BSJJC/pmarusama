@@ -1,6 +1,6 @@
 <template>
   <div id="p-profile__main"
-    class="w-[95%] ml-[5%] pl-[11%] pb-[70px] pr-4 pt-4 translate-y-[-7%] md:translate-y-[-8%] md:pt-10 md:pb-[90px]">
+    class="w-[95%] ml-[5%] pl-[11%] pb-[70px] pr-4 pt-4 translate-y-[-7%] md:translate-y-[-8%] md:pt-10 md:pb-[120px]">
     <div id="p-profile__inner" class="bg-[#ffda55] relative mt-4 ml-2 md:flex md:justify-center md:items-center">
       <!-- profile intro -->
       <div class="m-plus-rounded-1c pb-3 text-[#787878] pt-6 px-4 leading-3 md:w-1/2 md:px-10">

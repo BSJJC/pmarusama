@@ -1,5 +1,5 @@
 <template>
-  <iframe id="player" type="text/html" width="640" height="360" :src=url></iframe>
+  <iframe type="text/html" :src="url"></iframe>
 </template>
   
 <script setup lang='ts'>
