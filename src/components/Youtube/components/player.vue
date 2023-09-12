@@ -1,7 +1,7 @@
 <template>
-  <div id="p-youtube__main" class="relative mr-[5%] z-[+1]">
+  <div id="p-youtube__main" class="relative mr-[5%] mt-6 p-[20px] pt-[40px] pr-[30px]">
     <div id="p-youtube__main-inner" class="relative box-border bg-[#c0ecee] p-[5px]">
-      <YoutubePlayer url="3V9952osjnc" class="w-full h-[240px] "></YoutubePlayer>
+      <YoutubePlayer url="3V9952osjnc" class="w-full h-full "></YoutubePlayer>
     </div>
   </div>
 </template>
@@ -13,7 +13,6 @@ import YoutubePlayer from "../../Common/YoutubePlayer.vue"
 <style scoped>
 #p-youtube__main {
   background: url(../../../assets/imgs/youtube-bg-sp.png) right center/100% 100% no-repeat;
-  padding: 6vh 11vw 5vh 6vw;
 }
 
 #p-youtube__main-inner::before {

@@ -1,5 +1,5 @@
 <template>
-  <div id="p-youtube__title" class="absolute z-[2] -top-[13%] ml-[16%] pl-[4vw] py-[10px] pb-[10px]">
+  <div id="p-youtube__title" class="absolute z-[1] ml-[16%] pl-[4vw] py-[10px] pb-[10px]">
     <img src="../../../assets/imgs/title-youtube.png" alt="title youtube" class="w-[70%]">
   </div>
 </template>
