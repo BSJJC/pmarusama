@@ -1,9 +1,10 @@
 <template>
-  <div id="p-profile__main" class="w-[95%] h-full ml-[5%] pb-[15%] pl-[11%] pr-4 pt-12">
-    <div id="p-profile__inner" class="bg-[#ffda55] relative md:flex md:justify-center md:items-center   md:mt-4">
+  <div id="p-profile__main"
+    class="w-[95%] ml-[5%] pl-[11%] pb-[70px] pr-4 pt-4 translate-y-[-7%] md:translate-y-[-8%] md:pt-10 md:pb-[90px]">
+    <div id="p-profile__inner" class="bg-[#ffda55] relative mt-4 ml-2 md:flex md:justify-center md:items-center">
       <!-- profile intro -->
-      <div class="m-plus-rounded-1c pb-3 text-[#787878] pt-6 px-3 leading-3 md:w-1/2 md:px-10">
-        <h3 class="text-3xl font-bold">P丸様。</h3>
+      <div class="m-plus-rounded-1c pb-3 text-[#787878] pt-6 px-4 leading-3 md:w-1/2 md:px-10">
+        <h3 class="text-2xl font-bold">P丸様。</h3>
         <span class=" text-sm font-bold md:text-lg">YouTubeやTikTok等の動画投稿サイトで活動中のマルチエンターテイナー！</span>
         <br />
         <span class=" text-sm font-bold md:text-lg">癖になる短編アニメ動画が大人気で、現在YouTubeチャンネルの登録者数は255万人、動画総再生数は20億回を突破。</span>
@@ -22,17 +23,8 @@
 </script>
   
 <style scoped>
-#p-profile-container {
-  background-image: url(../../../assets/imgs/parts2.png);
-  background-repeat: no-repeat;
-  background-size: 150px;
-}
-
 #p-profile__main {
   background: url(../../../assets/imgs/profile-bg-sp.png) left center/100% 100% no-repeat;
-  background-size: 100% 100%;
-  position: relative;
-  z-index: +1;
 }
 
 @media (min-width: 768px) {

@@ -1,5 +1,5 @@
 <template>
-  <div id="p-youtube-container" class="my-5">
+  <div id="p-youtube-container" class="my-8">
     <!-- youtube title -->
     <Title></Title>
 
