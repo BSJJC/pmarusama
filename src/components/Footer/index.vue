@@ -5,13 +5,13 @@
       <div v-show="y > 200" id="p-pagetop" class="absolute w-full">
         <a href="#top">
           <img src="../../assets/imgs/pagetop.png" alt="" :class="footerVisible ? absoluteMode : fixedMode"
-            class="w-[50px] hover:cursor-pointer">
+            class="w-[50px] hover:cursor-pointer md:w-[100px]">
         </a>
       </div>
     </Transition>
 
     <!-- copy right lable -->
-    <p class="m-plus-rounded-1c text-[#787878] font-bold text-xs">©︎ P丸様。</p>
+    <p class="m-plus-rounded-1c text-[#787878] font-bold text-xs md:text-base">©︎ P丸様。</p>
   </footer>
 </template>
   
