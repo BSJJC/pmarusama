@@ -1,6 +1,6 @@
 <template>
-  <div id="p-youtube__main" class="flex justify-center items-center relative z-[+1] mt-8 w-[96vw]"
-    style="padding: 12vw 13vw 12vw 4vw;">
+  <div id="p-youtube__main"
+    class="flex justify-center items-center relative z-[+1] mt-8 w-[96vw] py-[12vw] pr-[13vw] pl-[4vw]">
     <div id="p-youtube__main-inner" class="relative w-full bg-[#c0ecee] pb-[56.25%]">
       <YoutubePlayer url="3V9952osjnc" class="absolute top-0 left-0 w-full h-full p-[5px]"></YoutubePlayer>
     </div>
@@ -14,6 +14,12 @@ import YoutubePlayer from "../../Common/YoutubePlayer.vue"
 <style scoped>
 #p-youtube__main {
   background: url(../../../assets/imgs/youtube-bg-sp.png) right center/100% 100% no-repeat;
+}
+
+@media (min-width: 768px) {
+  #p-youtube__main {
+    background: url(../../../assets/imgs/youtube-bg.png) right center/auto 105% no-repeat;
+  }
 }
 
 #p-youtube__main-inner::before {
