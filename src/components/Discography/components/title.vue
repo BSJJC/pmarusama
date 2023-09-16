@@ -1,6 +1,6 @@
 <template>
   <h2 id="p-discogtaphy-title" class="w-full flex justify-center items-center">
-    <img src="../../../assets/imgs/title-discography.png" alt="discography title" class="w-[95%]">
+    <img src="../../../assets/imgs/title-discography.png" alt="discography title" class="w-[95%] md:w-[68%]">
   </h2>
 </template>
   

@@ -1,8 +1,8 @@
 <template>
   <div class="w-full flex items-baseline flex-row flex-wrap mt-4">
-    <div v-for="(i, index) in discographyData" :key="index" class="w-1/2 p-2 flex flex-col-reverse">
+    <div v-for="(i, index) in discographyData" :key="index" class="w-1/2 p-2 flex flex-col-reverse md:w-1/3 md:p-6">
       <!-- discographie's title -->
-      <a href="#" class="m-plus-rounded-1c text-center text-[0.8rem] font-bold p-2 text-[#6e5be4]">
+      <a href="#" class="m-plus-rounded-1c text-center text-[0.8rem] font-bold p-2 text-[#6e5be4] md:text-[1rem]">
         {{ i.title }}
       </a>
 
