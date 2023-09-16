@@ -1,6 +1,6 @@
 <template>
   <div id="p-youtube__main"
-    class="flex justify-center items-center relative z-[+1] mt-8 w-[96vw] py-[12vw] pr-[13vw] pl-[4vw]">
+    class="flex justify-center items-center relative z-[+1] mt-8 w-[96vw] py-[12vw] pr-[13vw] pl-[4vw] md:pt-[16vw] md:pr-[14vw] md:pb-[18vw] md:pl-[4vw] md:mt-0">
     <div id="p-youtube__main-inner" class="relative w-full bg-[#c0ecee] pb-[56.25%]">
       <YoutubePlayer url="3V9952osjnc" class="absolute top-0 left-0 w-full h-full p-[5px]"></YoutubePlayer>
     </div>
