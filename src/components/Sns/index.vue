@@ -1,7 +1,7 @@
 <template>
-  <div id="p-sns-container" class="w-full flex flex-wrap px-3 my-5">
-    <div v-for="(i, index) in socialMedias" :key="index" class="w-1/2">
-      <a :href="i.url" class=" block mt-3 mr-3 overflow-hidden" target="_blank">
+  <div id="p-sns-container" class="w-full grid grid-cols-2 px-3 py-8 md:grid-cols-3">
+    <div v-for="(i, index) in socialMedias" :key="index" class="flex justify-center items-center">
+      <a :href="i.url" class="w-full mt-[12px] mx-[6px] overflow-hidden" target="_blank">
         <img v-if="socialMedias.length === socialMediaImgs.length" :src="socialMediaImgs[index]" alt="social medias"
           class="scale-105 transition-all duration-300 hover:scale-[115%]">
       </a>
