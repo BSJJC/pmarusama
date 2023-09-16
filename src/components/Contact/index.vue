@@ -1,5 +1,5 @@
 <template>
-    <div id="p-contact-container" class="relative flex justify-center items-center flex-col  gap-8 py-10 px-3">
+    <div id="p-contact-container" class="relative flex justify-center items-center flex-col  gap-8 py-20 px-3">
         <!-- title -->
         <Titlte></Titlte>
 
