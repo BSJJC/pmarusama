@@ -20,4 +20,11 @@ const Youtube = defineAsyncComponent(() => import("./components/player.vue"))
   position: relative;
   background: url(../../assets/imgs/parts3.png) center right -5vw/20vw auto no-repeat;
 }
+
+@media (min-width: 1024px) {
+  #p-youtube-container {
+    position: relative;
+    background: url(../../assets/imgs/parts3.png)center right 4vw no-repeat;
+  }
+}
 </style>
