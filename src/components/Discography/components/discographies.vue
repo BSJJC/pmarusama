@@ -1,15 +1,15 @@
 <template>
-  <div class="w-full flex items-baseline flex-row flex-wrap mt-4">
-    <div v-for="(i, index) in discographyData" :key="index"
-      class="w-1/2 p-2 flex flex-col-reverse overflow-hidden md:w-1/3 md:p-6">
-      <!-- discographie's title -->
-      <a href="#" class="m-plus-rounded-1c text-center text-[0.8rem] font-bold p-2 text-[#6e5be4] md:text-[1rem]">
+  <div class="grid grid-cols-2 w-full mt-4 md:grid-cols-3">
+    <div v-for="(i, index) in discographyData" :key="index" class="w-full h-full p-2">
+      <a href="#" class="m-plus-rounded-1c block text-center  text-[0.8rem] font-bold p-2 text-[#6e5be4] md:text-[1rem]">
+
+        <div v-if="discographyCoverUrls.length === discographyData.length" class="w-full overflow-hidden">
+          <img :src="discographyCoverUrls[index]" alt="pmarusama discography cover"
+            class="w-full transition-all duration-300 hover:scale-110">
+        </div>
+
         {{ i.title }}
       </a>
-
-      <!-- discographie's cover -->
-      <img v-if="discographyCoverUrls.length === discographyData.length" :src="discographyCoverUrls[index]"
-        class=" transition-all duration-300 hover:scale-[115%]" alt="pmarusama discography cover">
     </div>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div id="body" class="flex flex-col ">
+  <div id="body" class="flex flex-col">
     <Header></Header>
 
     <Top></Top>
