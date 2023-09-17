@@ -15,7 +15,7 @@
       </div>
 
       <div>
-        <span class="text-[2rem]">
+        <span class="text-[2.5rem]">
           <!-- day -->
           {{ i.data.split("/")[2] }}
         </span>
@@ -24,7 +24,7 @@
 
     <!-- news title -->
     <div class="m-plus-rounded-1c w-[70%]  border-l-[1px] border-r-[1px] border-[#f60] px-3 md:w-[85%]">
-      <a href="" class="text-[#3865e0] font-bold">{{ i.title }}123</a>
+      <a href="" class="text-[#3865e0] font-bold">{{ i.title }}</a>
     </div>
   </li>
 </template>

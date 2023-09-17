@@ -1,10 +1,11 @@
 <template>
   <div id="p-profile__main"
-    class="w-[95%] ml-[5%] pl-[11%] pb-[70px] pr-4 pt-4 translate-y-[-7%] md:translate-y-[-8%] md:pt-10 md:pb-[120px]">
-    <div id="p-profile__inner" class="bg-[#ffda55] relative mt-4 ml-2 md:flex md:justify-center md:items-center">
+    class="w-[95%] pl-[11%] pb-[70px] pr-4 pt-4 translate-y-[-7%] ml-auto md:translate-y-[-8%] md:pt-10 md:pb-[120px] lg:w-[80vw] lg:pt-[5vw] lg:pr-0 lg:pb-[10vw] lg:pl-[18vw]">
+    <div id="p-profile__inner"
+      class="bg-[#ffda55] relative mt-4 ml-2 md:flex md:justify-center md:items-center lg:max-w-[640px] lg:pl-[2vw]">
       <!-- profile intro -->
-      <div class="m-plus-rounded-1c pb-3 text-[#787878] pt-6 px-4 leading-3 md:w-1/2 md:px-10">
-        <h3 class="text-2xl font-bold">P丸様。</h3>
+      <div class="m-plus-rounded-1c pb-3 text-[#787878] pt-6 px-4 leading-3 md:w-1/2 md:px-10 lg:p-0">
+        <h3 class="text-3xl font-bold">P丸様。</h3>
         <span class=" text-sm font-bold md:text-lg">YouTubeやTikTok等の動画投稿サイトで活動中のマルチエンターテイナー！</span>
         <br />
         <span class=" text-sm font-bold md:text-lg">癖になる短編アニメ動画が大人気で、現在YouTubeチャンネルの登録者数は255万人、動画総再生数は20億回を突破。</span>
@@ -30,6 +31,13 @@
 @media (min-width: 768px) {
   #p-profile__main {
     background: url(../../../assets/imgs/profile-bg.png) left center/auto 105% no-repeat;
+  }
+}
+
+@media (min-width: 1024px) {
+  #p-profile__main {
+    background: url(../../../assets/imgs/profile-bg.png) left center / auto 100% no-repeat;
+    ;
   }
 }
 

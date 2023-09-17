@@ -1,6 +1,6 @@
 <template>
   <div id="p-information-container" class="w-full  py-8 mb-5 flex justify-center items-center relative">
-    <div class="w-full py-[20px] flex justify-center items-center flex-col">
+    <div class="w-full py-[20px] flex justify-center items-center flex-col max-w-[800px]">
       <!-- information title -->
       <Title></Title>
 
