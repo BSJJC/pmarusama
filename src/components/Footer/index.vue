@@ -3,10 +3,10 @@
     class="relative bg-[#fff157] h-[140px] flex justify-center items-center z-[9999]">
     <!-- to page top button -->
     <Transition>
-      <div v-show="y > 200" id="p-pagetop" class="absolute w-full">
+      <div v-show="y > 200" id="p-pagetop" class="absolute top-[30%] w-full">
         <a href="#top">
           <img src="../../assets/imgs/pagetop.png" alt="" :class="footerVisible ? absoluteMode : fixedMode"
-            class="w-[50px] hover:cursor-pointer md:w-[100px]">
+            class="w-[40px] hover:cursor-pointer md:w-[60px]">
         </a>
       </div>
     </Transition>

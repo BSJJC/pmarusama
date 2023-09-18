@@ -2,7 +2,7 @@
   <div id="p-profile__main"
     class="w-[95%] pl-[11%] pb-[70px] pr-4 pt-4 translate-y-[-7%] ml-auto md:translate-y-[-8%] md:pt-10 md:pb-[120px] lg:w-[80vw] lg:pt-[5vw] lg:pr-0 lg:pb-[10vw] lg:pl-[18vw]">
     <div id="p-profile__inner"
-      class="bg-[#ffda55] relative mt-4 ml-2 md:flex md:justify-center md:items-center lg:max-w-[640px] lg:pl-[2vw]">
+      class="bg-[#ffda55] relative mt-4 ml-2 rounded-lg md:flex md:justify-center md:items-center lg:max-w-[640px] lg:pl-[2vw]">
       <!-- profile intro -->
       <div class="m-plus-rounded-1c pb-3 text-[#787878] pt-6 px-4 leading-3 md:w-1/2 md:px-10 lg:p-0">
         <h3 class="text-3xl font-bold">P丸様。</h3>
@@ -51,5 +51,6 @@
   z-index: -1;
   background-image: linear-gradient(135deg, #ffd0de 25%, #fff 25%, #fff 50%, #ffd0de 50%, #ffd0de 75%, #fff 75%, #fff 100%);
   background-size: 24px 24px;
+  border-radius: 8px;
 }
 </style>

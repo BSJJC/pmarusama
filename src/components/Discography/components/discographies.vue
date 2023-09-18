@@ -3,7 +3,7 @@
     <div v-for="(i, index) in discographyData" :key="index" class="w-full h-full p-2">
       <a href="#" class="m-plus-rounded-1c block text-center  text-[0.8rem] font-bold text-[#6e5be4] md:text-[1rem]">
 
-        <div v-if="discographyCoverUrls.length === discographyData.length" class="w-full overflow-hidden mb-2">
+        <div v-if="discographyCoverUrls.length === discographyData.length" class="w-full overflow-hidden mb-2 rounded-lg">
           <img :src="discographyCoverUrls[index]" alt="pmarusama discography cover"
             class="w-full transition-all duration-300 hover:scale-110">
         </div>
