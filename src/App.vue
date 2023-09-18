@@ -12,4 +12,4 @@ import Home from "./views/home/index.vue"
 #body {
   background: #fff8a9 url(./assets//imgs//body-bg.png) center top/100% auto;
 }
-</style>
+</style>111
