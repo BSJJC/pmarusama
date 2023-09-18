@@ -13,7 +13,7 @@
 
       <!-- profile image -->
       <div class="flex justify-end items-center md:w-1/2">
-        <img src="../../../assets/imgs/profile-img.png" alt="profile image" class="w-[60%] md:w-full">
+        <img src="@/assets/imgs/profile-img.png" alt="profile image" class="w-[60%] md:w-full">
       </div>
     </div>
   </div>
@@ -25,18 +25,18 @@
   
 <style scoped>
 #p-profile__main {
-  background: url(../../../assets/imgs/profile-bg-sp.png) left center/100% 100% no-repeat;
+  background: url(@/assets/imgs/profile-bg-sp.png) left center/100% 100% no-repeat;
 }
 
 @media (min-width: 768px) {
   #p-profile__main {
-    background: url(../../../assets/imgs/profile-bg.png) left center/auto 105% no-repeat;
+    background: url(@/assets/imgs/profile-bg.png) left center/auto 105% no-repeat;
   }
 }
 
 @media (min-width: 1024px) {
   #p-profile__main {
-    background: url(../../../assets/imgs/profile-bg.png) left center / auto 100% no-repeat;
+    background: url(@/assets/imgs/profile-bg.png) left center / auto 100% no-repeat;
     ;
   }
 }

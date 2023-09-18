@@ -38,7 +38,7 @@
 <script setup lang='ts'>
 import { ref, Ref } from "vue"
 import _ from "lodash"
-import validateEmail from "../../../utils/validateEmail"
+import validateEmail from "@/utils/validateEmail"
 
 interface IFormData {
   title: string,

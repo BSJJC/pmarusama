@@ -5,7 +5,7 @@
     <Transition>
       <div v-show="y > 200" id="p-pagetop" class="absolute top-[30%] w-full">
         <a href="#top">
-          <img src="../../assets/imgs/pagetop.png" alt="" :class="footerVisible ? absoluteMode : fixedMode"
+          <img src="@/assets/imgs/pagetop.png" alt="" :class="footerVisible ? absoluteMode : fixedMode"
             class="w-[40px] hover:cursor-pointer md:w-[60px]">
         </a>
       </div>

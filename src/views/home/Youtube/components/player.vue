@@ -11,17 +11,17 @@
 </template>
   
 <script setup lang='ts'>
-import YoutubePlayer from "../../Common/YoutubePlayer.vue"
+import YoutubePlayer from "@/components/Common/YoutubePlayer.vue"
 </script>
   
 <style scoped>
 #p-youtube__main {
-  background: url(../../../assets/imgs/youtube-bg-sp.png) right center/100% 100% no-repeat;
+  background: url(@/assets/imgs/youtube-bg-sp.png) right center/100% 100% no-repeat;
 }
 
 @media (min-width: 768px) {
   #p-youtube__main {
-    background: url(../../../assets/imgs/youtube-bg.png) right center/auto 105% no-repeat;
+    background: url(@/assets/imgs/youtube-bg.png) right center/auto 105% no-repeat;
   }
 }
 

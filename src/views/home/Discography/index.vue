@@ -1,21 +1,15 @@
 <template>
-  <div class="grid grid-cols-2 w-full mt-4 md:grid-cols-3 lg:max-w-[1060px] lg:mx-auto">
-    <div v-for="(i, index) in discographyData" :key="index" class="w-full h-full p-2">
-      <a href="#" class="m-plus-rounded-1c block text-center  text-[0.8rem] font-bold text-[#6e5be4] md:text-[1rem]">
+  <div id="p-discography-container" class="relative py-14 lace-top lace-bottom">
+    <Title></Title>
 
-        <div v-if="discographyCoverUrls.length === discographyData.length" class="w-full overflow-hidden mb-2 rounded-lg">
-          <img :src="discographyCoverUrls[index]" alt="pmarusama discography cover"
-            class="w-full transition-all duration-300 hover:scale-110">
-        </div>
-
-        {{ i.title }}
-      </a>
+    <Discographies></Discographies>
+    <div>
     </div>
   </div>
 </template>
   
 <script setup lang='ts'>
-import { ref, Ref, onBeforeMount } from "vue"
+import { ref, Ref, onBeforeMount, defineAsyncComponent } from "vue"
 import axios from "axios"
 import type { DiscographyType } from "../../../types/discographyTypes"
 
@@ -23,6 +17,9 @@ interface IDiscographyStruct {
   title: string,
   coverID: string
 }
+
+const Title = defineAsyncComponent(() => import("./components/title.vue"))
+const Discographies = defineAsyncComponent(() => import("./components/discographies.vue"))
 
 const discographyData: Ref<IDiscographyStruct[]> = ref([])
 const discographyCoverUrls: Ref<string[]> = ref([])
@@ -73,5 +70,9 @@ onBeforeMount(() => {
   init()
 })
 </script>
-  
-<style></style>
+
+<style scoped>
+#p-discography-container {
+  background: rgba(255, 255, 255, .7);
+}
+</style>

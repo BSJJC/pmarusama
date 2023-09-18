@@ -15,12 +15,12 @@ const Profile = defineAsyncComponent(() => import("./components/profile.vue"))
   
 <style scoped>
 #p-profile-container {
-  background: url(../../assets/imgs/parts2.png) top 20vw left -4vw/40vw auto no-repeat;
+  background: url(@/assets/imgs/parts2.png) top 20vw left -4vw/40vw auto no-repeat;
 }
 
 @media (min-width: 768px) {
   #p-profile-container {
-    background: url(../../assets/imgs/parts2.png) bottom 3vw left 4vw no-repeat;
+    background: url(@/assets/imgs/parts2.png) bottom 3vw left 4vw no-repeat;
   }
 }
 </style>
