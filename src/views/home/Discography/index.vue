@@ -75,4 +75,4 @@ onBeforeMount(() => {
 #p-discography-container {
   background: rgba(255, 255, 255, .7);
 }
-</style>
+</style>./types/discographyTypes

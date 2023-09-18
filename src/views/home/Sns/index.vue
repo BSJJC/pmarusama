@@ -13,7 +13,7 @@
 <script setup lang='ts'>
 import { ref, Ref, onBeforeMount } from "vue"
 import axios from 'axios';
-import type { SocialMediaType } from "../../../types/socialMediaTypes"
+import type { SocialMediaType } from "./types/socialMediaTypes"
 
 const socialMedias: Ref<SocialMediaType[]> = ref([])
 const socialMediaImgs: Ref<string[]> = ref([])
@@ -54,4 +54,4 @@ async function init() {
 onBeforeMount(() => {
   init()
 })
-</script>
+</script>./types/socialMediaTypes
