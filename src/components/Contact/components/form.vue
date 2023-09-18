@@ -1,5 +1,5 @@
 <template>
-  <div class="m-plus-rounded-1c w-full flex justify-center items-center flex-col gap-4">
+  <div class="m-plus-rounded-1c w-full flex justify-center items-center flex-col gap-4 lg:max-w-[1060px] lg:m-auto">
 
     <!-- form -->
     <div v-for="(i, index) in formData" :key="index"
@@ -19,12 +19,12 @@
       </Transition>
 
       <input v-if="i.inputType === 'input'" type="text"
-        class="w-full border-[1.5px] border-[#00d991] rounded-lg p-2 text-sm focus:outline-none md:w-[70%]"
+        class="w-full border-[1.5px] border-[#00d991] rounded-lg p-2 text-sm focus:outline-none md:w-[80%]"
         :style="{ borderColor: i.verificationPassed || i.verificationPassed === undefined ? '' : '#ff5889' }"
         v-model="i.text" @input="i.checkFunction" @blur="i.checkFunction">
 
       <textarea v-else-if="i.inputType === 'textarea'" v-model="i.text" rows="10"
-        class="w-full border-[1.5px] border-[#00d991] rounded-lg p-2 text-sm resize-none focus:outline-none md:w-[70%]"
+        class="w-full border-[1.5px] border-[#00d991] rounded-lg p-2 text-sm resize-none focus:outline-none md:w-[80%]"
         :style="{ borderColor: i.verificationPassed || i.verificationPassed === undefined ? '' : '#ff5889' }"
         @input="i.checkFunction" @blur="i.checkFunction"></textarea>
     </div>
