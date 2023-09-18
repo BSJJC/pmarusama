@@ -51,6 +51,5 @@
   z-index: -1;
   background-image: linear-gradient(135deg, #ffd0de 25%, #fff 25%, #fff 50%, #ffd0de 50%, #ffd0de 75%, #fff 75%, #fff 100%);
   background-size: 24px 24px;
-  background-attachment: fixed;
 }
 </style>

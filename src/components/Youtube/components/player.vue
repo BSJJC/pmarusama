@@ -34,7 +34,6 @@ import YoutubePlayer from "../../Common/YoutubePlayer.vue"
   height: 100%;
   background-image: linear-gradient(135deg, #a7ef91 25%, #fff 25%, #fff 50%, #a7ef91 50%, #a7ef91 75%, #fff 75%, #fff 100%);
   background-size: 24px 24px;
-  background-attachment: fixed;
   z-index: -1;
 }
 </style>

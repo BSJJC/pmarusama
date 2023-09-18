@@ -1,5 +1,6 @@
 <template>
-  <footer ref="footer" id="p-footer-container" class="bg-[#fff157] h-[80px] flex justify-center items-center z-[9999]">
+  <footer ref="footer" id="p-footer-container"
+    class="relative bg-[#fff157] h-[140px] flex justify-center items-center z-[9999]">
     <!-- to page top button -->
     <Transition>
       <div v-show="y > 200" id="p-pagetop" class="absolute w-full">
@@ -29,19 +30,6 @@ const footerVisible = useElementVisibility(footer)
 </script>
   
 <style scoped>
-#p-footer-container::before {
-  position: absolute;
-  content: "";
-  margin: auto;
-  box-sizing: border-box;
-  vertical-align: middle;
-  top: -6px;
-  left: 0px;
-  width: 100%;
-  height: 6px;
-  background: url(../../assets/imgs/section-bg-bottom.png) center bottom/auto 100%;
-}
-
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.3s ease;

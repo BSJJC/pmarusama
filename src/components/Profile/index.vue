@@ -1,9 +1,7 @@
 <template>
   <div id="p-profile-container" class="relative my-8">
-    <!-- title -->
     <Title></Title>
 
-    <!-- profile -->
     <Profile></Profile>
   </div>
 </template>

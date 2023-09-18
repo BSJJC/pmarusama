@@ -1,12 +1,10 @@
 <template>
-    <div id="p-contact-container" class="relative flex justify-center items-center flex-col  gap-8 py-20 px-3">
-        <!-- title -->
+    <div id="p-contact-container"
+        class="lace-top lace-bottom relative flex justify-center items-center bg-[#ffffffb3] flex-col  gap-8 py-20 px-3">
         <Titlte></Titlte>
 
-        <!-- intro -->
         <Intro></Intro>
 
-        <!-- form -->
         <Form></Form>
     </div>
 </template>
@@ -19,32 +17,4 @@ const Intro = defineAsyncComponent(() => import("./components/intro.vue"))
 const Form = defineAsyncComponent(() => import("./components/form.vue"))
 </script>
   
-<style scoped>
-#p-contact-container {
-    background: rgba(255, 255, 255, .7);
-}
-
-#p-contact-container::before {
-    position: absolute;
-    content: "";
-    margin: auto;
-    box-sizing: border-box;
-    vertical-align: middle;
-    top: -6px;
-    width: 100%;
-    height: 6px;
-    background: url(../../assets/imgs/section-bg-top.png) center bottom/auto 100%;
-}
-
-#p-contact-container::after {
-    position: absolute;
-    content: "";
-    margin: auto;
-    box-sizing: border-box;
-    vertical-align: middle;
-    bottom: -6px;
-    width: 100%;
-    height: 6px;
-    background: url(../../assets/imgs/section-bg-bottom.png) center bottom/auto 100%;
-}
-</style> 
+<style scoped></style> 

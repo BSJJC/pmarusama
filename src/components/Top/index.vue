@@ -1,11 +1,9 @@
 <template>
   <div id="p-top-container" class="flex justify-center items-center relative bg-fixed py-8">
     <div class="my-3 relative">
-      <!-- logo -->
       <img src="../../assets/imgs/logo.png" alt="pmarusama logo"
         class="absolute top-[10%] left-[7%] w-[48%] md:top-[30%] md:w-[35%]">
 
-      <!-- index visual -->
       <img src="../../assets/imgs/index-visual.png" alt="index visual image">
     </div>
   </div>

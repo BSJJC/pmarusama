@@ -1,9 +1,7 @@
 <template>
   <div id="p-youtube-container" class="my-8 relative">
-    <!-- youtube title -->
     <Title></Title>
 
-    <!-- youtube player -->
     <Youtube></Youtube>
   </div>
 </template>
@@ -17,13 +15,11 @@ const Youtube = defineAsyncComponent(() => import("./components/player.vue"))
   
 <style scoped>
 #p-youtube-container {
-  position: relative;
   background: url(../../assets/imgs/parts3.png) center right -5vw/20vw auto no-repeat;
 }
 
 @media (min-width: 1024px) {
   #p-youtube-container {
-    position: relative;
     background: url(../../assets/imgs/parts3.png)center right 4vw no-repeat;
   }
 }

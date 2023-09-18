@@ -1,13 +1,9 @@
 <template>
-  <div id="p-discography-container" class="relative py-14">
-
-    <!-- discography title -->
+  <div id="p-discography-container" class="relative py-14 lace-top lace-bottom">
     <Title></Title>
 
-    <!-- discographies -->
     <Discographies></Discographies>
     <div>
-
     </div>
   </div>
 </template>
@@ -78,29 +74,5 @@ onBeforeMount(() => {
 <style scoped>
 #p-discography-container {
   background: rgba(255, 255, 255, .7);
-}
-
-#p-discography-container::before {
-  position: absolute;
-  content: "";
-  margin: auto;
-  box-sizing: border-box;
-  vertical-align: middle;
-  top: -6px;
-  width: 100%;
-  height: 6px;
-  background: url(../../assets/imgs/section-bg-top.png) center bottom/auto 100%;
-}
-
-#p-discography-container::after {
-  position: absolute;
-  content: "";
-  margin: auto;
-  box-sizing: border-box;
-  vertical-align: middle;
-  bottom: -6px;
-  width: 100%;
-  height: 6px;
-  background: url(../../assets/imgs/section-bg-bottom.png) center top/auto 100%;
 }
 </style>
