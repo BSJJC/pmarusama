@@ -1,5 +1,5 @@
 <template>
-  <div id="p-sns-container" class="w-full grid grid-cols-2 px-3 py-8 md:grid-cols-3 md:py-16">
+  <div id="p-sns-container" class="w-full grid grid-cols-2 px-3 py-8 md:grid-cols-3 md:py-16 lg:max-w-[1060px] lg:m-auto">
     <div v-for="(i, index) in socialMedias" :key="index" class="flex justify-center items-center">
       <a :href="i.url" class="w-full mt-[12px] mx-[6px] overflow-hidden md:mt-[20px] md:mx-[10px]" target="_blank">
         <img v-if="socialMedias.length === socialMediaImgs.length" :src="socialMediaImgs[index]" alt="social medias"
