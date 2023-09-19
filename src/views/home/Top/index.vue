@@ -11,7 +11,7 @@
   
 <script setup lang='ts'>
 import { ref, Ref, onMounted } from "vue"
-import anime from 'animejs/lib/anime.es.js';
+import anime from 'animejs';
 
 const logo: Ref<HTMLElement | undefined> = ref()
 const banner: Ref<HTMLElement | undefined> = ref()

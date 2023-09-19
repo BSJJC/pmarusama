@@ -3,28 +3,24 @@
 </template>
   
 <script setup lang='ts'>
-import { ref, Ref, watch } from "vue"
-import { useElementVisibility } from "@vueuse/core"
-import anime from 'animejs/lib/anime.es.js';
+import { ref, Ref } from "vue"
+import { useElementVisibility, watchOnce } from "@vueuse/core"
+import anime from 'animejs';
 
 const title: Ref<HTMLElement | undefined> = ref()
-const titleVisible = useElementVisibility(title);
+const titleVisible: Ref<boolean> = useElementVisibility(title);
 
-watch(
+watchOnce(
   () => titleVisible.value,
   () => {
-    console.log(titleVisible.value);
     if (titleVisible) {
       anime({
         targets: title.value,
-        delay: 300,
+        delay: 100,
         opacity: [0, 1],
-        translateY: [50, 0]
+        translateY: [50, 0],
       })
     }
-  },
-  {
-    immediate: true
   }
 )
 </script>

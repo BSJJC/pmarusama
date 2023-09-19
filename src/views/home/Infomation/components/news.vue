@@ -1,5 +1,5 @@
 <template>
-  <li v-for="(i, index) in data" :key="index"
+  <li ref="news" v-for="(i, index) in data" :key="index"
     class="flex justify-center items-center w-[97%] mx-3 mb-4 border-l-[1px] border-[#f60] md:w-[90%]">
 
     <!-- news publish date -->
@@ -30,6 +30,12 @@
 </template>
   
 <script setup lang='ts'>
+import { ref, Ref, onMounted } from "vue"
+import { useElementVisibility, watchOnce } from "@vueuse/core"
+import anime from "animejs";
+
+const news: Ref<HTMLElement[] | undefined> = ref()
+
 const data = [
   {
     data: "2022/12/16",
@@ -44,6 +50,27 @@ const data = [
     title: "2ndフルアルバム『ラブホリック』より新曲「恋愛偏差値上昇中！」MV公開!"
   },
 ]
+
+onMounted(() => {
+  news.value!.forEach((li, index) => {
+    const liVisible = useElementVisibility(li);
+
+    watchOnce(
+      () => liVisible.value,
+      () => {
+        if (liVisible.value) {
+          // news
+          anime({
+            targets: li,
+            delay: 100 * index + 200,
+            opacity: [0, 1],
+            translateY: [50, 0]
+          })
+        }
+      }
+    )
+  });
+})
 </script>
   
 <style></style>
