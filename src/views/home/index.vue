@@ -19,6 +19,17 @@
 </template>
   
 <script setup lang='ts'>
+// import Header from "./Header/index.vue"
+// import Top from "./Top/index.vue"
+// import Information from "./Infomation/index.vue"
+// import Profile from "./Profile/index.vue"
+// import Youtube from "./Youtube/index.vue"
+// import Discography from "./Discography/index.vue"
+// import Sns from "./Sns/index.vue"
+// import Contact from "./Contact/index.vue"
+// import Footer from "./Footer/index.vue"
+
+
 import { defineAsyncComponent } from "vue"
 
 const Header = defineAsyncComponent(() => import("./Header/index.vue"))

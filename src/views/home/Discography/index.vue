@@ -11,7 +11,7 @@
 <script setup lang='ts'>
 import { ref, Ref, onBeforeMount, defineAsyncComponent } from "vue"
 import axios from "axios"
-import type { DiscographyType } from "../../../types/discographyTypes"
+import type { DiscographyType } from "./types/discographyTypes"
 
 interface IDiscographyStruct {
   title: string,

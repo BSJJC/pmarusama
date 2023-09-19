@@ -7,9 +7,6 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    ElButton: typeof import('element-plus/es')['ElButton']
-    ElScroll: typeof import('element-plus/es')['ElScroll']
-    ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
     YoutubePlayer: typeof import('./../components/Common/YoutubePlayer.vue')['default']
   }
 }
