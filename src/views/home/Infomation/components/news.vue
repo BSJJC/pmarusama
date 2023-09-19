@@ -31,8 +31,8 @@
   
 <script setup lang='ts'>
 import { ref, Ref, onMounted } from "vue"
-import { useElementVisibility, watchOnce } from "@vueuse/core"
 import anime from "animejs";
+import enterAnimation from "@/utils/enterAnimation";
 
 const news: Ref<HTMLElement[] | undefined> = ref()
 
@@ -53,22 +53,13 @@ const data = [
 
 onMounted(() => {
   news.value!.forEach((li, index) => {
-    const liVisible = useElementVisibility(li);
+    const newsAnimationConfig: anime.AnimeParams = {
+      delay: 100 * index + 200,
+      opacity: [0, 1],
+      translateY: [50, 0]
+    }
 
-    watchOnce(
-      () => liVisible.value,
-      () => {
-        if (liVisible.value) {
-          // news
-          anime({
-            targets: li,
-            delay: 100 * index + 200,
-            opacity: [0, 1],
-            translateY: [50, 0]
-          })
-        }
-      }
-    )
+    enterAnimation(li, newsAnimationConfig)
   });
 })
 </script>

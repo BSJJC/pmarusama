@@ -6,25 +6,17 @@
   
 <script setup lang='ts'>
 import { ref, Ref, onMounted } from "vue"
-import { useElementVisibility, watchOnce } from "@vueuse/core"
 import anime from "animejs";
+import enterAnimation from "@/utils/enterAnimation";
 
 const more: Ref<HTMLElement | undefined> = ref()
+const moreAnimationConfig: anime.AnimeParams = {
+  delay: 600,
+  opacity: [0, 1]
+}
 
 onMounted(() => {
-  const moreVisible = useElementVisibility(more)
-
-  watchOnce(
-    () => moreVisible.value,
-    () => {
-      // more button
-      anime({
-        targets: more.value,
-        delay: 600,
-        opacity: [0, 1]
-      })
-    }
-  )
+  enterAnimation(more.value!, moreAnimationConfig)
 })
 </script>
   

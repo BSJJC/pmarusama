@@ -3,26 +3,21 @@
 </template>
   
 <script setup lang='ts'>
-import { ref, Ref } from "vue"
-import { useElementVisibility, watchOnce } from "@vueuse/core"
+import { ref, Ref, onMounted } from "vue"
 import anime from 'animejs';
+import enterAnimation from "@/utils/enterAnimation";
 
 const title: Ref<HTMLElement | undefined> = ref()
-const titleVisible: Ref<boolean> = useElementVisibility(title);
 
-watchOnce(
-  () => titleVisible.value,
-  () => {
-    if (titleVisible) {
-      anime({
-        targets: title.value,
-        delay: 100,
-        opacity: [0, 1],
-        translateY: [50, 0],
-      })
-    }
-  }
-)
+const titleAnimationConfig: anime.AnimeParams = {
+  delay: 100,
+  opacity: [0, 1],
+  translateY: [50, 0],
+}
+
+onMounted(() => {
+  enterAnimation(title.value!, titleAnimationConfig)
+})
 </script>
   
 <style></style>
