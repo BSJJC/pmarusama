@@ -1,6 +1,6 @@
 <template>
   <footer ref="footer" id="p-footer-container"
-    class="relative bg-[#fff157] h-[140px] flex justify-center items-center z-[9999]">
+    class="relative lace-bottom after:top-[-140px] bg-[#fff157] h-[140px] flex justify-center items-center z-[9999]">
     <!-- to page top button -->
     <Transition>
       <div v-show="y > 200" id="p-pagetop" class="absolute top-[30%] w-full">
