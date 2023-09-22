@@ -1,3 +1,4 @@
+import { Ref } from "vue"
 import { useElementVisibility, watchOnce } from "@vueuse/core"
 import anime from "animejs";
 
@@ -10,7 +11,7 @@ export default function enterAnimation(
   htmlElement: HTMLElement,
   animationConfig: anime.AnimeParams)
   : void {
-  const htmlElementVisible = useElementVisibility(htmlElement);
+  const htmlElementVisible: Ref<boolean> = useElementVisibility(htmlElement);
 
   watchOnce(
     () => htmlElementVisible.value,

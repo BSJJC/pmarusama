@@ -1,10 +1,10 @@
 <template>
-  <div id="p-profile__main"
+  <div ref="outterContainer" id="p-profile__main"
     class="w-[95%] pl-[11%] pb-[70px] pr-4 pt-4 translate-y-[-7%] ml-auto md:translate-y-[-8%] md:pt-10 md:pb-[120px] lg:w-[80vw] lg:pt-[5vw] lg:pr-0 lg:pb-[10vw] lg:pl-[18vw]">
-    <div id="p-profile__inner"
+    <div ref="innerContainer" id="p-profile__inner"
       class="bg-[#ffda55] relative mt-4 ml-2 rounded-lg md:flex md:justify-center md:items-center lg:max-w-[640px] lg:pl-[2vw]">
       <!-- profile intro -->
-      <div class="m-plus-rounded-1c pb-3 text-[#787878] pt-6 px-4 leading-3 md:w-1/2 md:px-10 lg:p-0">
+      <div ref="intro" class="m-plus-rounded-1c pb-3 text-[#787878] pt-6 px-4 leading-3 md:w-1/2 md:px-10 lg:p-0">
         <h3 class="text-3xl font-bold">P丸様。</h3>
         <span class=" text-sm font-bold md:text-lg">YouTubeやTikTok等の動画投稿サイトで活動中のマルチエンターテイナー！</span>
         <br />
@@ -20,7 +20,45 @@
 </template>
   
 <script setup lang='ts'>
+import { ref, Ref, onMounted } from "vue"
+import anime from "animejs";
+import enterAnimation from "@/utils/enterAnimation";
 
+const outterContainer: Ref<HTMLElement | undefined> = ref()
+const innerContainer: Ref<HTMLElement | undefined> = ref()
+const intro: Ref<HTMLElement | undefined> = ref()
+
+const outterContainerAnimationConfig: anime.AnimeParams = {
+  delay: 200,
+  duration: 1000,
+  translateX: [500, 0],
+  opacity: [0, 1],
+  easing: 'easeOutExpo'
+}
+
+const innerContainerAnimationConfig: anime.AnimeParams = {
+  delay: 600,
+  marginTop: [100, 16],
+  opacity: [0, 1],
+  easing: 'easeOutExpo'
+}
+
+onMounted(() => {
+  enterAnimation(outterContainer.value!, outterContainerAnimationConfig);
+  enterAnimation(innerContainer.value!, innerContainerAnimationConfig)
+
+  intro.value!.childNodes.forEach((el, index) => {
+    if (!el.textContent) return;
+
+    const elAnimationConfig: anime.AnimeParams = {
+      delay: 700 + 100 * index,
+      opacity: [0, 1],
+      translateY: [-100, 0]
+    }
+
+    enterAnimation(el as HTMLElement, elAnimationConfig)
+  });
+})
 </script>
   
 <style scoped>
@@ -41,8 +79,21 @@
   }
 }
 
+@keyframes bg-fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 #p-profile__inner::before {
   position: absolute;
+  animation: bg-fade-in 300ms ease-in-out forwards;
+  animation-delay: 4s;
+  opacity: 0;
   content: "";
   top: 5px;
   left: 5px;
