@@ -7,8 +7,7 @@
             <a :href="i.url"
                 class="w-full mt-[12px] mx-[6px] overflow-hidden rounded-lg md:mt-[20px] md:mx-[10px]"
                 target="_blank">
-                <img v-if="socialMedias.length === socialMediaImgs.length"
-                    :src="socialMediaImgs[index]"
+                <img :src="`http://localhost:5000/api/socialMediaImg/${socialMedias[index].imgID}`"
                     alt="social medias"
                     class="scale-105 transition-all duration-300 hover:scale-[115%]">
             </a>
@@ -17,47 +16,16 @@
 </template>
   
 <script setup lang='ts'>
-import { ref, Ref, onBeforeMount } from "vue"
-import axios from 'axios';
+import { ref, Ref, onMounted } from "vue"
 import type { SocialMediaType } from "./types/socialMediaTypes"
+import { getSocialMediaData } from "@/api/sns/index.ts"
 
 const socialMedias: Ref<SocialMediaType[]> = ref([])
-const socialMediaImgs: Ref<string[]> = ref([])
 
-/**
- * get social media data
- * @param callback the function that fetches the cover
- */
-function fetchDate(callback: Function): void {
-    axios.get(
-        "http://localhost:5000/api/socialMedia/get"
-    )
+onMounted(async () => {
+    await getSocialMediaData()
         .then(res => {
-            socialMedias.value = res.data.socialMedias
+            socialMedias.value = res
         })
-        .then(() => {
-            callback()
-        })
-}
-
-/**
- * get social media covers
- */
-function fetchCover(): void {
-    socialMedias.value.forEach(media => {
-        axios.get
-            (`http://localhost:5000/api/socialMediaImg/${media.imgID}`)
-            .then(res => {
-                socialMediaImgs.value.push(`data:image/jpeg;base64,${res.data}`)
-            })
-    });
-}
-
-async function init() {
-    fetchDate(fetchCover)
-}
-
-onBeforeMount(() => {
-    init()
 })
-</script>./types/socialMediaTypes
+</script>
