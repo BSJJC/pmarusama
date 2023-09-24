@@ -27,6 +27,7 @@
   
 <script setup lang='ts'>
 import { ref, Ref, onMounted } from "vue"
+import { useElementVisibility, watchOnce } from "@vueuse/core"
 import anime from "animejs";
 import enterAnimation from "@/utils/enterAnimation";
 
@@ -34,6 +35,8 @@ const outterContainer: Ref<HTMLElement | undefined> = ref()
 const innerContainer: Ref<HTMLElement | undefined> = ref()
 const intro: Ref<HTMLElement | undefined> = ref()
 const img: Ref<HTMLElement | undefined> = ref()
+
+const innerContainerVisible = useElementVisibility(innerContainer);
 
 const outterContainerAnimationConfig: anime.AnimeParams = {
     delay: 200,
@@ -73,6 +76,13 @@ onMounted(() => {
 
         enterAnimation(el as HTMLElement, elAnimationConfig)
     }
+
+    watchOnce(
+        () => innerContainerVisible.value,
+        () => {
+            innerContainer.value!.classList.add("show-before")
+        }
+    )
 })
 </script>
   
@@ -94,7 +104,7 @@ onMounted(() => {
     }
 }
 
-@keyframes bg-fade-in {
+@keyframes show-before {
     0% {
         opacity: 0;
     }
@@ -104,10 +114,10 @@ onMounted(() => {
     }
 }
 
-#p-profile__inner::before {
+.show-before::before {
     position: absolute;
-    animation: bg-fade-in 300ms ease-in-out forwards;
-    animation-delay: 4s;
+    animation: show-before .3s ease-in-out forwards;
+    animation-delay: 1.5s;
     opacity: 0;
     content: "";
     top: 5px;
