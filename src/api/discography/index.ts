@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export type DiscographyType = {
+type DiscographyType = {
     releaseDate: string,
     name: string,
     coverObjectIDs: string[],

@@ -1,5 +1,6 @@
 <template>
-    <div id="p-sns-container"
+    <div ref="a"
+        id="p-sns-container"
         class="w-full grid grid-cols-2 px-3 py-8 md:grid-cols-3 md:py-16 lg:max-w-[1060px] lg:m-auto">
         <div v-for="(i, index) in socialMedias"
             :key="index"
@@ -20,6 +21,7 @@ import { ref, Ref, onMounted } from "vue"
 import type { SocialMediaType } from "./types/socialMediaTypes"
 import { getSocialMediaData } from "@/api/sns/index.ts"
 
+const a: Ref<HTMLElement | undefined> = ref()
 const socialMedias: Ref<SocialMediaType[]> = ref([])
 
 onMounted(async () => {
@@ -27,5 +29,7 @@ onMounted(async () => {
         .then(res => {
             socialMedias.value = res
         })
+
+    console.log(a.value!.childNodes);
 })
 </script>

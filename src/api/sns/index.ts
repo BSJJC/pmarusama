@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export type SocialMediaType = {
+type SocialMediaType = {
     name: string,
     url: string,
     imgID: string
