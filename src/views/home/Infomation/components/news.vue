@@ -1,5 +1,7 @@
 <template>
-  <li ref="news" v-for="(i, index) in data" :key="index"
+  <li ref="news"
+    v-for="(i, index) in data"
+    :key="index"
     class="flex justify-center items-center w-[97%] mx-3 mb-4 border-l-[1px] border-[#f60] md:w-[90%]">
 
     <!-- news publish date -->
@@ -24,7 +26,8 @@
 
     <!-- news title -->
     <div class="m-plus-rounded-1c w-[70%]  border-l-[1px] border-r-[1px] border-[#f60] px-3 md:w-[85%]">
-      <a href="" class="text-[#3865e0] font-bold">{{ i.title }}</a>
+      <a href=""
+        class="text-[#3865e0] font-bold">{{ i.title }}</a>
     </div>
   </li>
 </template>

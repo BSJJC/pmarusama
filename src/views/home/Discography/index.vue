@@ -1,5 +1,6 @@
 <template>
-  <div id="p-discography-container" class="relative py-14 lace-top lace-bottom">
+  <div id="p-discography-container"
+    class="relative py-14 lace-top lace-bottom">
     <Title></Title>
 
     <Discographies></Discographies>

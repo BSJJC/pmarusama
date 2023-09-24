@@ -8,18 +8,18 @@ import anime from "animejs";
  * @param animationConfig the detail of animation
  */
 export default function enterAnimation(
-  htmlElement: HTMLElement,
-  animationConfig: anime.AnimeParams)
-  : void {
-  const htmlElementVisible: Ref<boolean> = useElementVisibility(htmlElement);
+    htmlElement: HTMLElement,
+    animationConfig: anime.AnimeParams)
+    : void {
+    const htmlElementVisible: Ref<boolean> = useElementVisibility(htmlElement);
 
-  watchOnce(
-    () => htmlElementVisible.value,
-    () => {
-      anime({
-        targets: htmlElement,
-        ...animationConfig
-      })
-    }
-  )
+    watchOnce(
+        () => htmlElementVisible.value,
+        () => {
+            anime({
+                targets: htmlElement,
+                ...animationConfig
+            })
+        }
+    )
 }

@@ -4,5 +4,5 @@
  * @returns if the emaile addres is legitimate
  */
 export default function validateEmail(email: string): boolean {
-  return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
 }

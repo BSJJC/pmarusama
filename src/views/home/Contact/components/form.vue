@@ -2,12 +2,14 @@
   <div class="m-plus-rounded-1c w-full flex justify-center items-center flex-col gap-4 lg:max-w-[1060px] lg:m-auto">
 
     <!-- form -->
-    <div v-for="(i, index) in formData" :key="index"
+    <div v-for="(i, index) in formData"
+      :key="index"
       class="relative w-full flex items-center flex-col gap-2 md:flex-row md:px-4 md:mt-5">
       <div class=" relative w-full flex items-center gap-4 font-bold md:w-[30%] md:justify-end">
         <div class="text-[#787878]">{{ i.title }}</div>
 
-        <div v-if="i.required" class="text-white bg-[#ff5889] px-2 rounded-full">必须</div>
+        <div v-if="i.required"
+          class="text-white bg-[#ff5889] px-2 rounded-full">必须</div>
       </div>
 
       <!-- error notice -->
@@ -18,15 +20,21 @@
         </div>
       </Transition>
 
-      <input v-if="i.inputType === 'input'" type="text"
+      <input v-if="i.inputType === 'input'"
+        type="text"
         class="w-full border-[1.5px] border-[#00d991] rounded-lg p-2 text-sm focus:outline-none md:w-[80%]"
         :style="{ borderColor: i.verificationPassed || i.verificationPassed === undefined ? '' : '#ff5889' }"
-        v-model="i.text" @input="i.checkFunction" @blur="i.checkFunction">
+        v-model="i.text"
+        @input="i.checkFunction"
+        @blur="i.checkFunction">
 
-      <textarea v-else-if="i.inputType === 'textarea'" v-model="i.text" rows="10"
+      <textarea v-else-if="i.inputType === 'textarea'"
+        v-model="i.text"
+        rows="10"
         class="w-full border-[1.5px] border-[#00d991] rounded-lg p-2 text-sm resize-none focus:outline-none md:w-[80%]"
         :style="{ borderColor: i.verificationPassed || i.verificationPassed === undefined ? '' : '#ff5889' }"
-        @input="i.checkFunction" @blur="i.checkFunction"></textarea>
+        @input="i.checkFunction"
+        @blur="i.checkFunction"></textarea>
     </div>
   </div>
 

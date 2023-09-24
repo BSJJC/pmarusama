@@ -1,10 +1,11 @@
 <template>
-  <iframe type="text/html" :src="url"></iframe>
+    <iframe type="text/html"
+        :src="url"></iframe>
 </template>
   
 <script setup lang='ts'>
 interface Config {
-  url: string
+    url: string
 }
 
 const props = defineProps<Config>()

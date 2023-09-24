@@ -1,21 +1,21 @@
 <template>
-  <Header></Header>
+    <Header></Header>
 
-  <Top></Top>
+    <Top></Top>
 
-  <Information></Information>
+    <Information></Information>
 
-  <Profile></Profile>
+    <Profile></Profile>
 
-  <Youtube></Youtube>
+    <Youtube></Youtube>
 
-  <Discography></Discography>
+    <Discography></Discography>
 
-  <Sns></Sns>
+    <Sns></Sns>
 
-  <Contact></Contact>
+    <Contact></Contact>
 
-  <Footer></Footer>
+    <Footer></Footer>
 </template>
   
 <script setup lang='ts'>

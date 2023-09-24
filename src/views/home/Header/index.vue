@@ -1,19 +1,26 @@
 <template>
-  <header id="p-header-container" class="top-[10px] right-[10px] fixed z-[9999]">
+  <header id="p-header-container"
+    class="top-[10px] right-[10px] fixed z-[9999]">
     <!-- switcher -->
-    <div ref="switcher" :id="status ? 'openNav' : ''"
+    <div ref="switcher"
+      :id="status ? 'openNav' : ''"
       class="w-[50px] h-[50px] bg-[#ff5872] rounded-full relative flex justify-center items-center flex-col gap-[0.3rem] hover:cursor-pointer">
-      <p id="top-p" class=" translate-y-[9px]"></p>
+      <p id="top-p"
+        class=" translate-y-[9px]"></p>
       <p id="middle-p"></p>
-      <p id="bottom-p" class=" translate-y-[-9px]"></p>
+      <p id="bottom-p"
+        class=" translate-y-[-9px]"></p>
     </div>
 
     <!-- navs -->
     <Transition name="show-nav">
       <nav v-show="status"
         class="px-5 py-2 bg-[#ff5872] flex justify-center items-end flex-col absolute top-[55px] right-0 rounded-3xl overflow-hidden border-[3px] border-white">
-        <a v-for="(i, index) in herfs" :key="index" :href="`#p-${i.toLocaleLowerCase()}-container`"
-          class=" text-white text-lg font-bold my-1 hover:text-[#fff8a9]" style="font-family: 'M PLUS Rounded 1c';">
+        <a v-for="(i, index) in herfs"
+          :key="index"
+          :href="`#p-${i.toLocaleLowerCase()}-container`"
+          class=" text-white text-lg font-bold my-1 hover:text-[#fff8a9]"
+          style="font-family: 'M PLUS Rounded 1c';">
           {{ i }}
         </a>
       </nav>
@@ -99,5 +106,4 @@ p {
 .show-nav-enter-to,
 .show-nav-leave-from {
   height: 304px;
-}
-</style>
+}</style>

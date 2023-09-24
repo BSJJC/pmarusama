@@ -6,21 +6,21 @@ import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
-  plugins: [
-    vue(),
-    AutoImport({
-      resolvers: [ElementPlusResolver()],
-      dts: "src/autoImports/components.d.ts"
-    }),
-    Components({
-      resolvers: [ElementPlusResolver()],
-      dts: "src/autoComponents/components.d.ts"
-    }),
-  ],
+    plugins: [
+        vue(),
+        AutoImport({
+            resolvers: [ElementPlusResolver()],
+            dts: "src/autoImports/components.d.ts"
+        }),
+        Components({
+            resolvers: [ElementPlusResolver()],
+            dts: "src/autoComponents/components.d.ts"
+        }),
+    ],
 
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "src")
+    resolve: {
+        alias: {
+            "@": path.resolve(__dirname, "src")
+        }
     }
-  }
 })
