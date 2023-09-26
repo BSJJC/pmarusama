@@ -1,6 +1,5 @@
 <template>
-    <el-scrollbar ref="scrollbarRef"
-        height="100vh">
+    <el-scrollbar height="100vh">
         <div id="body">
             <Home></Home>
         </div>
@@ -8,16 +7,7 @@
 </template>
   
 <script setup lang='ts'>
-import { ref, provide } from "vue"
 import Home from "./views/home/index.vue"
-
-const scrollbarRef = ref()
-
-function scrollTo(distanceFromTop: number): void {
-    scrollbarRef.value.setScrollTop(distanceFromTop)
-}
-
-provide("scrollTo", scrollTo)
 </script>
   
 <style >

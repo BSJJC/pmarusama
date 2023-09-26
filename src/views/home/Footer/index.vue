@@ -7,11 +7,14 @@
             <div v-show="!topVisible"
                 id="p-pagetop"
                 class="absolute top-[30%] w-full"
-                @click="scrollToTop">
-                <img src="@/assets/imgs/pagetop.png"
-                    alt=""
-                    :class="footerVisible ? absoluteMode : fixedMode"
-                    class="w-[40px] hover:cursor-pointer md:w-[60px]">
+                @click="">
+                <a href="#p-top-container">
+
+                    <img src="@/assets/imgs/pagetop.png"
+                        alt=""
+                        :class="footerVisible ? absoluteMode : fixedMode"
+                        class="w-[40px] hover:cursor-pointer md:w-[60px]">
+                </a>
             </div>
         </Transition>
 
@@ -21,7 +24,7 @@
 </template>
   
 <script setup lang='ts'>
-import { ref, Ref, onMounted, inject } from "vue"
+import { ref, Ref, onMounted } from "vue"
 import { useElementVisibility } from '@vueuse/core'
 
 const footer: Ref<HTMLElement | undefined> = ref()
@@ -30,11 +33,6 @@ let topVisible: Ref<boolean> = ref(false);
 const absoluteMode = "absolute right-[10px] bottom-[47px]"
 const fixedMode = "fixed right-[10px] bottom-[10px]"
 const footerVisible = useElementVisibility(footer)
-
-const scrollTo = inject("scrollTo", Function, true)
-function scrollToTop(): void {
-    scrollTo(10)
-}
 
 onMounted(() => {
     const top: HTMLElement | null = document.getElementById("p-top-container")
