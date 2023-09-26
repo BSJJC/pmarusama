@@ -3,12 +3,12 @@ import { useElementVisibility, watchOnce } from "@vueuse/core"
 import anime from "animejs";
 
 /**
- * Execute an enter animation for HTML elements.
- * @param parentHtmlElement The parent HTML element containing the child elements to animate.
- * @param targetNodeName The HTML node name (tag name) of the child elements to animate.
- * @param animationConfig The animation configuration object containing various properties and parameters for the animation, controlled by anime.js.
- * @param baseDelay (Optional) The base delay time for controlling the animation start delay.
- * @param increaseDelay (Optional) The incremental delay time used to add delay to each child element being animated.
+ * Animate child elements of a parent HTML element when the parent element becomes visible.
+ * @param {HTMLElement} parentHtmlElement - The parent HTML element containing child nodes to animate.
+ * @param {string} targetNodeName - The node name of the child nodes to target for animation (e.g., 'DIV', 'LI', etc.).
+ * @param {anime.AnimeParams} animationConfig - Configuration parameters for the animation.
+ * @param {number} [baseDelay] - The base delay before starting animations for child nodes (optional).
+ * @param {number} [increaseDelay] - The increase in delay between animations for consecutive child nodes (optional).
  */
 export default function overrallEnterAnimation(
     parentHtmlElement: HTMLElement,

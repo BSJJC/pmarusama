@@ -3,9 +3,9 @@ import { useElementVisibility, watchOnce } from "@vueuse/core"
 import anime from "animejs";
 
 /**
- * Perform an entrance animation for an HTML element.
- * @param htmlElement The HTML element that requires animation.
- * @param animationConfig Details of the animation, specified through an anime.js configuration object.
+ * Animate an HTML element when it becomes visible.
+ * @param {HTMLElement} htmlElement - The HTML element to animate.
+ * @param {anime.AnimeParams} animationConfig - Configuration parameters for the animation.
  */
 export default function enterAnimation(
     htmlElement: HTMLElement,

@@ -1,14 +1,14 @@
 <template>
-  <div id="p-information-container"
-    class="w-full  py-8 mb-5 flex justify-center items-center relative">
-    <div class="lace-top lace-bottom w-full py-[20px] flex justify-center items-center flex-col max-w-[800px]">
-      <Title></Title>
+    <div id="p-information-container"
+        class="w-full  py-8 mb-5 flex justify-center items-center relative">
+        <div class="lace-top lace-bottom w-full py-[20px] flex justify-center items-center flex-col max-w-[800px]">
+            <Title></Title>
 
-      <News></News>
+            <News></News>
 
-      <More></More>
+            <More></More>
+        </div>
     </div>
-  </div>
 </template>
   
 <script setup lang='ts'>
@@ -21,6 +21,6 @@ const More = defineAsyncComponent(() => import("./components/more.vue"))
   
 <style scoped>
 #p-information-container {
-  background: rgba(255, 255, 255, .7) url(@/assets//imgs/parts1.png) bottom 6vw right 4vw/24vw auto no-repeat;
+    background: rgba(255, 255, 255, .7) url(@/assets//imgs/parts1.png) bottom 6vw right 4vw/24vw auto no-repeat;
 }
 </style>

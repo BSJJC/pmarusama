@@ -1,7 +1,7 @@
 /**
- * Validate an email address using a regular expression.
- * @param email The email address to be validated.
- * @returns A boolean indicating whether the email address is valid.
+ * Validate an email address based on a regular expression pattern.
+ * @param {string} email - The email address to validate.
+ * @returns {boolean} True if the email address is valid, false otherwise.
  */
 export default function validateEmail(email: string): boolean {
     // Use a regular expression to check if the email address matches the expected pattern.
