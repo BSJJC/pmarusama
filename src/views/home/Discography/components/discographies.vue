@@ -20,9 +20,9 @@
 </template>
   
 <script setup lang='ts'>
-import { ref, Ref, onMounted } from "vue"
+import { ref, Ref, onBeforeMount, onMounted } from "vue"
 import anime from "animejs";
-import { getDiscograhyData } from "@/api/discography/index.ts"
+import { getDiscographyData } from "@/api/discography/index.ts"
 import overrallEnterAnimation from "@/utils/overallEnterAnimation";
 
 const discography: Ref<HTMLElement | undefined> = ref()
@@ -32,12 +32,11 @@ const discographyData: Ref<{
     coverID: string
 }[]> = ref([])
 
-onMounted(async () => {
-    await getDiscograhyData()
-        .then(res => {
-            discographyData.value = res
-        })
+onBeforeMount(async () => {
+    discographyData.value = await getDiscographyData()
+})
 
+onMounted(() => {
     const discographyAnimationConfig: anime.AnimeParams = {
         opacity: [0, 1],
         translateY: [50, 0]
