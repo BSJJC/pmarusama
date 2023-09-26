@@ -21,12 +21,11 @@
   
 <script setup lang='ts'>
 import { ref, Ref, onMounted } from "vue"
-import { useElementVisibility, watchOnce } from "@vueuse/core"
 import anime from "animejs";
 import { getDiscograhyData } from "@/api/discography/index.ts"
+import overrallEnterAnimation from "@/utils/overallEnterAnimation";
 
 const discography: Ref<HTMLElement | undefined> = ref()
-const discographyVisible: Ref<boolean> = useElementVisibility(discography)
 
 const discographyData: Ref<{
     title: string,
@@ -39,27 +38,12 @@ onMounted(async () => {
             discographyData.value = res
         })
 
-    watchOnce(
-        () => discographyVisible.value,
-        () => {
-            for (let i = 0; i < discography.value!.childNodes.length; i++) {
-                const el = discography.value!.childNodes[i];
+    const discographyAnimationConfig: anime.AnimeParams = {
+        opacity: [0, 1],
+        translateY: [50, 0]
+    }
 
-                if (el.nodeName === "DIV") {
-                    const elAnimationConfig: anime.AnimeParams = {
-                        delay: 300 + 100 * i,
-                        opacity: [0, 1],
-                        translateY: [50, 0]
-                    }
-
-                    anime({
-                        targets: el,
-                        ...elAnimationConfig
-                    })
-                }
-            }
-        }
-    )
+    overrallEnterAnimation(discography.value!, "DIV", discographyAnimationConfig, 300, 100)
 })
 </script>
   
