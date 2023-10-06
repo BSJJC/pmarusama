@@ -33,11 +33,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, Ref, onMounted } from 'vue'
-import anime from 'animejs'
-import enterAnimation from '@/utils/enterAnimation'
+import { ref, Ref, onMounted } from 'vue';
+import anime from 'animejs';
+import enterAnimation from '@/utils/enterAnimation';
 
-const news: Ref<HTMLElement[] | undefined> = ref()
+const news: Ref<HTMLElement[] | undefined> = ref();
 
 const data = [
   {
@@ -52,7 +52,7 @@ const data = [
     data: '2022/10/08',
     title: '2ndフルアルバム『ラブホリック』より新曲「恋愛偏差値上昇中！」MV公開!',
   },
-]
+];
 
 onMounted(() => {
   news.value!.forEach((li, index) => {
@@ -60,11 +60,11 @@ onMounted(() => {
       delay: 100 * index + 200,
       opacity: [0, 1],
       translateY: [50, 0],
-    }
+    };
 
-    enterAnimation(li, newsAnimationConfig)
-  })
-})
+    enterAnimation(li, newsAnimationConfig);
+  });
+});
 </script>
 
 <style></style>

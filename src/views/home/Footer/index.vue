@@ -24,20 +24,20 @@
 </template>
 
 <script setup lang="ts">
-import { ref, Ref, onMounted } from 'vue'
-import { useElementVisibility } from '@vueuse/core'
+import { ref, Ref, onMounted } from 'vue';
+import { useElementVisibility } from '@vueuse/core';
 
-const footer: Ref<HTMLElement | undefined> = ref()
-let topVisible: Ref<boolean> = ref(false)
+const footer: Ref<HTMLElement | undefined> = ref();
+let topVisible: Ref<boolean> = ref(false);
 
-const absoluteMode = 'absolute right-[10px] bottom-[47px]'
-const fixedMode = 'fixed right-[10px] bottom-[10px]'
-const footerVisible = useElementVisibility(footer)
+const absoluteMode = 'absolute right-[10px] bottom-[47px]';
+const fixedMode = 'fixed right-[10px] bottom-[10px]';
+const footerVisible = useElementVisibility(footer);
 
 onMounted(() => {
-  const top: HTMLElement | null = document.getElementById('p-top-container')
-  topVisible = useElementVisibility(top)
-})
+  const top: HTMLElement | null = document.getElementById('p-top-container');
+  topVisible = useElementVisibility(top);
+});
 </script>
 
 <style scoped>

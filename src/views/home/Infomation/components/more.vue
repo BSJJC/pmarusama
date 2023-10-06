@@ -5,19 +5,19 @@
 </template>
 
 <script setup lang="ts">
-import { ref, Ref, onMounted } from 'vue'
-import anime from 'animejs'
-import enterAnimation from '@/utils/enterAnimation'
+import { ref, Ref, onMounted } from 'vue';
+import anime from 'animejs';
+import enterAnimation from '@/utils/enterAnimation';
 
-const more: Ref<HTMLElement | undefined> = ref()
+const more: Ref<HTMLElement | undefined> = ref();
 const moreAnimationConfig: anime.AnimeParams = {
   delay: 600,
   opacity: [0, 1],
-}
+};
 
 onMounted(() => {
-  enterAnimation(more.value!, moreAnimationConfig)
-})
+  enterAnimation(more.value!, moreAnimationConfig);
+});
 </script>
 
 <style></style>

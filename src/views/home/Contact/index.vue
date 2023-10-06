@@ -12,11 +12,11 @@
 </template>
 
 <script setup lang="ts">
-import { defineAsyncComponent } from 'vue'
+import { defineAsyncComponent } from 'vue';
 
-const Titlte = defineAsyncComponent(() => import('./components/title.vue'))
-const Intro = defineAsyncComponent(() => import('./components/intro.vue'))
-const Form = defineAsyncComponent(() => import('./components/form.vue'))
+const Titlte = defineAsyncComponent(() => import('./components/title.vue'));
+const Intro = defineAsyncComponent(() => import('./components/intro.vue'));
+const Form = defineAsyncComponent(() => import('./components/form.vue'));
 </script>
 
 <style scoped></style>

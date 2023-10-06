@@ -32,10 +32,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref, Ref } from 'vue'
+import { ref, Ref } from 'vue';
 
-const switcher: Ref<HTMLElement | undefined> = ref()
-const status: Ref<boolean> = ref(false)
+const switcher: Ref<HTMLElement | undefined> = ref();
+const status: Ref<boolean> = ref(false);
 
 const herfs: Ref<string[]> = ref([
   'TOP',
@@ -46,29 +46,29 @@ const herfs: Ref<string[]> = ref([
   'MMDモデル',
   'SNS',
   'CONTACT',
-])
+]);
 
 /**
  * toggle status
  * @param event mouse click eevnt
  */
 function toggleNav(event: Event): void {
-  const target = event.target as HTMLElement
+  const target = event.target as HTMLElement;
 
   // only call toogleNav function directly when switcher itself is clicked
   // or, when clicked on the p tags which is the three lines
   if (target === switcher.value || target.id === 'top-p' || target.id === 'middle-p' || target.id === 'bottom-p') {
-    status.value = !status.value
-    return
+    status.value = !status.value;
+    return;
   }
 
   // otherwise, only when stats is true, toogleNav function can be called
   if (status.value === true) {
-    status.value = !status.value
+    status.value = !status.value;
   }
 }
 
-document.addEventListener('click', toggleNav)
+document.addEventListener('click', toggleNav);
 </script>
 
 <style scoped>

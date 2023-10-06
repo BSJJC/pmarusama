@@ -20,16 +20,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref, Ref, onMounted } from 'vue'
-import { useElementVisibility, watchOnce } from '@vueuse/core'
-import anime from 'animejs'
-import YoutubePlayer from '@/components/Common/YoutubePlayer.vue'
-import enterAnimation from '@/utils/enterAnimation'
+import { ref, Ref, onMounted } from 'vue';
+import { useElementVisibility, watchOnce } from '@vueuse/core';
+import anime from 'animejs';
+import YoutubePlayer from '@/components/Common/YoutubePlayer.vue';
+import enterAnimation from '@/utils/enterAnimation';
 
-const outterContainer: Ref<HTMLElement | undefined> = ref()
-const innerContainer: Ref<HTMLTimeElement | undefined> = ref()
+const outterContainer: Ref<HTMLElement | undefined> = ref();
+const innerContainer: Ref<HTMLTimeElement | undefined> = ref();
 
-const innerContainerVisible = useElementVisibility(innerContainer)
+const innerContainerVisible = useElementVisibility(innerContainer);
 
 const outterContainerAnimationConfig: anime.AnimeParams = {
   delay: 200,
@@ -37,26 +37,26 @@ const outterContainerAnimationConfig: anime.AnimeParams = {
   translateX: [-500, 0],
   opacity: [0, 1],
   easing: 'easeOutExpo',
-}
+};
 
 const innerContainerAnimationConfig: anime.AnimeParams = {
   delay: 600,
   marginTop: [100, 16],
   opacity: [0, 1],
   easing: 'easeOutExpo',
-}
+};
 
 onMounted(() => {
-  enterAnimation(outterContainer.value!, outterContainerAnimationConfig)
-  enterAnimation(innerContainer.value!, innerContainerAnimationConfig)
+  enterAnimation(outterContainer.value!, outterContainerAnimationConfig);
+  enterAnimation(innerContainer.value!, innerContainerAnimationConfig);
 
   watchOnce(
     () => innerContainerVisible.value,
     () => {
-      innerContainer.value!.classList.add('show-before')
+      innerContainer.value!.classList.add('show-before');
     },
-  )
-})
+  );
+});
 </script>
 
 <style scoped>

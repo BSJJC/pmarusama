@@ -21,25 +21,25 @@
 </template>
 
 <script setup lang="ts">
-import { ref, Ref, onMounted } from 'vue'
-import anime from 'animejs'
-import type { SocialMediaType } from './types/socialMediaTypes'
-import { getSocialMediaData } from '@/api/sns/index.ts'
-import overrallEnterAnimation from '@/utils/overallEnterAnimation.ts'
+import { ref, Ref, onMounted } from 'vue';
+import anime from 'animejs';
+import type { SocialMediaType } from './types/socialMediaTypes';
+import { getSocialMediaData } from '@/api/sns/index.ts';
+import overrallEnterAnimation from '@/utils/overallEnterAnimation.ts';
 
-const socialMedia: Ref<HTMLElement | undefined> = ref()
-const socialMediaData: Ref<SocialMediaType[]> = ref([])
+const socialMedia: Ref<HTMLElement | undefined> = ref();
+const socialMediaData: Ref<SocialMediaType[]> = ref([]);
 
 onMounted(async () => {
   await getSocialMediaData().then((res) => {
-    socialMediaData.value = res
-  })
+    socialMediaData.value = res;
+  });
 
   const socialMediaAnimationConfig: anime.AnimeParams = {
     opacity: [0, 1],
     translateY: [50, 0],
-  }
+  };
 
-  overrallEnterAnimation(socialMedia.value!, 'DIV', socialMediaAnimationConfig, 100, 100)
-})
+  overrallEnterAnimation(socialMedia.value!, 'DIV', socialMediaAnimationConfig, 100, 100);
+});
 </script>

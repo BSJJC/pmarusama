@@ -7,10 +7,10 @@
 </template>
 
 <script setup lang="ts">
-import { defineAsyncComponent } from 'vue'
+import { defineAsyncComponent } from 'vue';
 
-const Title = defineAsyncComponent(() => import('./components/title.vue'))
-const Youtube = defineAsyncComponent(() => import('./components/player.vue'))
+const Title = defineAsyncComponent(() => import('./components/title.vue'));
+const Youtube = defineAsyncComponent(() => import('./components/player.vue'));
 </script>
 
 <style scoped>

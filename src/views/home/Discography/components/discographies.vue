@@ -17,32 +17,32 @@
 </template>
 
 <script setup lang="ts">
-import { ref, Ref, onBeforeMount, onMounted } from 'vue'
-import anime from 'animejs'
-import { getDiscographyData } from '@/api/discography/index.ts'
-import overrallEnterAnimation from '@/utils/overallEnterAnimation'
+import { ref, Ref, onBeforeMount, onMounted } from 'vue';
+import anime from 'animejs';
+import { getDiscographyData } from '@/api/discography/index.ts';
+import overrallEnterAnimation from '@/utils/overallEnterAnimation';
 
-const discography: Ref<HTMLElement | undefined> = ref()
+const discography: Ref<HTMLElement | undefined> = ref();
 
 const discographyData: Ref<
   {
-    title: string
-    coverID: string
+    title: string;
+    coverID: string;
   }[]
-> = ref([])
+> = ref([]);
 
 onBeforeMount(async () => {
-  discographyData.value = await getDiscographyData()
-})
+  discographyData.value = await getDiscographyData();
+});
 
 onMounted(() => {
   const discographyAnimationConfig: anime.AnimeParams = {
     opacity: [0, 1],
     translateY: [50, 0],
-  }
+  };
 
-  overrallEnterAnimation(discography.value!, 'DIV', discographyAnimationConfig, 300, 100)
-})
+  overrallEnterAnimation(discography.value!, 'DIV', discographyAnimationConfig, 300, 100);
+});
 </script>
 
 <style></style>

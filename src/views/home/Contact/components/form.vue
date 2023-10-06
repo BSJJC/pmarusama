@@ -57,13 +57,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref, Ref } from 'vue'
-import _ from 'lodash'
-import validateEmail from '@/utils/validateEmail'
-import { IItem, itemNames } from '../types/index.ts'
+import { ref, Ref } from 'vue';
+import _ from 'lodash';
+import validateEmail from '@/utils/validateEmail';
+import { IItem, itemNames } from '../types/index.ts';
 
 const formItems: Ref<{
-  [key in itemNames]: IItem
+  [key in itemNames]: IItem;
 }> = ref({
   name: {
     title: 'お名前',
@@ -97,7 +97,7 @@ const formItems: Ref<{
     inputType: 'textarea',
     checkFunction: inquiryCheck,
   },
-})
+});
 
 /**
  * Check if a form field is not empty.
@@ -105,21 +105,21 @@ const formItems: Ref<{
  * @returns {boolean} True if the field is not empty, false otherwise.
  */
 function checkField(itemName: itemNames): boolean {
-  return formItems.value[itemName].text.trim().length > 0
+  return formItems.value[itemName].text.trim().length > 0;
 }
 
 /**
  * Check the 'name' field and update its verification status.
  */
 function nameChcke(): void {
-  formItems.value['name'].verificationPassed = checkField('name')
+  formItems.value['name'].verificationPassed = checkField('name');
 }
 
 /**
  * Check the 'subject' field and update its verification status.
  */
 function subjectCheck(): void {
-  formItems.value['subject'].verificationPassed = checkField('subject')
+  formItems.value['subject'].verificationPassed = checkField('subject');
 }
 
 /**
@@ -127,34 +127,34 @@ function subjectCheck(): void {
  */
 function emailCheck(): void {
   if (!checkField('email')) {
-    formItems.value['email'].verificationPassed = false
-    return
+    formItems.value['email'].verificationPassed = false;
+    return;
   }
 
-  const email = formItems.value['email'].text
+  const email = formItems.value['email'].text;
 
-  formItems.value['email'].verificationPassed = validateEmail(email)
+  formItems.value['email'].verificationPassed = validateEmail(email);
 }
 
 /**
  * Check the 'inquiry' field and update its verification status.
  */
 function inquiryCheck(): void {
-  formItems.value['inquiry'].verificationPassed = checkField('inquiry')
+  formItems.value['inquiry'].verificationPassed = checkField('inquiry');
 }
 
 /**
  * Handle form submission and log the result.
  */
 function submit(): void {
-  const status = _.map(formItems.value, 'verificationPassed')
+  const status = _.map(formItems.value, 'verificationPassed');
 
   if (status.every((el) => el === true)) {
-    console.log('OK')
+    console.log('OK');
   } else {
     _.forEach(formItems.value, (item) => {
-      if (item.verificationPassed === undefined) item.verificationPassed = false
-    })
+      if (item.verificationPassed === undefined) item.verificationPassed = false;
+    });
   }
 }
 </script>
