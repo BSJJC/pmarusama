@@ -14,9 +14,9 @@
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue';
 
-const Titlte = defineAsyncComponent(() => import('./components/title.vue'));
-const Intro = defineAsyncComponent(() => import('./components/intro.vue'));
-const Form = defineAsyncComponent(() => import('./components/form.vue'));
+const Titlte = defineAsyncComponent(() => import('./components/contact-title.vue'));
+const Intro = defineAsyncComponent(() => import('./components/contact-intro.vue'));
+const Form = defineAsyncComponent(() => import('./components/contact-form.vue'));
 </script>
 
 <style scoped></style>

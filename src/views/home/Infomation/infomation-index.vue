@@ -13,9 +13,9 @@
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue';
 
-const Title = defineAsyncComponent(() => import('./components/title.vue'));
-const News = defineAsyncComponent(() => import('./components/news.vue'));
-const More = defineAsyncComponent(() => import('./components/more.vue'));
+const Title = defineAsyncComponent(() => import('./components/infomation-title.vue'));
+const News = defineAsyncComponent(() => import('./components/infomation-news.vue'));
+const More = defineAsyncComponent(() => import('./components/infomation-more.vue'));
 </script>
 
 <style scoped>

@@ -9,8 +9,8 @@
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue';
 
-const Title = defineAsyncComponent(() => import('./components/title.vue'));
-const Youtube = defineAsyncComponent(() => import('./components/player.vue'));
+const Title = defineAsyncComponent(() => import('./components/youtube-title.vue'));
+const Youtube = defineAsyncComponent(() => import('./components/youtube-player.vue'));
 </script>
 
 <style scoped>

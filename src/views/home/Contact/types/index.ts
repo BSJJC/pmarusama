@@ -4,7 +4,7 @@ export interface IItem {
   text: string;
   verificationPassed: boolean | undefined;
   inputType: 'input' | 'textarea';
-  checkFunction: Function;
+  checkFunction: () => void;
 }
 
 export type itemNames = 'name' | 'subject' | 'email' | 'inquiry';

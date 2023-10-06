@@ -9,8 +9,8 @@
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue';
 
-const Title = defineAsyncComponent(() => import('./components/title.vue'));
-const Profile = defineAsyncComponent(() => import('./components/profile.vue'));
+const Title = defineAsyncComponent(() => import('./components/profile-title.vue'));
+const Profile = defineAsyncComponent(() => import('./components/profile-profile.vue'));
 </script>
 
 <style scoped>

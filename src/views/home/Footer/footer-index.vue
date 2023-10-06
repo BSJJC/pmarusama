@@ -6,7 +6,7 @@
   >
     <!-- to page top button -->
     <Transition>
-      <div v-show="!topVisible" id="p-pagetop" class="absolute top-[30%] w-full" @click="">
+      <div v-show="!topVisible" id="p-pagetop" class="absolute top-[30%] w-full">
         <a href="#p-top-container">
           <img
             src="@/assets/imgs/pagetop.png"
@@ -36,7 +36,7 @@ const footerVisible = useElementVisibility(footer);
 
 onMounted(() => {
   const top: HTMLElement | null = document.getElementById('p-top-container');
-  topVisible = useElementVisibility(top);
+  topVisible.value = useElementVisibility(top).value;
 });
 </script>
 
