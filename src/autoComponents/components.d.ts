@@ -5,9 +5,9 @@
 // Read more: https://github.com/vuejs/core/pull/3399
 export {}
 
-declare module 'vue' {
+declare module "vue" {
   export interface GlobalComponents {
-    ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
-    YoutubePlayer: typeof import('./../components/Common/YoutubePlayer.vue')['default']
+    ElScrollbar: (typeof import("element-plus/es"))["ElScrollbar"];
+    YoutubePlayer: (typeof import("./../components/Common/YoutubePlayer.vue"))["default"];
   }
 }

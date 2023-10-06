@@ -1,33 +1,33 @@
 <template>
-    <Header></Header>
+  <Header></Header>
 
-    <Top></Top>
+  <Top></Top>
 
-    <Information></Information>
+  <Information></Information>
 
-    <Profile></Profile>
+  <Profile></Profile>
 
-    <Youtube></Youtube>
+  <Youtube></Youtube>
 
-    <Discography></Discography>
+  <Discography></Discography>
 
-    <Sns></Sns>
+  <Sns></Sns>
 
-    <Contact></Contact>
+  <Contact></Contact>
 
-    <Footer></Footer>
+  <Footer></Footer>
 </template>
-  
-<script setup lang='ts'>
-import Header from "./Header/index.vue"
-import Top from "./Top/index.vue"
-import Information from "./Infomation/index.vue"
-import Profile from "./Profile/index.vue"
-import Youtube from "./Youtube/index.vue"
-import Discography from "./Discography/index.vue"
-import Sns from "./Sns/index.vue"
-import Contact from "./Contact/index.vue"
-import Footer from "./Footer/index.vue"
+
+<script setup lang="ts">
+import Header from "./Header/index.vue";
+import Top from "./Top/index.vue";
+import Information from "./Infomation/index.vue";
+import Profile from "./Profile/index.vue";
+import Youtube from "./Youtube/index.vue";
+import Discography from "./Discography/index.vue";
+import Sns from "./Sns/index.vue";
+import Contact from "./Contact/index.vue";
+import Footer from "./Footer/index.vue";
 </script>
-  
+
 <style></style>
