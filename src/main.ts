@@ -5,8 +5,6 @@ import './css/index.css';
 import './css/style.css';
 import './css/fonts.css';
 
-//test
-
 const app = createApp(App);
 
 app.mount('#app');

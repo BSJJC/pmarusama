@@ -3,7 +3,7 @@
     <!-- switcher -->
     <div
       ref="switcher"
-      :id="status ? 'openNav' : ''"
+      :id="status ? 'open-nav' : ''"
       class="w-[50px] h-[50px] bg-[#ff5872] rounded-full relative flex justify-center items-center flex-col gap-[0.3rem] hover:cursor-pointer"
     >
       <p id="top-p" class="translate-y-[9px]"></p>
@@ -22,7 +22,7 @@
           :key="index"
           :href="`#p-${i.toLocaleLowerCase()}-container`"
           class="text-white text-lg font-bold my-1 hover:text-[#fff8a9]"
-          style="font-family: 'M PLUS Rounded 1c'"
+          style="font-family: 'M PLUS Rounded 1c', sans-serif"
         >
           {{ i }}
         </a>
@@ -72,16 +72,16 @@ document.addEventListener('click', toggleNav);
 </script>
 
 <style scoped>
-#openNav #top-p {
+#open-nav #top-p {
   height: 5px;
   transform: rotate(45deg);
 }
 
-#openNav #middle-p {
+#open-nav #middle-p {
   opacity: 0;
 }
 
-#openNav #bottom-p {
+#open-nav #bottom-p {
   height: 5px;
   transform: rotate(-45deg);
 }

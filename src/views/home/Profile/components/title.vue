@@ -41,7 +41,7 @@ onMounted(() => {
 
 <style scoped>
 h2 {
-  background-image: url(@/assets/imgs/profile-bg2.png);
+  background-image: url('@/assets/imgs/profile-bg2.png');
   background-size: 100% 100%;
 }
 </style>

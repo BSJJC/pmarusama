@@ -61,12 +61,12 @@ onMounted(() => {
 
 <style scoped>
 #p-youtube__main {
-  background: url(@/assets/imgs/youtube-bg-sp.png) right center/100% 100% no-repeat;
+  background: url('@/assets/imgs/youtube-bg-sp.png') right center/100% 100% no-repeat;
 }
 
-@media (min-width: 768px) {
+@media (width>= 768px) {
   #p-youtube__main {
-    background: url(@/assets/imgs/youtube-bg.png) right center/auto 105% no-repeat;
+    background: url('@/assets/imgs/youtube-bg.png') right center/auto 105% no-repeat;
   }
 }
 

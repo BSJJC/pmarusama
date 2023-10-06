@@ -15,12 +15,12 @@ const Youtube = defineAsyncComponent(() => import('./components/player.vue'));
 
 <style scoped>
 #p-youtube-container {
-  background: url(@/assets/imgs/parts3.png) center right -5vw/20vw auto no-repeat;
+  background: url('@/assets/imgs/parts3.png') center right -5vw/20vw auto no-repeat;
 }
 
-@media (min-width: 1024px) {
+@media (width>= 1024px) {
   #p-youtube-container {
-    background: url(@/assets/imgs/parts3.png) center right 4vw no-repeat;
+    background: url('@/assets/imgs/parts3.png') center right 4vw no-repeat;
   }
 }
 </style>

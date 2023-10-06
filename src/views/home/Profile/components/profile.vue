@@ -91,18 +91,18 @@ onMounted(() => {
 
 <style scoped>
 #p-profile__main {
-  background: url(@/assets/imgs/profile-bg-sp.png) left center/100% 100% no-repeat;
+  background: url('@/assets/imgs/profile-bg-sp.png') left center/100% 100% no-repeat;
 }
 
-@media (min-width: 768px) {
+@media (width>= 768px) {
   #p-profile__main {
-    background: url(@/assets/imgs/profile-bg.png) left center/auto 105% no-repeat;
+    background: url('@/assets/imgs/profile-bg.png') left center/auto 105% no-repeat;
   }
 }
 
-@media (min-width: 1024px) {
+@media (width>= 1024px) {
   #p-profile__main {
-    background: url(@/assets/imgs/profile-bg.png) left center / auto 100% no-repeat;
+    background: url('@/assets/imgs/profile-bg.png') left center / auto 100% no-repeat;
   }
 }
 

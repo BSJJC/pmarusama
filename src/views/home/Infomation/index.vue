@@ -20,6 +20,6 @@ const More = defineAsyncComponent(() => import('./components/more.vue'));
 
 <style scoped>
 #p-information-container {
-  background: rgba(255, 255, 255, 0.7) url(@/assets//imgs/parts1.png) bottom 6vw right 4vw/24vw auto no-repeat;
+  background: #ffffffb3 url('@/assets//imgs/parts1.png') bottom 6vw right 4vw/24vw auto no-repeat;
 }
 </style>

@@ -37,6 +37,6 @@ onMounted(() => {
 
 <style scoped>
 #p-youtube__title {
-  background: url(@/assets/imgs/youtube-bg2.png) left center/100% 100% no-repeat;
+  background: url('@/assets/imgs/youtube-bg2.png') left center/100% 100% no-repeat;
 }
 </style>

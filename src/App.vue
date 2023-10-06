@@ -12,7 +12,7 @@ import Home from './views/home/index.vue';
 
 <style>
 #body {
-  background: #fff8a9 url(./assets/imgs/body-bg.png) center top/100% auto;
+  background: #fff8a9 url('./assets/imgs/body-bg.png') center top/100% auto;
 }
 
 .el-scrollbar__wrap {
