@@ -1,26 +1,26 @@
-import axios from "axios";
+import axios from 'axios'
 
 /**
  * Represents an item in the discography.
  */
 interface IDiscographyItem {
-  title: string; // The title of the discography item.
-  coverID: string; // An identifier for the discography item's cover image.
+  title: string // The title of the discography item.
+  coverID: string // An identifier for the discography item's cover image.
 }
 
 /**
  * Represents a discography entry.
  */
 type DiscographyType = {
-  releaseDate: string; // The release date of the discography entry.
-  name: string; // The name or title of the discography entry.
-  coverObjectIDs: Array<string>; // Identifiers for cover images associated with the entry.
-  stprLink: string; // A link to the entry on a music platform (e.g., Spotify).
+  releaseDate: string // The release date of the discography entry.
+  name: string // The name or title of the discography entry.
+  coverObjectIDs: Array<string> // Identifiers for cover images associated with the entry.
+  stprLink: string // A link to the entry on a music platform (e.g., Spotify).
   songs: Array<{
-    name: string; // The name of a song in the discography entry.
-    credits: string; // Credits or contributors for the song.
-  }>;
-};
+    name: string // The name of a song in the discography entry.
+    credits: string // Credits or contributors for the song.
+  }>
+}
 
 /**
  * Fetches discography data from the specified API endpoint.
@@ -29,23 +29,19 @@ type DiscographyType = {
 export async function getDiscographyData(): Promise<IDiscographyItem[]> {
   try {
     // Send an HTTP GET request to the API endpoint to fetch discography data.
-    const response = await axios.get(
-      "http://localhost:5000/api/discography/get",
-    );
-    const data = response.data.discographies;
+    const response = await axios.get('http://localhost:5000/api/discography/get')
+    const data = response.data.discographies
 
     // Map the received data to create an array of simplified discography items.
-    const discographyData: IDiscographyItem[] = data.map(
-      (item: DiscographyType) => ({
-        title: item.name,
-        coverID: item.coverObjectIDs[0], // Assuming the first cover image is used.
-      }),
-    );
+    const discographyData: IDiscographyItem[] = data.map((item: DiscographyType) => ({
+      title: item.name,
+      coverID: item.coverObjectIDs[0], // Assuming the first cover image is used.
+    }))
 
-    return discographyData;
+    return discographyData
   } catch (error) {
     // Handle and log any errors that occur during the API request.
-    console.error("Error fetching discography data:", error);
-    throw error; // Rethrow the error for higher-level error handling, if needed.
+    console.error('Error fetching discography data:', error)
+    throw error // Rethrow the error for higher-level error handling, if needed.
   }
 }

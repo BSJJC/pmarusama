@@ -1,11 +1,6 @@
 <template>
-  <div
-    id="p-information-container"
-    class="w-full py-8 mb-5 flex justify-center items-center relative"
-  >
-    <div
-      class="lace-top lace-bottom w-full py-[20px] flex justify-center items-center flex-col max-w-[800px]"
-    >
+  <div id="p-information-container" class="w-full py-8 mb-5 flex justify-center items-center relative">
+    <div class="lace-top lace-bottom w-full py-[20px] flex justify-center items-center flex-col max-w-[800px]">
       <Title></Title>
 
       <News></News>
@@ -16,16 +11,15 @@
 </template>
 
 <script setup lang="ts">
-import { defineAsyncComponent } from "vue";
+import { defineAsyncComponent } from 'vue'
 
-const Title = defineAsyncComponent(() => import("./components/title.vue"));
-const News = defineAsyncComponent(() => import("./components/news.vue"));
-const More = defineAsyncComponent(() => import("./components/more.vue"));
+const Title = defineAsyncComponent(() => import('./components/title.vue'))
+const News = defineAsyncComponent(() => import('./components/news.vue'))
+const More = defineAsyncComponent(() => import('./components/more.vue'))
 </script>
 
 <style scoped>
 #p-information-container {
-  background: rgba(255, 255, 255, 0.7) url(@/assets//imgs/parts1.png) bottom 6vw
-    right 4vw/24vw auto no-repeat;
+  background: rgba(255, 255, 255, 0.7) url(@/assets//imgs/parts1.png) bottom 6vw right 4vw/24vw auto no-repeat;
 }
 </style>

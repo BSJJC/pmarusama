@@ -8,5 +8,5 @@ export default function validateEmail(email: string): boolean {
   // The pattern ensures that the email contains one or more word characters (\w),
   // followed by an optional dot (.) or hyphen (-) and more word characters,
   // an "@" symbol, followed by more word characters, a dot, and 2 to 3 letters (the domain extension).
-  return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+  return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
 }

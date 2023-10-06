@@ -1,12 +1,12 @@
 interface ISong {
-  name: string;
-  credits: string;
+  name: string
+  credits: string
 }
 
 export interface IDiscographyData {
-  coverObjectIDs: Array<string>;
-  name: string;
-  releaseDate: string;
-  song: Array<ISong>;
-  stprLink: string;
+  coverObjectIDs: Array<string>
+  name: string
+  releaseDate: string
+  song: Array<ISong>
+  stprLink: string
 }

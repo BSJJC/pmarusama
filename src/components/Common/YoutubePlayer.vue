@@ -4,10 +4,10 @@
 
 <script setup lang="ts">
 interface Config {
-  url: string;
+  url: string
 }
 
-const props = defineProps<Config>();
+const props = defineProps<Config>()
 
-const url = `https://www.youtube.com/embed/${props.url}`;
+const url = `https://www.youtube.com/embed/${props.url}`
 </script>

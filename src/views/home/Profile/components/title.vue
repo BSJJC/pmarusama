@@ -13,30 +13,30 @@
 </template>
 
 <script setup lang="ts">
-import { ref, Ref, onMounted } from "vue";
-import anime from "animejs";
-import enterAnimation from "@/utils/enterAnimation";
+import { ref, Ref, onMounted } from 'vue'
+import anime from 'animejs'
+import enterAnimation from '@/utils/enterAnimation'
 
-const h2: Ref<HTMLElement | undefined> = ref();
-const img: Ref<HTMLImageElement | undefined> = ref();
+const h2: Ref<HTMLElement | undefined> = ref()
+const img: Ref<HTMLImageElement | undefined> = ref()
 
 const h2AnimationConfig: anime.AnimeParams = {
   dealy: 200,
-  translateX: ["-100%", 0],
+  translateX: ['-100%', 0],
   duration: 1000,
-  easing: "easeOutExpo",
-};
+  easing: 'easeOutExpo',
+}
 
 const imgAnimationConfig: anime.AnimeParams = {
   delay: 400,
   opacity: [0, 1],
   translateY: [20, 0],
-};
+}
 
 onMounted(() => {
-  enterAnimation(h2.value!, h2AnimationConfig);
-  enterAnimation(img.value!, imgAnimationConfig);
-});
+  enterAnimation(h2.value!, h2AnimationConfig)
+  enterAnimation(img.value!, imgAnimationConfig)
+})
 </script>
 
 <style scoped>
