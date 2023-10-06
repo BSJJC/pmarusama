@@ -1,8 +1,15 @@
 <template>
     <el-scrollbar height="100vh">
         <div id="body">
+
+
+
             <Home></Home>
+
+
         </div>
+
+
     </el-scrollbar>
 </template>
 
