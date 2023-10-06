@@ -28,7 +28,7 @@ import { ref, Ref, onMounted } from 'vue';
 import { useElementVisibility } from '@vueuse/core';
 
 const footer: Ref<HTMLElement | undefined> = ref();
-let topVisible: Ref<boolean> = ref(false);
+let topVisible: Ref<boolean>;
 
 const absoluteMode = 'absolute right-[10px] bottom-[47px]';
 const fixedMode = 'fixed right-[10px] bottom-[10px]';
@@ -36,7 +36,7 @@ const footerVisible = useElementVisibility(footer);
 
 onMounted(() => {
   const top: HTMLElement | null = document.getElementById('p-top-container');
-  topVisible.value = useElementVisibility(top).value;
+  topVisible = useElementVisibility(top);
 });
 </script>
 
