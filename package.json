@@ -6,7 +6,8 @@
     "scripts": {
         "dev": "vite",
         "build": "vue-tsc && vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "prepare": "husky install"
     },
     "dependencies": {
         "@types/node": "^20.6.2",
@@ -23,6 +24,7 @@
         "@types/lodash": "^4.14.198",
         "@vitejs/plugin-vue": "^4.2.3",
         "autoprefixer": "^10.4.14",
+        "husky": "^8.0.3",
         "postcss": "^8.4.27",
         "prettier": "^3.0.3",
         "tailwindcss": "^3.3.3",

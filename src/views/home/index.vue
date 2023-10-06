@@ -28,6 +28,8 @@ import Discography from './Discography/index.vue';
 import Sns from './Sns/index.vue';
 import Contact from './Contact/index.vue';
 import Footer from './Footer/index.vue';
+
+//teste
 </script>
 
 <style></style>
