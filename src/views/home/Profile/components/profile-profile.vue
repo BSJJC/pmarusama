@@ -33,6 +33,7 @@ import { ref, Ref, onMounted } from 'vue';
 import { useElementVisibility, watchOnce } from '@vueuse/core';
 import anime from 'animejs';
 import enterAnimation from '@/utils/enterAnimation';
+import overrallEnterAnimation from '@/utils/overallEnterAnimation';
 
 const outterContainer: Ref<HTMLElement | undefined> = ref();
 const innerContainer: Ref<HTMLElement | undefined> = ref();
@@ -62,23 +63,16 @@ const imgAnimationConfig: anime.AnimeParams = {
   translateY: [50, 0],
 };
 
+const introAnimationConfig: anime.AnimeParams = {
+  opacity: [0, 1],
+  translateY: [-30, 0],
+};
+
 onMounted(() => {
   enterAnimation(outterContainer.value!, outterContainerAnimationConfig);
   enterAnimation(innerContainer.value!, innerContainerAnimationConfig);
   enterAnimation(img.value!, imgAnimationConfig);
-
-  for (let i = 0; i < intro.value!.childNodes.length; i++) {
-    const el = intro.value!.childNodes[i];
-    if (!el.textContent) continue;
-
-    const elAnimationConfig: anime.AnimeParams = {
-      delay: 700 + 100 * i,
-      opacity: [0, 1],
-      translateY: [-30, 0],
-    };
-
-    enterAnimation(el as HTMLElement, elAnimationConfig);
-  }
+  overrallEnterAnimation(intro.value!, ['H3', 'SPAN'], introAnimationConfig, 700, 100);
 
   watchOnce(
     () => innerContainerVisible.value,
