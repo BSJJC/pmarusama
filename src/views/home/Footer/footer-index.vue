@@ -2,7 +2,7 @@
   <footer
     ref="footer"
     id="p-footer-container"
-    class="relative lace-bottom after:top-[-140px] bg-[#fff157] h-[140px] flex justify-center items-center z-[9999]"
+    class="relative lace-bottom after:top-[-140px] bg-[#fff157] h-[140px] flex justify-center items-center"
   >
     <!-- to page top button -->
     <Transition>
