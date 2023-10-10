@@ -40,6 +40,6 @@ onMounted(async () => {
     translateY: [50, 0],
   };
 
-  overrallEnterAnimation(socialMedia.value!, 'DIV', socialMediaAnimationConfig, 100, 100);
+  overrallEnterAnimation(socialMedia.value!, ['DIV'], socialMediaAnimationConfig, 100, 100);
 });
 </script>

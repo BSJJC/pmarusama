@@ -1,17 +1,21 @@
 <template>
-  <div class="m-plus-rounded-1c w-full flex justify-center items-center flex-col gap-4 lg:max-w-[1060px] lg:m-auto">
+  <div
+    ref="contact"
+    class="m-plus-rounded-1c w-full flex justify-center items-center flex-col gap-4 lg:max-w-[1060px] lg:m-auto"
+  >
     <!-- form -->
-    <div
+    <li
       v-for="(i, index) in formItems"
       :key="index"
       class="relative w-full flex items-center flex-col gap-2 md:flex-row md:px-4 md:mt-5"
     >
       <div class="relative w-full flex items-center gap-4 font-bold md:w-[30%] md:justify-end">
-        <div class="text-[#787878]">{{ i.title }}</div>
+        <span class="text-[#787878]">{{ i.title }}</span>
 
         <div v-if="i.required" class="text-white bg-[#ff5889] px-2 rounded-full">必须</div>
       </div>
 
+      <!-- error notice -->
       <Transition name="fade-up">
         <div
           v-show="i.verificationPassed === false"
@@ -21,6 +25,9 @@
         </div>
       </Transition>
 
+      <!-- 
+            The type of input will only be one of text and textarea
+       -->
       <input
         v-if="i.inputType === 'input'"
         type="text"
@@ -44,24 +51,27 @@
         @input="i.checkFunction"
         @blur="i.checkFunction"
       ></textarea>
-    </div>
-  </div>
+    </li>
 
-  <!-- submit button -->
-  <button
-    class="m-plus-rounded-1c text-white bg-[#ff5872] text-[1.5rem] font-bold px-8 py-3 rounded-full"
-    @click="submit"
-  >
-    送信
-  </button>
+    <!-- submit button -->
+    <button
+      class="m-plus-rounded-1c text-white bg-[#ff5872] text-[1.5rem] font-bold px-8 py-3 rounded-full"
+      @click="submit"
+    >
+      送信
+    </button>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { ref, Ref } from 'vue';
+import { ref, Ref, onMounted } from 'vue';
+import anime from 'animejs';
 import _ from 'lodash';
 import validateEmail from '@/utils/validateEmail';
 import { IItem, itemNames } from '../types/index.ts';
+import overrallEnterAnimation from '@/utils/overallEnterAnimation.ts';
 
+const contact: Ref<HTMLElement | undefined> = ref();
 const formItems: Ref<{
   [key in itemNames]: IItem;
 }> = ref({
@@ -157,6 +167,15 @@ function submit(): void {
     });
   }
 }
+
+onMounted(() => {
+  const contactAnimationConfig: anime.AnimeParams = {
+    opacity: [0, 1],
+    translateY: [50, 0],
+  };
+
+  overrallEnterAnimation(contact.value!, ['LI'], contactAnimationConfig, 100, 100);
+});
 </script>
 
 <style scoped>

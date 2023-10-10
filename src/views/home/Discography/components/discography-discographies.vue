@@ -41,7 +41,7 @@ onMounted(() => {
     translateY: [50, 0],
   };
 
-  overrallEnterAnimation(discography.value!, 'DIV', discographyAnimationConfig, 300, 100);
+  overrallEnterAnimation(discography.value!, ['DIV'], discographyAnimationConfig, 300, 100);
 });
 </script>
 

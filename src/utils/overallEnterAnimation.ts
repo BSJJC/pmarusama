@@ -5,14 +5,14 @@ import anime from 'animejs';
 /**
  * Animate child elements of a parent HTML element when the parent element becomes visible.
  * @param {HTMLElement} parentHtmlElement - The parent HTML element containing child nodes to animate.
- * @param {string} targetNodeName - The node name of the child nodes to target for animation (e.g., 'DIV', 'LI', etc.).
+ * @param {string[]} targetNodeNames - The node names of the child nodes to target for animation (e.g., 'DIV', 'LI', etc.).
  * @param {anime.AnimeParams} animationConfig - Configuration parameters for the animation.
  * @param {number} [baseDelay] - The base delay before starting animations for child nodes (optional).
  * @param {number} [increaseDelay] - The increase in delay between animations for consecutive child nodes (optional).
  */
 export default function overrallEnterAnimation(
   parentHtmlElement: HTMLElement,
-  targetNodeName: string,
+  targetNodeNames: string[],
   animationConfig: anime.AnimeParams,
   baseDelay?: number,
   increaseDelay?: number,
@@ -28,8 +28,8 @@ export default function overrallEnterAnimation(
       for (let i = 0; i < parentHtmlElement.childNodes.length; i++) {
         const childNode = parentHtmlElement.childNodes[i];
 
-        // Skip if the node name of the child node does not match the target node name
-        if (childNode.nodeName !== targetNodeName) continue;
+        // Skip if the node name of the child node does not match the target node names
+        if (!targetNodeNames.includes(childNode.nodeName)) continue;
 
         // Use anime.js to create the animation effect
         anime({
