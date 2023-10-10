@@ -174,7 +174,7 @@ onMounted(() => {
     translateY: [50, 0],
   };
 
-  overrallEnterAnimation(contact.value!, ['LI'], contactAnimationConfig, 100, 100);
+  overrallEnterAnimation(contact.value!, ['LI', 'BUTTON'], contactAnimationConfig, 100, 100);
 });
 </script>
 
