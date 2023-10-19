@@ -1,12 +1,12 @@
-interface ISong {
+type TSong = {
   name: string;
   credits: string;
-}
+};
 
-export interface IDiscographyData {
+export type TDiscographyData = {
   coverObjectIDs: Array<string>;
   name: string;
   releaseDate: string;
-  song: Array<ISong>;
+  song: Array<TSong>;
   stprLink: string;
-}
+};

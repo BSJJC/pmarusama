@@ -3,9 +3,9 @@
 </template>
 
 <script setup lang="ts">
-interface Config {
+type Config = {
   url: string;
-}
+};
 
 const props = defineProps<Config>();
 

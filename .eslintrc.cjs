@@ -21,5 +21,8 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint', 'vue'],
-  rules: { 'vue/no-ref-as-operand': 'error' },
+  rules: {
+    'vue/no-ref-as-operand': 'error',
+    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+  },
 };
