@@ -68,12 +68,12 @@ import { ref, Ref, onMounted } from 'vue';
 import anime from 'animejs';
 import _ from 'lodash';
 import validateEmail from '@/utils/validateEmail';
-import { IItem, itemNames } from '../types/index.ts';
+import { TItem, itemNames } from '../types/index.ts';
 import overrallEnterAnimation from '@/utils/overallEnterAnimation.ts';
 
 const contact: Ref<HTMLElement | undefined> = ref();
 const formItems: Ref<{
-  [key in itemNames]: IItem;
+  [key in itemNames]: TItem;
 }> = ref({
   name: {
     title: 'お名前',
