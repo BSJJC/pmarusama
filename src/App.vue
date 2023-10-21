@@ -12,7 +12,7 @@
 
 <script setup lang="ts"></script>
 
-<style scoped>
+<style>
 #body {
   background: #fff8a9 url('./assets/imgs/body-bg.png') center top/100% auto;
 }

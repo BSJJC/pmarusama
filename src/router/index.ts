@@ -1,7 +1,8 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  //   You cannot use the `createWebHashHistory` mode, otherwise, when you want to scroll to a specific section using the header's navigation, the page will be redirected.
+  history: createWebHistory(),
   routes: [
     {
       name: 'home',
