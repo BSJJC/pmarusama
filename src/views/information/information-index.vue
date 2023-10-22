@@ -1,23 +1,16 @@
 <template>
   <div>
-    <div>inforamtion</div>
-    <RouterLink to="/">to home</RouterLink>
-    <br />
-    <div>{{ data }}</div>
+    <Title></Title>
+
+    <Informations></Informations>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import axios from 'axios';
+import { defineAsyncComponent } from 'vue';
 
-const data = ref('');
-
-onMounted(() => {
-  axios.get('http://localhost:5000/api/information/get').then((res) => {
-    data.value = res.data;
-  });
-});
+const Title = defineAsyncComponent(() => import('./Title/title-index.vue'));
+const Informations = defineAsyncComponent(() => import('./Informations/informations-index.vue'));
 </script>
 
 <style></style>
