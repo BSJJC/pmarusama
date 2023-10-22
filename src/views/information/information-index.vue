@@ -1,7 +1,10 @@
 <template>
-  <div>inforamtion</div>
-  <br />
-  <div v-html="data.informations[0].text"></div>
+  <div>
+    <div>inforamtion</div>
+    <RouterLink to="/">to home</RouterLink>
+    <br />
+    <div>{{ data }}</div>
+  </div>
 </template>
 
 <script setup lang="ts">

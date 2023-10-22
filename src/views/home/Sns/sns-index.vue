@@ -11,7 +11,7 @@
         target="_blank"
       >
         <img
-          :src="`http://localhost:5000/api/socialMediaImg/${socialMediaData[index].imgID}`"
+          :src="`http://localhost:5000/api/socialMediaImage/${socialMediaData[index].imgID}`"
           alt="social medias"
           class="scale-105 transition-all duration-300 hover:scale-[115%]"
         />

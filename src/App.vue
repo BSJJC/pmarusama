@@ -2,7 +2,7 @@
   <el-scrollbar height="100vh">
     <div id="body">
       <router-view v-slot="{ Component }">
-        <transition name="fade">
+        <transition name="app-vue" mode="out-in">
           <component :is="Component" />
         </transition>
       </router-view>
@@ -21,14 +21,14 @@
   scroll-behavior: smooth;
 }
 
-.fade-enter-active,
-.fade-leave-active {
+.app-vue-enter-active,
+.app-vue-leave-active {
   transition: all 0.3s ease-in-out;
 }
 
-.fade-enter-from,
-.fade-leave-to {
+.app-vue-enter-from,
+.app-vue-leave-to {
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(-10px);
 }
 </style>
