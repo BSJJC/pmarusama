@@ -3,7 +3,7 @@ import axios from 'axios';
 /**
  * Represents a social media platform.
  */
-type SocialMediaType = {
+type TSocialMedia = {
   name: string; // The name of the social media platform.
   url: string; // The URL of the social media profile.
   imgID: string; // An identifier for the social media platform's image.
@@ -11,9 +11,9 @@ type SocialMediaType = {
 
 /**
  * Fetches social media data from the specified API endpoint.
- * @returns {Promise<SocialMediaType[]>} A promise that resolves to an array of social media data.
+ * @returns {Promise<TSocialMedia[]>} A promise that resolves to an array of social media data.
  */
-export async function getSocialMediaData(): Promise<SocialMediaType[]> {
+export async function getSocialMediaData(): Promise<TSocialMedia[]> {
   try {
     // Send an HTTP GET request to the API endpoint to fetch social media data.
     const response = await axios.get('http://localhost:5000/api/socialMedia/get');
