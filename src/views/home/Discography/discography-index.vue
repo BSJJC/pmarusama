@@ -1,5 +1,5 @@
 <template>
-  <div id="p-discography-container" class="relative py-14 lace-top lace-bottom bg-[#ffffffb3]">
+  <div id="p-discography" class="relative py-14 lace-top lace-bottom bg-[#ffffffb3]">
     <Title></Title>
 
     <Discographies></Discographies>

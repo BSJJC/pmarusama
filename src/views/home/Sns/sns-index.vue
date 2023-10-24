@@ -1,7 +1,7 @@
 <template>
   <div
+    id="p-sns"
     ref="socialMedia"
-    id="p-sns-container"
     class="w-full grid grid-cols-2 px-3 py-8 md:grid-cols-3 md:py-16 lg:max-w-[1060px] lg:m-auto"
   >
     <div v-for="(i, index) in socialMediaData" :key="index" class="flex justify-center items-center">

@@ -1,5 +1,5 @@
 <template>
-  <div id="p-top-container" class="flex justify-center items-center relative bg-fixed py-4 px-2">
+  <div id="p-top" class="flex justify-center items-center relative bg-fixed py-4 px-2">
     <div class="my-3 relative">
       <img
         ref="logoRef"
@@ -41,7 +41,7 @@ onMounted(() => {
 </script>
 
 <style>
-#p-top-container {
+#p-top {
   width: 100vw;
   background-size: 50px 50px;
   background-image: linear-gradient(

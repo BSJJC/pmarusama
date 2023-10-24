@@ -1,5 +1,5 @@
 <template>
-  <header id="p-header-container" class="top-[10px] right-[10px] fixed z-[9999]">
+  <header id="p-header" class="top-[10px] right-[10px] fixed z-[9999]">
     <!-- switcher -->
     <div
       ref="switcherRef"
@@ -20,7 +20,7 @@
         <a
           v-for="(i, index) in herfs"
           :key="index"
-          :href="`#p-${i.toLocaleLowerCase()}-container`"
+          :href="`#p-${i.toLocaleLowerCase()}`"
           class="text-white text-lg font-bold my-1 hover:text-[#fff8a9]"
           style="font-family: 'M PLUS Rounded 1c', sans-serif"
         >

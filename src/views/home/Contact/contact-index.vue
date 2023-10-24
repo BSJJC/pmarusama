@@ -1,6 +1,6 @@
 <template>
   <div
-    id="p-contact-container"
+    id="p-contact"
     class="lace-top relative flex justify-center items-center bg-[#ffffffb3] flex-col gap-8 py-20 px-3"
   >
     <Titlte></Titlte>

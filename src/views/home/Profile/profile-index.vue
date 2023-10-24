@@ -1,5 +1,5 @@
 <template>
-  <div id="p-profile-container" class="relative my-8">
+  <div id="p-profile" class="relative my-8">
     <Title></Title>
 
     <Profile></Profile>
@@ -19,7 +19,7 @@ const Profile = defineAsyncComponent(() => import('./components/profile-profile.
 }
 
 @media (width>= 768px) {
-  #p-profile-container {
+  #p-profile {
     background: url('@/assets/imgs/parts2.png') bottom 3vw left 4vw no-repeat;
   }
 }
