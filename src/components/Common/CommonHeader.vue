@@ -2,7 +2,7 @@
   <header id="p-header-container" class="top-[10px] right-[10px] fixed z-[9999]">
     <!-- switcher -->
     <div
-      ref="switcher"
+      ref="switcherRef"
       :id="status ? 'open-nav' : ''"
       class="w-[50px] h-[50px] bg-[#ff5872] rounded-full relative flex justify-center items-center flex-col gap-[0.3rem] hover:cursor-pointer"
     >
@@ -34,7 +34,7 @@
 <script setup lang="ts">
 import { ref, Ref } from 'vue';
 
-const switcher: Ref<HTMLElement | undefined> = ref();
+const switcherRef: Ref<HTMLElement | undefined> = ref();
 const status: Ref<boolean> = ref(false);
 
 const herfs: Ref<string[]> = ref([
@@ -57,7 +57,7 @@ function toggleNav(event: Event): void {
 
   // only call toogleNav function directly when switcher itself is clicked
   // or, when clicked on the p tags which is the three lines
-  if (target === switcher.value || target.id === 'top-p' || target.id === 'middle-p' || target.id === 'bottom-p') {
+  if (target === switcherRef.value || target.id === 'top-p' || target.id === 'middle-p' || target.id === 'bottom-p') {
     status.value = !status.value;
     return;
   }

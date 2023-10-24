@@ -1,5 +1,5 @@
 <template>
-  <li ref="news" v-for="(i, index) in data" :key="index" class="flex w-[97%] mx-3 mb-4 md:w-[90%]">
+  <li ref="newsRef" v-for="(i, index) in data" :key="index" class="flex w-[97%] mx-3 mb-4 md:w-[90%]">
     <!-- news publish date -->
     <div
       class="fredoka-one flex border-x-[1px] border-[#f60] justify-center items-center w-[25%] text-[#f60] font-bold md:w-[15%]"
@@ -34,7 +34,7 @@ import { ref, Ref, onMounted } from 'vue';
 import anime from 'animejs';
 import enterAnimation from '@/utils/enterAnimation';
 
-const news: Ref<HTMLElement[] | undefined> = ref();
+const newsRef: Ref<HTMLElement[] | undefined> = ref();
 
 const data = [
   {
@@ -52,7 +52,7 @@ const data = [
 ];
 
 onMounted(() => {
-  news.value!.forEach((li, index) => {
+  newsRef.value!.forEach((li, index) => {
     const newsAnimationConfig: anime.AnimeParams = {
       delay: 100 * index + 200,
       opacity: [0, 1],

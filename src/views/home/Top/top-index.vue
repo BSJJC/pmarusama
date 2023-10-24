@@ -2,13 +2,13 @@
   <div id="p-top-container" class="flex justify-center items-center relative bg-fixed py-4 px-2">
     <div class="my-3 relative">
       <img
-        ref="logo"
+        ref="logoRef"
         src="@/assets/imgs/logo.png"
         alt="pmarusama logo"
         class="absolute z-[+1] top-[10%] left-[7%] w-[48%] md:top-[30%] md:w-[35%]"
       />
 
-      <img ref="banner" src="@/assets/imgs/index-visual.png" alt="index visual image" class="lg:w-[82vw]" />
+      <img ref="bannerRef" src="@/assets/imgs/index-visual.png" alt="index visual image" class="lg:w-[82vw]" />
     </div>
   </div>
 </template>
@@ -18,25 +18,25 @@ import { ref, Ref, onMounted } from 'vue';
 import anime from 'animejs';
 import enterAnimation from '@/utils/enterAnimation';
 
-const logo: Ref<HTMLElement | undefined> = ref();
-const banner: Ref<HTMLElement | undefined> = ref();
+const logoRef: Ref<HTMLElement | undefined> = ref();
+const bannerRef: Ref<HTMLElement | undefined> = ref();
 
-const logoAnimationConfig: anime.AnimeParams = {
+const logoRefAnimationConfig: anime.AnimeParams = {
   delay: 300,
   translateY: [200, 0],
   opacity: [0, 1],
   scale: [0.7, 1],
 };
 
-const bannerAnimationConfig: anime.AnimeParams = {
+const bannerRefAnimationConfig: anime.AnimeParams = {
   duration: 1000,
   opacity: [0, 1],
   translateY: [100, 0],
 };
 
 onMounted(() => {
-  enterAnimation(logo.value!, logoAnimationConfig);
-  enterAnimation(banner.value!, bannerAnimationConfig);
+  enterAnimation(logoRef.value!, logoRefAnimationConfig);
+  enterAnimation(bannerRef.value!, bannerRefAnimationConfig);
 });
 </script>
 

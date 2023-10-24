@@ -1,11 +1,11 @@
 <template>
   <div
-    ref="outterContainer"
+    ref="outterContainerRef"
     id="p-youtube__main"
     class="flex justify-center items-center relative z-[+1] mt-8 w-[96vw] py-[12vw] pr-[13vw] pl-[4vw] md:pt-[16vw] md:pr-[14vw] md:pb-[18vw] md:pl-[4vw] md:mt-0 lg:w-[80vw] lg:mr-auto lg:pt-[10vw] lg:pr-[18vw] lg:pb-[10vw] lg:pl-0 lg:justify-end"
   >
     <div
-      ref="innerContainer"
+      ref="innerContainerRef"
       id="p-youtube__main-inner"
       class="relative w-full bg-[#c0ecee] rounded-lg lg:max-w-[640px]"
     >
@@ -26,10 +26,10 @@ import anime from 'animejs';
 import YoutubePlayer from '@/components/Common/YoutubePlayer.vue';
 import enterAnimation from '@/utils/enterAnimation';
 
-const outterContainer: Ref<HTMLElement | undefined> = ref();
-const innerContainer: Ref<HTMLTimeElement | undefined> = ref();
+const outterContainerRef: Ref<HTMLElement | undefined> = ref();
+const innerContainerRef: Ref<HTMLTimeElement | undefined> = ref();
 
-const innerContainerVisible = useElementVisibility(innerContainer);
+const innerContainerVisible = useElementVisibility(innerContainerRef);
 
 const outterContainerAnimationConfig: anime.AnimeParams = {
   delay: 200,
@@ -47,13 +47,13 @@ const innerContainerAnimationConfig: anime.AnimeParams = {
 };
 
 onMounted(() => {
-  enterAnimation(outterContainer.value!, outterContainerAnimationConfig);
-  enterAnimation(innerContainer.value!, innerContainerAnimationConfig);
+  enterAnimation(outterContainerRef.value!, outterContainerAnimationConfig);
+  enterAnimation(innerContainerRef.value!, innerContainerAnimationConfig);
 
   watchOnce(
     () => innerContainerVisible.value,
     () => {
-      innerContainer.value!.classList.add('show-before');
+      innerContainerRef.value!.classList.add('show-before');
     },
   );
 });

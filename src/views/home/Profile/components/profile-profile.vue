@@ -1,16 +1,16 @@
 <template>
   <div
-    ref="outterContainer"
+    ref="outterContainerRef"
     id="p-profile__main"
     class="w-[95%] pl-[11%] pb-[70px] pr-4 pt-4 translate-y-[-7%] ml-auto md:translate-y-[-8%] md:pt-10 md:pb-[120px] lg:w-[80vw] lg:pt-[5vw] lg:pr-0 lg:pb-[10vw] lg:pl-[18vw]"
   >
     <div
-      ref="innerContainer"
+      ref="innerContainerRef"
       id="p-profile__inner"
       class="bg-[#ffda55] relative mt-4 ml-2 rounded-lg md:flex md:justify-center md:items-center lg:max-w-[640px] lg:pl-[2vw]"
     >
       <!-- profile intro -->
-      <div ref="intro" class="m-plus-rounded-1c pb-3 text-[#787878] pt-6 px-4 leading-3 md:w-1/2 md:px-10 lg:p-0">
+      <div ref="introRef" class="m-plus-rounded-1c pb-3 text-[#787878] pt-6 px-4 leading-3 md:w-1/2 md:px-10 lg:p-0">
         <h3 class="text-3xl font-bold">P丸様。</h3>
         <span class="block text-sm font-bold md:text-lg">
           YouTubeやTikTok等の動画投稿サイトで活動中のマルチエンターテイナー！
@@ -21,7 +21,7 @@
       </div>
 
       <!-- profile image -->
-      <div ref="img" class="flex justify-end items-center md:w-1/2">
+      <div ref="imgRef" class="flex justify-end items-center md:w-1/2">
         <img src="@/assets/imgs/profile-img.png" alt="profile image" class="w-[60%] md:w-full" />
       </div>
     </div>
@@ -35,12 +35,12 @@ import anime from 'animejs';
 import enterAnimation from '@/utils/enterAnimation';
 import overrallEnterAnimation from '@/utils/overallEnterAnimation';
 
-const outterContainer: Ref<HTMLElement | undefined> = ref();
-const innerContainer: Ref<HTMLElement | undefined> = ref();
-const intro: Ref<HTMLElement | undefined> = ref();
-const img: Ref<HTMLElement | undefined> = ref();
+const outterContainerRef: Ref<HTMLElement | undefined> = ref();
+const innerContainerRef: Ref<HTMLElement | undefined> = ref();
+const introRef: Ref<HTMLElement | undefined> = ref();
+const imgRef: Ref<HTMLElement | undefined> = ref();
 
-const innerContainerVisible = useElementVisibility(innerContainer);
+const innerContainerVisible = useElementVisibility(innerContainerRef);
 
 const outterContainerAnimationConfig: anime.AnimeParams = {
   delay: 200,
@@ -69,15 +69,15 @@ const introAnimationConfig: anime.AnimeParams = {
 };
 
 onMounted(() => {
-  enterAnimation(outterContainer.value!, outterContainerAnimationConfig);
-  enterAnimation(innerContainer.value!, innerContainerAnimationConfig);
-  enterAnimation(img.value!, imgAnimationConfig);
-  overrallEnterAnimation(intro.value!, ['H3', 'SPAN'], introAnimationConfig, 700, 100);
+  enterAnimation(outterContainerRef.value!, outterContainerAnimationConfig);
+  enterAnimation(innerContainerRef.value!, innerContainerAnimationConfig);
+  enterAnimation(imgRef.value!, imgAnimationConfig);
+  overrallEnterAnimation(introRef.value!, ['H3', 'SPAN'], introAnimationConfig, 700, 100);
 
   watchOnce(
     () => innerContainerVisible.value,
     () => {
-      innerContainer.value!.classList.add('show-before');
+      innerContainerRef.value!.classList.add('show-before');
     },
   );
 });

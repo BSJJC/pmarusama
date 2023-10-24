@@ -1,5 +1,5 @@
 <template>
-  <span ref="intro" class="m-plus-rounded-1c text-center text-[#787878] font-bold md:text-[1.15rem]">
+  <span ref="introRef" class="m-plus-rounded-1c text-center text-[#787878] font-bold md:text-[1.15rem]">
     内容によっては、ご連絡にお時間がかかる場合や、お答えできない場合がございます。
     <br />
     あらかじめご了承ください。
@@ -11,16 +11,16 @@ import { ref, Ref, onMounted } from 'vue';
 import anime from 'animejs';
 import enterAnimation from '@/utils/enterAnimation';
 
-const intro: Ref<HTMLElement | undefined> = ref();
+const introRef: Ref<HTMLElement | undefined> = ref();
 
-const introAnimationConfig: anime.AnimeParams = {
+const introRefAnimationConfig: anime.AnimeParams = {
   delay: 300,
   opacity: [0, 1],
   translateY: [50, 0],
 };
 
 onMounted(() => {
-  enterAnimation(intro.value!, introAnimationConfig);
+  enterAnimation(introRef.value!, introRefAnimationConfig);
 });
 </script>
 

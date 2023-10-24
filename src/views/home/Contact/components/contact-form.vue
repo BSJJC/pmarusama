@@ -1,6 +1,6 @@
 <template>
   <div
-    ref="contact"
+    ref="switcherRef"
     class="m-plus-rounded-1c w-full flex justify-center items-center flex-col gap-4 lg:max-w-[1060px] lg:m-auto"
   >
     <!-- form -->
@@ -71,7 +71,7 @@ import validateEmail from '@/utils/validateEmail';
 import { TItem, itemNames } from '../types/index.ts';
 import overrallEnterAnimation from '@/utils/overallEnterAnimation.ts';
 
-const contact: Ref<HTMLElement | undefined> = ref();
+const switcherRef: Ref<HTMLElement | undefined> = ref();
 const formItems: Ref<{
   [key in itemNames]: TItem;
 }> = ref({
@@ -169,12 +169,12 @@ function submit(): void {
 }
 
 onMounted(() => {
-  const contactAnimationConfig: anime.AnimeParams = {
+  const switcherRefAnimationConfig: anime.AnimeParams = {
     opacity: [0, 1],
     translateY: [50, 0],
   };
 
-  overrallEnterAnimation(contact.value!, ['LI', 'BUTTON'], contactAnimationConfig, 100, 100);
+  overrallEnterAnimation(switcherRef.value!, ['LI', 'BUTTON'], switcherRefAnimationConfig, 100, 100);
 });
 </script>
 
