@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Use this div as the anchor to return to the top -->
-    <div id="/"></div>
+    <div id="TOP"></div>
 
     <Header></Header>
 

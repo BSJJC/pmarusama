@@ -3,7 +3,7 @@
     <!-- to page top button -->
     <Transition>
       <div v-show="toTopVisible" class="relative top-[30%] w-full z-[9999]">
-        <a href="#/">
+        <a href="#TOP">
           <img
             src="@/assets/imgs/pagetop.png"
             alt=""
