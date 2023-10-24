@@ -1,10 +1,6 @@
 <template>
   <ul class="mt-10">
-    <li
-      v-for="(i, index) in informations"
-      :key="index"
-      class="flex justify-center items-center mb-4 min-w-[300px] w-[90%] m-auto md:mb-8"
-    >
+    <li v-for="(i, index) in informations" :key="index" class="flex mb-4 min-w-[300px] w-[70%] m-auto md:mb-8">
       <!-- informations pubulish date -->
       <div
         class="fredoka-one flex justify-center items-center w-[30%] max-w-[140px] border-[#f60] border-x-[1px] text-[#f60] font-bold"
@@ -19,14 +15,16 @@
           </span>
         </div>
 
-        <span class="text-[2rem] md:text-[2.3rem]">
+        <span class="text-[2rem] md:text-[2.5rem]">
           <!-- day -->
           {{ i.date.toString().substring(6, 8) }}
         </span>
       </div>
 
       <!-- news title -->
-      <div class="m-plus-rounded-1c w-[70%] border-r-[1px] border-[#f60] px-3 md:text-[1.5rem]">
+      <div
+        class="m-plus-rounded-1c flex justify-start items-center w-[70%] border-r-[1px] border-[#f60] px-3 md:text-[1.3rem] md:w-full"
+      >
         <a href="" class="text-[#3865e0] font-black">{{ i.title }}</a>
       </div>
     </li>
