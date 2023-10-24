@@ -1,42 +1,46 @@
 <template>
-  <footer
-    ref="footer"
-    id="p-footer-container"
-    class="relative lace-bottom after:top-[-140px] bg-[#fff157] h-[140px] flex justify-center items-center"
-  >
+  <footer>
     <!-- to page top button -->
     <Transition>
-      <div v-show="!topVisible" id="p-pagetop" class="absolute top-[30%] w-full">
+      <div v-show="toTopVisible" class="relative top-[30%] w-full z-[9999]">
         <a href="#p-top-container">
           <img
             src="@/assets/imgs/pagetop.png"
             alt=""
-            :class="footerVisible ? absoluteMode : fixedMode"
+            :class="footerRefVisible ? fixedAtBottom : notFixedAtBottom"
             class="w-[40px] hover:cursor-pointer md:w-[60px]"
           />
         </a>
       </div>
     </Transition>
 
-    <!-- copy right lable -->
-    <p class="m-plus-rounded-1c text-[#787878] font-bold text-xs md:text-base">©︎ P丸様。</p>
+    <div
+      ref="footerRef"
+      class="relative lace-bottom after:top-[-140px] bg-[#fff157] h-[140px] flex justify-center items-center"
+    >
+      <!-- copy right lable -->
+      <p class="m-plus-rounded-1c text-[#787878] font-bold text-xs md:text-base">©︎ P丸様。</p>
+    </div>
   </footer>
 </template>
 
 <script setup lang="ts">
 import { ref, Ref, onMounted } from 'vue';
+import { storeToRefs } from 'pinia';
 import { useElementVisibility } from '@vueuse/core';
+import { useFooter } from '@/stores/footerStore';
 
-const footer: Ref<HTMLElement | undefined> = ref();
-let topVisible: Ref<boolean>;
+const footerRef: Ref<HTMLElement | undefined> = ref();
 
-const absoluteMode = 'absolute right-[10px] bottom-[47px]';
-const fixedMode = 'fixed right-[10px] bottom-[10px]';
-const footerVisible = useElementVisibility(footer);
+const footerStore = useFooter();
+const { toTopVisible } = storeToRefs(footerStore);
+let footerRefVisible: Ref<boolean>;
+
+const fixedAtBottom = 'absolute right-[10px] bottom-[calc(-100%+10px)]';
+const notFixedAtBottom = 'fixed right-[10px] bottom-[10px]';
 
 onMounted(() => {
-  const top: HTMLElement | null = document.getElementById('p-top-container');
-  topVisible = useElementVisibility(top);
+  footerRefVisible = useElementVisibility(footerRef);
 });
 </script>
 
@@ -52,7 +56,7 @@ onMounted(() => {
 }
 
 a:hover img {
-  animation: pagetop-aniamtion 1.5s ease-out infinite;
+  animation: pagetop-aniamtion 1s ease-out infinite;
 }
 
 @keyframes pagetop-aniamtion {

@@ -1,5 +1,5 @@
 <template>
-  <el-scrollbar height="100vh">
+  <el-scrollbar height="100vh" @scroll="toggleToTopVisible">
     <div id="body">
       <router-view v-slot="{ Component }">
         <transition name="app-vue" mode="out-in">
@@ -10,7 +10,9 @@
   </el-scrollbar>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import toggleToTopVisible from '@/utils/toggleToTopVisible';
+</script>
 
 <style>
 #body {
