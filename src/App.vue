@@ -1,11 +1,7 @@
 <template>
   <el-scrollbar height="100vh" @scroll="toggleToTopVisible">
     <div id="body">
-      <router-view v-slot="{ Component }">
-        <transition name="app-vue" mode="out-in">
-          <component :is="Component" />
-        </transition>
-      </router-view>
+      <router-view></router-view>
     </div>
   </el-scrollbar>
 </template>
@@ -21,16 +17,5 @@ import toggleToTopVisible from '@/utils/toggleToTopVisible';
 
 .el-scrollbar__wrap {
   scroll-behavior: smooth;
-}
-
-.app-vue-enter-active,
-.app-vue-leave-active {
-  transition: all 0.3s ease-in-out;
-}
-
-.app-vue-enter-from,
-.app-vue-leave-to {
-  opacity: 0;
-  transform: translateY(-10px);
 }
 </style>

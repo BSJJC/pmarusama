@@ -14,7 +14,7 @@ const Youtube = defineAsyncComponent(() => import('./components/youtube-player.v
 </script>
 
 <style scoped>
-#p-youtube-container {
+#p-youtube {
   background: url('@/assets/imgs/parts3.png') center right -5vw/20vw auto no-repeat;
 }
 

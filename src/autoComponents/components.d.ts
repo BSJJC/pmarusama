@@ -7,12 +7,12 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    CommonFooter: typeof import('./../components/Common/CommonFooter.vue')['default']
-    CommonHeader: typeof import('./../components/Common/CommonHeader.vue')['default']
+    CommonFooter: (typeof import('./../components/Common/CommonFooter.vue'))['default']
+    CommonHeader: (typeof import('./../components/Common/CommonHeader.vue'))['default']
     ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
     Footer: (typeof import('./../components/Common/Footer.vue'))['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    YoutubePlayer: typeof import('./../components/Common/YoutubePlayer.vue')['default']
+    YoutubePlayer: typeof import('./../components/YoutubePlayer.vue')['default']
   }
 }

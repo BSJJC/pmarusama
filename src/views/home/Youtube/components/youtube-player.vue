@@ -23,7 +23,7 @@
 import { ref, Ref, onMounted } from 'vue';
 import { useElementVisibility, watchOnce } from '@vueuse/core';
 import anime from 'animejs';
-import YoutubePlayer from '@/components/Common/YoutubePlayer.vue';
+import YoutubePlayer from '@/components/YoutubePlayer.vue';
 import enterAnimation from '@/utils/enterAnimation';
 
 const outterContainerRef: Ref<HTMLElement | undefined> = ref();
