@@ -2,8 +2,8 @@
   <footer id="p-footer">
     <!-- to page top button -->
     <Transition>
-      <div v-show="toTopVisible" class="relative top-[30%] w-full z-[9999]">
-        <a href="#TOP">
+      <div v-show="toTop" class="relative top-[30%] w-full z-[9999]">
+        <a @click="backToTop">
           <img
             src="@/assets/imgs/pagetop.png"
             alt=""
@@ -33,11 +33,15 @@ import { useFooter } from '@/stores/footerStore';
 const footerRef: Ref<HTMLElement | undefined> = ref();
 
 const footerStore = useFooter();
-const { toTopVisible } = storeToRefs(footerStore);
+const { toTop } = storeToRefs(footerStore);
 let footerRefVisible: Ref<boolean>;
 
 const fixedAtBottom = 'absolute right-[10px] bottom-[calc(-100%+10px)]';
 const notFixedAtBottom = 'fixed right-[10px] bottom-[10px]';
+
+function backToTop(): void {
+  toTop.value = false;
+}
 
 onMounted(() => {
   footerRefVisible = useElementVisibility(footerRef);

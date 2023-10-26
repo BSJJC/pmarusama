@@ -1,16 +1,21 @@
 import { storeToRefs } from 'pinia';
 import { useFooter } from '@/stores/footerStore';
 
-type TElScrollArg = {
+type TElScrollOption = {
   scrollLeft: number;
   scrollTop: number;
 };
 
-export default function toggleToTopVisible(elArg: TElScrollArg): void {
-  const top = elArg.scrollTop;
+/**
+ * Switch whether to display the toTop button
+ * @param {TElScrollOption} elOptions -Parameters that match the ElScrollOption type
+ */
+export default function toggleToTopVisible(elOptions: TElScrollOption): void {
+  const top = elOptions.scrollTop;
 
   const footerStore = useFooter();
-  const { toTopVisible } = storeToRefs(footerStore);
+  const { toTop } = storeToRefs(footerStore);
 
-  toTopVisible.value = top >= 500 ? true : false;
+  // Show the top button when scrolling over 500
+  toTop.value = top >= 500 ? true : false;
 }

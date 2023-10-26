@@ -1,5 +1,5 @@
 <template>
-  <el-scrollbar height="100vh" @scroll="toggleToTopVisible">
+  <el-scrollbar ref="scrollbarRef" height="100vh" @scroll="toggleToTopVisible">
     <div id="body">
       <router-view></router-view>
     </div>
@@ -7,7 +7,21 @@
 </template>
 
 <script setup lang="ts">
+import { ref, watch } from 'vue';
+import { storeToRefs } from 'pinia';
+import { useFooter } from '@/stores/footerStore';
 import toggleToTopVisible from '@/utils/toggleToTopVisible';
+
+const scrollbarRef = ref();
+const footerStore = useFooter();
+const { toTop } = storeToRefs(footerStore);
+
+watch(
+  () => toTop.value,
+  () => {
+    if (!toTop.value) scrollbarRef.value?.setScrollTop(0);
+  },
+);
 </script>
 
 <style>
