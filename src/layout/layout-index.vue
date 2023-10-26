@@ -3,7 +3,7 @@
     <Header></Header>
 
     <router-view v-slot="{ Component }">
-      <transition name="app-vue" mode="out-in">
+      <transition name="layout" mode="out-in">
         <component :is="Component" />
       </transition>
     </router-view>
@@ -20,14 +20,14 @@ const Footer = defineAsyncComponent(() => import('./components/CommonFooter.vue'
 </script>
 
 <style scoped>
-.app-vue-enter-active,
-.app-vue-leave-active {
+.layout-enter-active,
+.layout-leave-active {
   transition: all 0.3s ease-in-out;
 }
 
-.app-vue-enter-from,
-.app-vue-leave-to {
+.layout-enter-from,
+.layout-leave-to {
   opacity: 0;
-  transform: translateY(-10px);
+  transform: translateY(-20px);
 }
 </style>

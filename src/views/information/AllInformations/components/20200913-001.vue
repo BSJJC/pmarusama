@@ -1,5 +1,5 @@
 <template>
-  <div>02</div>
+  <div>20200913-001</div>
 </template>
 
 <script setup lang="ts"></script>
