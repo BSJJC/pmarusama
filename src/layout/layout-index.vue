@@ -1,8 +1,5 @@
 <template>
   <div>
-    <!-- Use this div as the anchor to return to the top -->
-    <div id="TOP"></div>
-
     <Header></Header>
 
     <router-view v-slot="{ Component }">
