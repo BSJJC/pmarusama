@@ -3,7 +3,7 @@
     <Transition mode="out-in">
       <div
         v-if="!informations"
-        class="fredoka-one loading-animation w-[70%] h-[300px] m-auto flex justify-center items-start mt-10 pt-20 text-[2rem] font-bold text-[#f70] md:text-[3rem]"
+        class="fredoka-one loading-animation w-[70%] min-h-[300px] select-none m-auto flex justify-center items-start mt-10 pt-20 text-[2rem] font-bold text-[#f70] md:text-[3rem]"
       >
         Loading...
       </div>

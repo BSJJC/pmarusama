@@ -1,5 +1,5 @@
 <template>
-  <div class="relative bg-[#ffffffb3] py-10 lace-top lace-bottom">
+  <div class="relative bg-[#ffffffb3] min-h-screen py-10 lace-top lace-bottom">
     <Title></Title>
 
     <Informations></Informations>
