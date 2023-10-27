@@ -10,10 +10,11 @@
       class="relative w-full bg-[#c0ecee] rounded-lg lg:max-w-[640px]"
     >
       <div class="max-w-none pt-[56.25%]">
-        <YoutubePlayer
-          url="3V9952osjnc"
+        <iframe
+          type="text/html"
+          src="3V9952osjnc"
           class="absolute top-0 left-0 w-full h-full p-[5px] lg:p-[10px]"
-        ></YoutubePlayer>
+        ></iframe>
       </div>
     </div>
   </div>
@@ -23,7 +24,6 @@
 import { ref, Ref, onMounted } from 'vue';
 import { useElementVisibility, watchOnce } from '@vueuse/core';
 import anime from 'animejs';
-import YoutubePlayer from '@/components/YoutubePlayer.vue';
 import enterAnimation from '@/utils/enterAnimation';
 
 const outterContainerRef: Ref<HTMLElement | undefined> = ref();
