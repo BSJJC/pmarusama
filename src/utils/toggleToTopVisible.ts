@@ -7,15 +7,16 @@ type TElScrollOption = {
 };
 
 /**
- * Switch whether to display the toTop button
+ * Switch whether to display the atTop button
  * @param {TElScrollOption} elOptions -Parameters that match the ElScrollOption type
  */
 export default function toggleToTopVisible(elOptions: TElScrollOption): void {
   const top = elOptions.scrollTop;
 
   const footerStore = useFooter();
-  const { toTop } = storeToRefs(footerStore);
+  const { atTop } = storeToRefs(footerStore);
 
   // Show the top button when scrolling over 500
-  toTop.value = top >= 500 ? true : false;
+  if (top >= 500) atTop.value = false;
+  if (top === 0) atTop.value = true;
 }

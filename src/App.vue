@@ -18,12 +18,15 @@ import toggleToTopVisible from '@/utils/toggleToTopVisible';
 
 const scrollbarRef = ref();
 const footerStore = useFooter();
-const { toTop } = storeToRefs(footerStore);
+const { atTop } = storeToRefs(footerStore);
 
 watch(
-  () => toTop.value,
+  () => atTop.value,
   () => {
-    if (!toTop.value) scrollbarRef.value?.setScrollTop(0);
+    if (atTop.value) scrollbarRef.value?.setScrollTop(0);
+  },
+  {
+    immediate: true,
   },
 );
 </script>
