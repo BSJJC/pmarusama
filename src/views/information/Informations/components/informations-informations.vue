@@ -34,7 +34,7 @@
           <div
             class="m-plus-rounded-1c flex justify-start items-center w-[70%] border-r-[1px] border-[#f60] px-3 md:text-[1.3rem] md:w-full"
           >
-            <RouterLink :to="{ path: '/information/date', query: { id: i.date } }" class="text-[#3865e0] font-black">
+            <RouterLink :to="{ path: '/information/date', query: { date: i.date } }" class="text-[#3865e0] font-black">
               {{ i.title }}
             </RouterLink>
           </div>
