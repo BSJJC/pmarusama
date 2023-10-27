@@ -3,7 +3,7 @@
     <Header></Header>
 
     <router-view v-slot="{ Component }">
-      <transition name="layout" mode="out-in">
+      <transition name="main-laytout" mode="out-in">
         <component :is="Component" />
       </transition>
     </router-view>
@@ -15,18 +15,18 @@
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue';
 
-const Header = defineAsyncComponent(() => import('./components/CommonHeader.vue'));
-const Footer = defineAsyncComponent(() => import('./components/CommonFooter.vue'));
+const Header = defineAsyncComponent(() => import('../components/common-header.vue'));
+const Footer = defineAsyncComponent(() => import('../components/common-footer.vue'));
 </script>
 
 <style scoped>
-.layout-enter-active,
-.layout-leave-active {
+.main-laytout-enter-active,
+.main-laytout-leave-active {
   transition: all 0.3s ease-in-out;
 }
 
-.layout-enter-from,
-.layout-leave-to {
+.main-laytout-enter-from,
+.main-laytout-leave-to {
   opacity: 0;
   transform: translateY(-20px);
 }

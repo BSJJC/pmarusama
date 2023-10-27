@@ -8,7 +8,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      component: () => import('@/layout/layout-index.vue'),
+      component: () => import('@/layout/main-layout/main-layout.vue'),
       children: [
         {
           name: 'home',
@@ -18,12 +18,19 @@ const router = createRouter({
         {
           name: 'information',
           path: '/information',
-          component: () => import('@/views/information/information-index.vue'),
-        },
-        {
-          name: 'date',
-          path: '/information/date',
-          component: () => import('@/views/information/AllInformations/allinformation-index.vue'),
+          //   use information's layout here
+          component: () => import('@/layout/information-layout/information-layout.vue'),
+          children: [
+            {
+              name: 'information-list',
+              path: '',
+              component: () => import('@/views/information/InformationList/list-index.vue'),
+            },
+            {
+              path: ':/date',
+              component: () => import('@/views/information/AllInformations/allinformation-index.vue'),
+            },
+          ],
         },
       ],
     },

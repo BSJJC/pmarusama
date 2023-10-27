@@ -1,6 +1,6 @@
 <template>
   <h1 class="max-w-[540px] min-w-[300px] m-auto">
-    <img src="@/assets/imgs/title-info.png" alt="informations title" />
+    <img src="@/assets/imgs/title-info.png" alt="informations list title" />
   </h1>
 </template>
 

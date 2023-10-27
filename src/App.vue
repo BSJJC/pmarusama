@@ -1,7 +1,11 @@
 <template>
   <el-scrollbar ref="scrollbarRef" height="100vh" @scroll="toggleToTopVisible">
     <div id="body">
-      <router-view></router-view>
+      <router-view v-slot="{ Component }">
+        <transition mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </div>
   </el-scrollbar>
 </template>
