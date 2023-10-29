@@ -53,10 +53,20 @@ type TInformation = {
   title: string;
 };
 
-const informations: Ref<TInformation[] | null> = ref(null);
+const informations: Ref<null | TInformation[]> = ref(null);
 
 onBeforeMount(async () => {
-  informations.value = await getInformation();
+  const sessionStorageInformations = sessionStorage.getItem('information-list');
+
+  if (sessionStorageInformations) {
+    informations.value = JSON.parse(sessionStorageInformations);
+  } else {
+    getInformation().then((res) => {
+      informations.value = res;
+
+      sessionStorage.setItem('information-list', JSON.stringify(res));
+    });
+  }
 });
 </script>
 

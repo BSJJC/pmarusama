@@ -1,8 +1,8 @@
 <template>
-  <div class="min-h-screen">
+  <div>
     <Logo></Logo>
 
-    <div class="relative bg-[#ffffffb3] py-10 lace-top lace-bottom">
+    <div class="relative bg-[#ffffffb3] py-10 min-h-screen lace-top lace-bottom">
       <Title></Title>
 
       <RouterView v-slot="{ Component }">
