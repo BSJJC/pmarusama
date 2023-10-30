@@ -6,4 +6,10 @@ export const useFooter = defineStore('useFooter', {
       atTop: true,
     };
   },
+
+  actions: {
+    backToTop(): void {
+      this.atTop = true;
+    },
+  },
 });

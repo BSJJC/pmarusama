@@ -3,7 +3,7 @@
     <!-- to page top button -->
     <Transition>
       <div v-show="!atTop" class="relative top-[30%] w-full z-[9999]">
-        <a @click="backToTop">
+        <a @click="footerStore.backToTop">
           <img
             src="@/assets/imgs/pagetop.png"
             alt="to top image"
@@ -38,10 +38,6 @@ let footerRefVisible: Ref<boolean>;
 
 const fixedAtBottom = 'absolute right-[10px] bottom-[calc(-100%+10px)]';
 const notFixedAtBottom = 'fixed right-[10px] bottom-[10px]';
-
-function backToTop(): void {
-  atTop.value = true;
-}
 
 onMounted(() => {
   footerRefVisible = useElementVisibility(footerRef);

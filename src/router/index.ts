@@ -7,6 +7,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
+      name: '',
       path: '/',
       component: () => import('@/layout/main-layout/main-layout.vue'),
       children: [
@@ -27,6 +28,7 @@ const router = createRouter({
               component: () => import('@/views/information/InformationList/list-index.vue'),
             },
             {
+              name: 'specific-information',
               path: ':/date',
               component: () => import('@/views/information/AllInformations/allinformation-index.vue'),
             },
