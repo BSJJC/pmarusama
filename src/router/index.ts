@@ -29,7 +29,7 @@ const router = createRouter({
             },
             {
               name: 'specific-information',
-              path: ':/date',
+              path: ':date',
               component: () => import('@/views/information/AllInformations/allinformation-index.vue'),
             },
           ],
