@@ -5,10 +5,11 @@
 
 p {
     line-height: 1.8;
+    color: #787878;
 }
 
 img {
-    position: relative;
+    max-width: 300px;
     border-radius: 8px;
 }
 
@@ -51,9 +52,9 @@ img {
 }
 
 table {
-    color: #787878;
     font-size: 0.9rem;
     line-height: 1.8;
+    color: #787878;
 }
 
 tr td:first-child {
@@ -62,6 +63,20 @@ tr td:first-child {
     padding-right: 4px;
     font-size: .9rem;
     font-weight: bold;
+}
+
+.img-center {
+    width: 100%;
+    margin-top: 1.125rem;
+    margin-bottom: 1.125rem;
+}
+
+.img-center * {
+    margin: auto;
+}
+
+.text-center {
+    text-align: center;
 }
 
 ::selection {
