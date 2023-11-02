@@ -1,0 +1,81 @@
+* {
+    transition: all;
+    transition-duration: 75ms;
+}
+
+p {
+    line-height: 1.8;
+}
+
+img {
+    position: relative;
+    border-radius: 8px;
+}
+
+.info-container {
+    width: 94%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.info-date {
+    font-size: 1.125rem;
+    color: var(--main-color);
+    font-family: 'Fredoka One', sans-serif;
+}
+
+.h1-title {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    font-weight: bold;
+    margin-bottom: 1.125rem;
+}
+
+.h2-title {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.flex-img {
+    display: flex;
+}
+
+.flex-img img {
+    width: calc(50% - 0.5rem);
+    max-width: 300px;
+    margin: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+table {
+    color: #787878;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+tr td:first-child {
+    display: flex;
+    white-space: nowrap;
+    padding-right: 4px;
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+::selection {
+    color: whitesmoke;
+    background: #f60;
+}
+
+@media (width>=768px) {
+    .info-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}

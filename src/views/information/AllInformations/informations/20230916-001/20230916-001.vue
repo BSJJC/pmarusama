@@ -1,5 +1,5 @@
 <template>
-  <div class="w-[200px] min-h-screen bg-red-300">dasdasdsadsadasdsadsadsad</div>
+  <div>123</div>
 </template>
 
 <script setup lang="ts"></script>

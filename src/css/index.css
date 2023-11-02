@@ -1,3 +1,7 @@
+:root {
+    --main-color: #f60;
+}
+
 * {
     -webkit-user-drag: none;
 }
