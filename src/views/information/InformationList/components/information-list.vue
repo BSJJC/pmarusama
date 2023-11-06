@@ -47,6 +47,7 @@
 <script setup lang="ts">
 import { ref, Ref, onBeforeMount } from 'vue';
 import { getInformation } from '@/api/information/index.ts';
+import { useFooter } from '@/stores/footerStore';
 
 type TInformation = {
   date: number;
@@ -54,8 +55,10 @@ type TInformation = {
 };
 
 const informations: Ref<null | TInformation[]> = ref(null);
+const footerStore = useFooter();
 
 onBeforeMount(async () => {
+  footerStore.backToTop();
   const sessionStorageInformations = sessionStorage.getItem('information-list');
 
   if (sessionStorageInformations) {

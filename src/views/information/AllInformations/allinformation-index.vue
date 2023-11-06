@@ -1,11 +1,13 @@
 <template>
-  <div class="min-h-screen">
+  <div class="min-h-screen relative">
+    <BackButton></BackButton>
+
     <component :is="dynamicInformationComponent" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { shallowRef, Ref, onBeforeMount, onMounted } from 'vue';
+import { shallowRef, Ref, onBeforeMount, onMounted, defineAsyncComponent } from 'vue';
 import { useRoute } from 'vue-router';
 import { useFooter } from '@/stores/footerStore';
 
@@ -13,6 +15,7 @@ const route = useRoute();
 const date: Ref<string> = shallowRef(route.query.date as string);
 const dynamicInformationComponent: Ref<HTMLElement | undefined> = shallowRef();
 const footerStore = useFooter();
+const BackButton = defineAsyncComponent(() => import('./components/back-button.vue'));
 
 onBeforeMount(() => {
   //   date : 20231027001 -> date : 20231027-001

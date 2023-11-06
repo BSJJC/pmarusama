@@ -60,7 +60,7 @@
         <div class="w-[98%] m-auto rounded-lg bg-[#f60] grid grid-cols-2 p-2 md:grid-cols-3 lg:grid-cols-4">
           <div v-for="(i, index) in shopImages" :key="index" class="flex justify-center items-center p-1">
             <a :href="i.url" target="_blank">
-              <img :src="i.src" :alt="i.alt" class="rounded-lg w-full" />
+              <img :src="i.src" :alt="i.alt" class="w-full" />
             </a>
           </div>
         </div>
