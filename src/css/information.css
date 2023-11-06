@@ -90,7 +90,7 @@ tr td:first-child {
         flex-direction: column;
     }
 
-    p {
+    * {
         font-size: 1.2rem;
     }
 }
