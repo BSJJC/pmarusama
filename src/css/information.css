@@ -6,10 +6,14 @@
 p {
     line-height: 1.8;
     color: #787878;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #f60;
 }
 
 img {
-    max-width: 300px;
     border-radius: 8px;
 }
 
