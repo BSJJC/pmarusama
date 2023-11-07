@@ -1,6 +1,6 @@
 <template>
   <div class="info-container">
-    <div class="info-date">2020.09.13</div>
+    <span class="info-date">2020.09.13</span>
 
     <h1 class="h1-title">P丸様。のすべてがわかる！待望のファンブック！！ 「ぴーまるぶっく！。」発売決定！</h1>
 

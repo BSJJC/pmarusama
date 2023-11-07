@@ -1,6 +1,6 @@
 <template>
   <div class="info-container">
-    <div class="info-date">2020.09.25</div>
+    <span class="info-date">2020.09.25</span>
 
     <h1 class="h1-title">公式ショップ「P☻shop」、9/30(水)入場方法についてのご案内</h1>
 

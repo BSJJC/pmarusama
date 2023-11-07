@@ -1,6 +1,6 @@
 <template>
   <div class="info-container">
-    <div class="info-date">2020.11.01</div>
+    <span class="info-date">2020.11.01</span>
 
     <h1 class="h1-title">11月14日(土)よりオリジナル新商品、発売決定！</h1>
 

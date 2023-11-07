@@ -1,6 +1,6 @@
 <template>
   <div class="info-container">
-    <div class="info-date">2020.10.29</div>
+    <span class="info-date">2020.10.29</span>
 
     <h1 class="h1-title">P丸様。LINE公式スタンプ販売スタート！</h1>
 
