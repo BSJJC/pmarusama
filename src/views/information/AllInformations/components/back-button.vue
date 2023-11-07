@@ -1,51 +1,54 @@
 <template>
-  <svg
-    ref="backButtonRef"
-    :class="mode"
-    class="w-[50px] left-[5vw] top-0"
-    :style="{ top: `${buttonTop}px` }"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    viewBox="0 0 512 512"
-    xml:space="preserve"
-    fill="#FF6600"
-    stroke="#FF6600"
-  >
-    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-    <g id="SVGRepo_iconCarrier">
-      <circle style="fill: #f60" cx="256" cy="256" r="256"></circle>
-      <path
-        d="M510.835,280.405L402.532,172.103l1.957,60.678l-34.137,34.137H206.581v14.574h-86.195l37.926,61.278 l161.268,161.268C422.581,477.713,500.57,388.922,510.835,280.405z"
-      ></path>
-      <path
-        style="fill: #fff"
-        d="M351.668,140.921h-67.224c-5.711,0-10.343,4.632-10.343,10.343s4.632,10.343,10.343,10.343h67.222 c19.968,0,36.212,16.244,36.212,36.212v30.808c0,19.968-16.244,36.212-36.212,36.212H129.543l38.462-38.464 c4.041-4.039,4.041-10.588,0-14.626c-4.037-4.041-10.59-4.041-14.626,0L96.49,268.64c-4.041,4.039-4.041,10.588,0,14.626 l56.889,56.889c2.019,2.02,4.667,3.031,7.313,3.031c2.646,0,5.294-1.01,7.313-3.031c4.041-4.039,4.041-10.588,0-14.626l-40-40.001 h223.663c31.373,0,56.899-25.526,56.899-56.899V197.82C408.566,166.447,383.042,140.921,351.668,140.921z"
-      ></path>
-    </g>
-  </svg>
+  <div>
+    <div ref="anchorRef" class="absolute top-[-50px] divide-none"></div>
 
-  {{ top }}
+    <svg
+      class="w-[50px] left-[5vw] top-0 hover:cursor-pointer"
+      :style="{ position: `${mode}`, top: `${buttonTop}px` }"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 512 512"
+      xml:space="preserve"
+      fill="#FF6600"
+      stroke="#FF6600"
+    >
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+      <g id="SVGRepo_iconCarrier">
+        <circle style="fill: #f60" cx="256" cy="256" r="256"></circle>
+        <path
+          d="M510.835,280.405L402.532,172.103l1.957,60.678l-34.137,34.137H206.581v14.574h-86.195l37.926,61.278 l161.268,161.268C422.581,477.713,500.57,388.922,510.835,280.405z"
+        ></path>
+        <path
+          style="fill: #fff"
+          d="M351.668,140.921h-67.224c-5.711,0-10.343,4.632-10.343,10.343s4.632,10.343,10.343,10.343h67.222 c19.968,0,36.212,16.244,36.212,36.212v30.808c0,19.968-16.244,36.212-36.212,36.212H129.543l38.462-38.464 c4.041-4.039,4.041-10.588,0-14.626c-4.037-4.041-10.59-4.041-14.626,0L96.49,268.64c-4.041,4.039-4.041,10.588,0,14.626 l56.889,56.889c2.019,2.02,4.667,3.031,7.313,3.031c2.646,0,5.294-1.01,7.313-3.031c4.041-4.039,4.041-10.588,0-14.626l-40-40.001 h223.663c31.373,0,56.899-25.526,56.899-56.899V197.82C408.566,166.447,383.042,140.921,351.668,140.921z"
+        ></path>
+      </g>
+    </svg>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { ref, Ref, watch, onMounted } from 'vue';
 import { useElementBounding } from '@vueuse/core';
 
-const backButtonRef: Ref<HTMLElement | undefined> = ref();
+const anchorRef: Ref<HTMLElement | undefined> = ref();
 const mode: Ref<'absolute' | 'fixed'> = ref('absolute');
-const buttonTop = ref(0);
-const { top } = useElementBounding(backButtonRef);
+const buttonTop: Ref<number> = ref(0);
+const { top } = useElementBounding(anchorRef);
 
 onMounted(() => {
   watch(
     () => top.value,
     () => {
-      if (mode.value === 'absolute')
-        if (top.value < 50) {
-          mode.value = 'fixed';
-          buttonTop.value = 60;
-        }
+      if (top.value <= 0) {
+        mode.value = 'fixed';
+        buttonTop.value = 50;
+      }
+      if (top.value >= 0) {
+        mode.value = 'absolute';
+        buttonTop.value = 0;
+      }
     },
   );
 });
