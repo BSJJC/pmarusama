@@ -85,7 +85,7 @@
       </div>
     </div>
 
-    <p>
+    <p class="mt-8">
       <img src="./img/20210314001-06.jpg" alt="special cover" />
     </p>
 
