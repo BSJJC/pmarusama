@@ -1,6 +1,7 @@
 * {
     transition: all;
     transition-duration: 75ms;
+    color: #787878;
 }
 
 p {
@@ -54,7 +55,6 @@ li {
 
 .flex-img {
     display: flex;
-
 }
 
 .flex-img img {
@@ -66,7 +66,6 @@ li {
 
 table {
     line-height: 1.8;
-    color: #787878;
 }
 
 tr td:first-child {
