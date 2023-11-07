@@ -16,7 +16,7 @@
     </p>
 
     <div class="w-full h-[300px] flex justify-center items-center">
-      <img src="./img/20200925001-01.jpg" alt="shop open information" class="h-full" />
+      <img src="./img/20200925001-01.jpg" alt="shop open information" class="h-full object-contain" />
     </div>
 
     <p>
