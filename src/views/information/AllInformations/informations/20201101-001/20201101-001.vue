@@ -5,7 +5,7 @@
     <h1 class="h1-title">オリジナル曲「ガチやべぇじゃん feat.ななもり。」公開！</h1>
 
     <p>
-      <img src="./img/20201101001-01.jpg" alt="gachiyabexejang image" />
+      <img src="./img/20201101001-01.jpg" alt="gachiyabe image" />
     </p>
 
     <p>
