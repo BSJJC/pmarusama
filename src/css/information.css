@@ -65,6 +65,7 @@ li {
 }
 
 table {
+    word-break: break-all;
     line-height: 1.8;
 }
 
