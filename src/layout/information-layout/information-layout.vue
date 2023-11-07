@@ -5,6 +5,8 @@
     <div class="relative bg-[#ffffffb3] py-10 min-h-screen lace-top lace-bottom">
       <Title></Title>
 
+      <BackButton></BackButton>
+
       <RouterView v-slot="{ Component }">
         <Transition name="information" mode="out-in">
           <component :is="Component"></component>
@@ -17,6 +19,7 @@
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue';
 
+const BackButton = defineAsyncComponent(() => import('./components/information-backbutton.vue'));
 const Logo = defineAsyncComponent(() => import('./components/information-logo.vue'));
 const Title = defineAsyncComponent(() => import('./components/information-title.vue'));
 </script>
