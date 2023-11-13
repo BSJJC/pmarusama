@@ -67,6 +67,8 @@ li {
 table {
     word-break: break-all;
     line-height: 1.8;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 tr td:first-child {
