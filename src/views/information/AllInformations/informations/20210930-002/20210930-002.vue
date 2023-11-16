@@ -1,5 +1,7 @@
 <template>
   <div class="info-container">
+    <span class="info-date">2021.09.30</span>
+
     <h1 class="h1-title">アルバム「Sunny!!」から新たなMV 「Magical Word」を公開!</h1>
 
     <p>

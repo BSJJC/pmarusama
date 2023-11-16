@@ -1,5 +1,7 @@
 <template>
   <div class="info-container">
+    <span class="info-date">2021.12.01</span>
+
     <h1 class="h1-title">
       『シル・ヴ・プレジデント』がスマートフォンアプリ「太鼓の達人プラス★新曲取り放題」で配信スタート！
     </h1>

@@ -1,5 +1,7 @@
 <template>
   <div class="info-container">
+    <span class="info-date">2021.09.29</span>
+
     <h1 class="h1-title">公式ファンブック第2弾「ぴーまる。Diary!!」発売＆「ぴーまるぶっく！。」重版決定！！</h1>
 
     <p>

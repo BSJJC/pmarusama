@@ -1,5 +1,7 @@
 <template>
   <div class="info-container">
+    <span class="info-date">2020.06.05</span>
+
     <h1 class="h1-title">P丸様。初のガチャガチャが発売決定！</h1>
 
     <p>

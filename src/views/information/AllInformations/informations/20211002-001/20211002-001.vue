@@ -1,5 +1,7 @@
 <template>
   <div class="info-container">
+    <span class="info-date">2021.10.02</span>
+
     <h1 class="h1-title">初ワンマンライブ！バーチャルライブ「Peace Parade!!」in両国国技館、チケット受付スタート！</h1>
 
     <p>

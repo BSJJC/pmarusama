@@ -1,5 +1,7 @@
 <template>
   <div class="info-container">
+    <span class="info-date">2021.12.10</span>
+
     <h1 class="h1-title">Peace Paradeオフィシャルグッズアニメイト・アニメイト通販で発売決定!</h1>
 
     <p class="img-center">

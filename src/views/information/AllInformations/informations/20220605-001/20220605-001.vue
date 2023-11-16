@@ -1,5 +1,7 @@
 <template>
   <div class="info-container">
+    <span class="info-date">2020.06.05</span>
+
     <h1 class="h1-title">ゲームセンターのUFOキャッチャーにP丸様。の景品が初登場！</h1>
 
     <p>

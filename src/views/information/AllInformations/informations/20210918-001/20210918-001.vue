@@ -1,5 +1,7 @@
 <template>
   <div class="info-container">
+    <span class="info-date">2021.09.18</span>
+
     <h1 class="h1-title">P丸様。の3Dモデルが完成!!お披露目となる初ライブを自身の誕生日である9月30日(木)に開催!</h1>
 
     <p>

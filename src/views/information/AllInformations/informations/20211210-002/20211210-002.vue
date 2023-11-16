@@ -1,5 +1,7 @@
 <template>
   <div class="info-container">
+    <span class="info-date">2021.12.10</span>
+
     <h1 class="h1-title">新曲「ちきゅう大爆発」MV公開＆SNSシェアキャンペーンスタート！</h1>
 
     <p>

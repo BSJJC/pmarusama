@@ -1,5 +1,7 @@
 <template>
   <div class="info-container">
+    <span class="info-date">2021.10.26</span>
+
     <h1 class="h1-title">
       初のワンマンライブ!「Peace Parade!!」in 両国国技館!Twitter先行チケット受付スタート! ライブ開催記念にMMDモデル配布!
     </h1>

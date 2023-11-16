@@ -1,5 +1,7 @@
 <template>
   <div class="info-container">
+    <span class="info-date">2021.11.09</span>
+
     <h1 class="h1-title">「TikTok流行語大賞2021」に『シル・ヴ・プレジデント』がノミネート！</h1>
 
     <p>

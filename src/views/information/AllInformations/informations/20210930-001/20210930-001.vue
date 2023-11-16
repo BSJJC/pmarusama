@@ -1,5 +1,7 @@
 <template>
   <div class="info-container">
+    <span class="info-date">2021.09.30</span>
+
     <h1 class="h1-title">初のワンマンライブ！両国国技館バーチャルライブが開催決定！！</h1>
 
     <p>
