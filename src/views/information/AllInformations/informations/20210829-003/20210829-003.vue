@@ -86,12 +86,12 @@
 
 <script setup lang="ts">
 import shopList from '../../common-components/shop-list.vue';
-import amazon from './img/shop_amazon.png';
-import rakuten from './img/shop_rakuten-books.png';
-import sevenNet from './img/shop_7net.png';
-import animate from './img/shop_animate.png';
-import tower from './img/shop_towerrecords.png';
-import eHome from './img/shop_e-hon.png';
+import amazon from '../../shop-images/shop_amazon.png';
+import rakuten from '../../shop-images/shop_rakuten-books.png';
+import sevenNet from '../../shop-images/shop_7net.png';
+import animate from '../../shop-images/shop_animate.png';
+import tower from '../../shop-images/shop_towerrecords.png';
+import eHon from '../../shop-images/shop_e-hon.png';
 
 const shopImages = [
   { src: amazon, url: 'https://www.amazon.co.jp/dp/4845636816?/', alt: 'amazon' },
@@ -103,7 +103,7 @@ const shopImages = [
     url: 'https://tower.jp/item/5245590/%E3%81%B4%E3%83%BC%E3%81%BE%E3%82%8B%E3%80%82Diary!!',
     alt: 'tower',
   },
-  { src: eHome, url: 'https://www.e-hon.ne.jp/bec/SA/Detail?refBook=978-4-8456-3681-5&Sza_id=MM', alt: 'ehome' },
+  { src: eHon, url: 'https://www.e-hon.ne.jp/bec/SA/Detail?refBook=978-4-8456-3681-5&Sza_id=MM', alt: 'eHon' },
 ];
 </script>
 

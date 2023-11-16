@@ -97,14 +97,14 @@
 
 <script setup lang="ts">
 import shopList from '../../common-components/shop-list.vue';
-import animate from './img/shop_animate.png';
-import towerrecords from './img/shop_towerrecords.png';
-import tsutaya from './img/shop_tsutaya.png';
-import amazon from './img/shop_amazon.png';
-import rakuten from './img/shop_rakuten-books.png';
-import sevenNet from './img/shop_7net.png';
-import neowing from './img/shop_neowing.png';
-import hmvbooks from './img/shop_hmvbooks.png';
+import animate from '../../shop-images/shop_animate.png';
+import towerrecords from '../../shop-images/shop_towerrecords.png';
+import tsutaya from '../../shop-images/shop_tsutaya.png';
+import amazon from '../../shop-images/shop_amazon.png';
+import rakuten from '../../shop-images/shop_rakuten-books.png';
+import sevenNet from '../../shop-images/shop_7net.png';
+import neowing from '../../shop-images/shop_neowing.png';
+import hmvbooks from '../../shop-images/shop_hmvbooks.png';
 
 const shopImages = [
   { src: animate, url: 'https://www.animate-onlineshop.jp/pn/pd/1898616/', alt: 'animate' },

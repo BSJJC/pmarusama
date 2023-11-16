@@ -77,13 +77,13 @@
 
 <script setup lang="ts">
 import shopList from '../../common-components/shop-list.vue';
-import animate from './img/shop_animate.png';
-import tower from './img/shop_towerrecords.png';
-import tsutaya from './img/shop_tsutaya.png';
-import amazon from './img/shop_amazon.png';
-import rakuten from './img/shop_rakuten-books.png';
-import sevenNet from './img/shop_7net.png';
-import village from './img/shop_village-v.png';
+import animate from '../../shop-images/shop_animate.png';
+import tower from '../../shop-images/shop_towerrecords.png';
+import tsutaya from '../../shop-images/shop_tsutaya.png';
+import amazon from '../../shop-images/shop_amazon.png';
+import rakuten from '../../shop-images/shop_rakuten-books.png';
+import sevenNet from '../../shop-images/shop_7net.png';
+import village from '../../shop-images/shop_village-v.png';
 
 const shopImages = [
   {

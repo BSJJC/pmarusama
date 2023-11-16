@@ -65,16 +65,16 @@
 
 <script setup lang="ts">
 import shopList from '../../common-components/shop-list.vue';
-import amazon from './img/shop_amazon.png';
-import rakuten from './img/shop_rakuten-books.png';
-import sevenNet from './img/shop_7net.png';
-import animate from './img/shop_animate.png';
-import towerrecords from './img/shop_towerrecords.png';
-import tsutaya from './img/shop_tsutaya.png';
-import kinokuniya from './img/shop_kinokuniya.png';
-import eHome from './img/shop_e-hon.png';
-import hmvbooks from './img/shop_hmvbooks.png';
-import honto from './img/shop_honto.png';
+import amazon from '../../shop-images/shop_amazon.png';
+import rakuten from '../../shop-images/shop_rakuten-books.png';
+import sevenNet from '../../shop-images/shop_7net.png';
+import animate from '../../shop-images/shop_animate.png';
+import towerrecords from '../../shop-images/shop_towerrecords.png';
+import tsutaya from '../../shop-images/shop_tsutaya.png';
+import kinokuniya from '../../shop-images/shop_kinokuniya.png';
+import eHon from '../../shop-images/shop_e-hon.png';
+import hmvbooks from '../../shop-images/shop_hmvbooks.png';
+import honto from '../../shop-images/shop_honto.png';
 
 const bookInfo = [
   ['■書名：', 'ぴーまるぶっく！。'],
@@ -123,7 +123,7 @@ const shopImages = [
   { src: tsutaya, url: 'https://shop.tsutaya.co.jp/book/product/9784845635474/', alt: 'tsutaya' },
   { src: kinokuniya, url: 'https://www.kinokuniya.co.jp/f/dsg-01-9784845635474', alt: 'kinokuniya' },
   {
-    src: eHome,
+    src: eHon,
     url: 'https://www.e-hon.ne.jp/bec/SA/Detail?refShinCode=0100000000000034118858&Action_id=121&Sza_id=F2',
     alt: 'e home',
   },
