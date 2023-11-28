@@ -1,5 +1,5 @@
 <template>
-  <component :is="dynamicInformationComponent" :className="props.data.className" :text="props.data.text" />
+  <component :is="dynamicInformationComponent" :data="props.data" />
 </template>
 
 <script setup lang="ts">
@@ -16,8 +16,6 @@ const dynamicInformationComponent: Ref<HTMLElement | undefined> = shallowRef();
 
 import(`./common-components/${props.tagName}-component.vue`).then((component) => {
   dynamicInformationComponent.value = component.default;
-
-  console.log(component.default);
 });
 </script>
 
