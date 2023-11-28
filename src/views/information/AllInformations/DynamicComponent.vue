@@ -3,20 +3,17 @@
 </template>
 
 <script setup lang="ts">
-import { Ref, shallowRef } from 'vue';
+import { Ref } from 'vue';
+import importDynamicInformationByTagName from './import-dynamic-information-by-tag-name';
 
-type TTest = {
+type TItem = {
   tagName: string;
   data: unknown;
 };
 
-const props = defineProps<TTest>();
+const props = defineProps<TItem>();
 
-const dynamicInformationComponent: Ref<HTMLElement | undefined> = shallowRef();
-
-import(`./common-components/${props.tagName}-component.vue`).then((component) => {
-  dynamicInformationComponent.value = component.default;
-});
+const dynamicInformationComponent: Ref<HTMLElement | undefined> = importDynamicInformationByTagName(props.tagName);
 </script>
 
 <style></style>

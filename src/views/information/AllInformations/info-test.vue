@@ -2,7 +2,7 @@
   <div class="info-container">
     <dateTest :dateText="date"></dateTest>
 
-    <DynamicComponent :tagName="form[0].tagName" :data="form[0].data" />
+    <DynamicComponent v-for="(i, index) in form" :key="index" :tagName="form[index].tagName" :data="i.data" />
   </div>
 </template>
 
@@ -14,7 +14,7 @@ import DynamicComponent from './DynamicComponent.vue';
 const date: string = jsonData.date;
 const form = jsonData.form;
 
-console.log(form[0]);
+console.log(form);
 </script>
 
 <style scoped>
