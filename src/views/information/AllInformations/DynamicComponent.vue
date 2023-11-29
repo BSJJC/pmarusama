@@ -4,16 +4,18 @@
 
 <script setup lang="ts">
 import { Ref } from 'vue';
-import importDynamicInformationByTagName from './import-dynamic-information-by-tag-name';
+import importDynamicInformationByComponentName from './import-dynamic-information-by-tag-name';
 
 type TItem = {
-  tagName: string;
+  componentName: string;
   data: unknown;
 };
 
 const props = defineProps<TItem>();
 
-const dynamicInformationComponent: Ref<HTMLElement | undefined> = importDynamicInformationByTagName(props.tagName);
+const dynamicInformationComponent: Ref<HTMLElement | undefined> = importDynamicInformationByComponentName(
+  props.componentName,
+);
 </script>
 
 <style></style>

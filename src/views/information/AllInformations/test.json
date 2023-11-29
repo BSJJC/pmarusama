@@ -3,14 +3,14 @@
     "date": "2020.09.13",
     "form": [
         {
-            "tagName": "h1",
+            "componentName": "h1",
             "data": {
                 "className": "h1-title",
                 "text": "初のぬいぐるみ化！かわいい新商品が発売！"
             }
         },
         {
-            "tagName": "p",
+            "componentName": "p",
             "data": {
                 "className": "",
                 "text": [
@@ -24,14 +24,14 @@
             }
         },
         {
-            "tagName": "h2",
+            "componentName": "h2",
             "data": {
                 "className": "h2-title",
                 "text": "◎大きいぬいぐるみ【全2種】価格：3,000円（税込）"
             }
         },
         {
-            "tagName": "images",
+            "componentName": "images",
             "data": {
                 "className": "",
                 "images": [
@@ -47,14 +47,14 @@
             }
         },
         {
-            "tagName": "h2",
+            "componentName": "h2",
             "data": {
                 "className": "h2-title",
                 "text": "◎ぬいぐるみマスコット【全2種】価格：1,300円（税込）"
             }
         },
         {
-            "tagName": "images",
+            "componentName": "images",
             "data": {
                 "className": "",
                 "images": [
@@ -70,7 +70,7 @@
             }
         },
         {
-            "tagName": "table",
+            "componentName": "table",
             "data": {
                 "className": "",
                 "text": [

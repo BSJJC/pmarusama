@@ -2,7 +2,12 @@
   <div class="info-container">
     <dateTest :dateText="date"></dateTest>
 
-    <DynamicComponent v-for="(i, index) in form" :key="index" :tagName="form[index].tagName" :data="i.data" />
+    <DynamicComponent
+      v-for="(i, index) in form"
+      :key="index"
+      :componentName="form[index].componentName"
+      :data="i.data"
+    />
   </div>
 </template>
 

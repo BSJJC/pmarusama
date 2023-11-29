@@ -1,13 +1,13 @@
 import { shallowRef, Ref } from 'vue';
 
-export default function importDynamicInformationByTagName(tagName: string): Ref<HTMLElement | undefined> {
+export default function importDynamicInformationByComponentName(componentName: string): Ref<HTMLElement | undefined> {
   const dynamicInformationComponent: Ref<HTMLElement | undefined> = shallowRef();
 
-  switch (tagName) {
+  switch (componentName) {
     case 'h1':
     case 'h2':
     case 'p':
-      import(`./common-components/${tagName}-component.vue`).then((component) => {
+      import(`./common-components/${componentName}-component.vue`).then((component) => {
         dynamicInformationComponent.value = component.default;
       });
       break;
