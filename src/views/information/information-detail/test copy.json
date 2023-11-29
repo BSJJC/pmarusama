@@ -1,0 +1,79 @@
+{
+    "components": [
+        {
+            "componentName": "h1",
+            "data": {
+                "text": "P丸様。”初”の公式ショップ「P☻shop」が池袋にオープン決定！"
+            }
+        },
+        {
+            "componentName": "images",
+            "data": {
+                "images": [
+                    {
+                        "url": "http://localhost:5000/api/informationImage/20200913002-01",
+                        "alt": "p shop logo"
+                    }
+                ]
+            }
+        },
+        {
+            "componentName": "p",
+            "data": {
+                "text": [
+                    "2020年9月30日(水)に、P丸様。初の公式リアルショップ「 P☻Shop(ぴーまるしょっぷ）」が 、池袋サンシャインシティALTAにオープンすることが決定しました！",
+                    "P丸様。の動画でおなじみのキャラクターたちと一緒に写真を撮れるフォトスポットや、限定のショッパーも登場します。",
+                    "お近くにいらした際は、是非遊びに来てくださいね。",
+                    "P☻Shop（ぴーまるしょっぷ）の<a href='https://twitter.com/p_ma_ru_shop' target='_blank'>Twitter公式アカウント</a>もスタート！ショップの情報はこちらをチェックしてくださいね！"
+                ]
+            }
+        },
+        {
+            "componentName": "images",
+            "data": {
+                "images": [
+                    {
+                        "url": "http://localhost:5000/api/informationImage/20200913002-02",
+                        "alt": "p shop bag"
+                    }
+                ]
+            }
+        },
+        {
+            "componentName": "p",
+            "data": {
+                "text": [
+                    "限定ショッパー"
+                ]
+            }
+        },
+        {
+            "componentName": "h2",
+            "data": {
+                "text": "【P☻Shop(ぴーまるしょっぷ)店舗情報】"
+            }
+        },
+        {
+            "componentName": "table",
+            "data": {
+                "text": [
+                    [
+                        [
+                            "住所："
+                        ],
+                        [
+                            "池袋サンシャインシティALTA",
+                            null,
+                            "東京都豊島区東池袋3丁目1-3",
+                            null,
+                            "サンシャインシティ",
+                            null,
+                            "ワールドインポートマートビル1F",
+                            null
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}

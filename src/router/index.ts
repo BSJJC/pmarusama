@@ -25,12 +25,12 @@ const router = createRouter({
             {
               name: 'information-list',
               path: '',
-              component: () => import('@/views/information/InformationList/list-index.vue'),
+              component: () => import('@/views/information/information-list.vue'),
             },
             {
               name: 'specific-information',
               path: ':date',
-              component: () => import('@/views/information/AllInformations/allinformation-index.vue'),
+              component: () => import('@/views/information/information-detail/information-detail-index.vue'),
             },
           ],
         },
