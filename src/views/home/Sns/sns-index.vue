@@ -24,7 +24,7 @@
 import { ref, Ref, onMounted } from 'vue';
 import anime from 'animejs';
 import type { SocialMediaType } from './types/socialMediaTypes';
-import { getSocialMediaData } from '@/api/sns/index.ts';
+import getSocialMediaData from '@/api/sns/getSocialMediaData.ts';
 import overrallEnterAnimation from '@/utils/overallEnterAnimation.ts';
 
 const socialMedia: Ref<HTMLElement | undefined> = ref();
@@ -43,3 +43,4 @@ onMounted(async () => {
   overrallEnterAnimation(socialMedia.value!, ['DIV'], socialMediaAnimationConfig, 100, 100);
 });
 </script>
+@/api/sns/getSocialMediaData

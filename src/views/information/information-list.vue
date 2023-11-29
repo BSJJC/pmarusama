@@ -2,14 +2,14 @@
   <div>
     <Transition mode="out-in">
       <div
-        v-if="!informations"
+        v-if="!informationList"
         class="fredoka-one loading-animation w-[70%] min-h-[300px] select-none m-auto flex justify-center items-start mt-10 pt-20 text-[2rem] font-bold text-[#f70] md:text-[3rem]"
       >
         Loading...
       </div>
 
       <ul v-else class="mt-10">
-        <li v-for="(i, index) in informations" :key="index" class="flex mb-4 min-w-[300px] w-[70%] m-auto md:mb-8">
+        <li v-for="(i, index) in informationList" :key="index" class="flex mb-4 min-w-[300px] w-[70%] m-auto md:mb-8">
           <!-- informations pubulish date -->
           <div
             class="fredoka-one flex justify-center items-center w-[30%] max-w-[140px] border-[#f60] border-x-[1px] text-[#f60] font-bold"
@@ -46,7 +46,7 @@
 
 <script setup lang="ts">
 import { ref, Ref, onBeforeMount } from 'vue';
-import { getInformation } from '@/api/information/index.ts';
+import getInformationList from '@/api/information/getInformationList.ts';
 import { useFooter } from '@/stores/footerStore';
 
 type TInformation = {
@@ -54,18 +54,19 @@ type TInformation = {
   title: string;
 };
 
-const informations: Ref<null | TInformation[]> = ref(null);
+const informationList: Ref<null | TInformation[]> = ref(null);
 const footerStore = useFooter();
 
 onBeforeMount(async () => {
   footerStore.backToTop();
+
   const sessionStorageInformations = sessionStorage.getItem('information-list');
 
   if (sessionStorageInformations) {
-    informations.value = JSON.parse(sessionStorageInformations);
+    informationList.value = JSON.parse(sessionStorageInformations);
   } else {
-    getInformation().then((res) => {
-      informations.value = res;
+    getInformationList().then((res) => {
+      informationList.value = res;
 
       sessionStorage.setItem('information-list', JSON.stringify(res));
     });
@@ -102,3 +103,4 @@ onBeforeMount(async () => {
   transform: translateY(-10px);
 }
 </style>
+@/api/information/getInformationList

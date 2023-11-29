@@ -26,9 +26,8 @@ type DiscographyType = {
  * Fetches discography data from the specified API endpoint.
  * @returns {Promise<TDiscographyItem[]>} A promise that resolves to an array of discography items.
  */
-export async function getDiscographyData(): Promise<TDiscographyItem[]> {
+export default async function getDiscographyData(): Promise<TDiscographyItem[]> {
   try {
-    // Send an HTTP GET request to the API endpoint to fetch discography data.
     const response = await axios.get('http://localhost:5000/api/discography/get');
     const data = response.data.discographies;
 
@@ -40,8 +39,7 @@ export async function getDiscographyData(): Promise<TDiscographyItem[]> {
 
     return discographyData;
   } catch (error) {
-    // Handle and log any errors that occur during the API request.
     console.error('Error fetching discography data:', error);
-    throw error; // Rethrow the error for higher-level error handling, if needed.
+    throw error;
   }
 }

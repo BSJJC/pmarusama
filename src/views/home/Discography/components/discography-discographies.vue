@@ -18,7 +18,7 @@
 <script setup lang="ts">
 import { ref, Ref, onBeforeMount, onMounted } from 'vue';
 import anime from 'animejs';
-import { getDiscographyData } from '@/api/discography/index.ts';
+import getDiscographyData from '@/api/discography/getDiscographyData.ts';
 import overrallEnterAnimation from '@/utils/overallEnterAnimation';
 
 const discographyRef: Ref<HTMLElement | undefined> = ref();
@@ -45,3 +45,4 @@ onMounted(() => {
 </script>
 
 <style></style>
+@/api/discography/getDiscographyData

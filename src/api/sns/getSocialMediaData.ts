@@ -13,7 +13,7 @@ type TSocialMedia = {
  * Fetches social media data from the specified API endpoint.
  * @returns {Promise<TSocialMedia[]>} A promise that resolves to an array of social media data.
  */
-export async function getSocialMediaData(): Promise<TSocialMedia[]> {
+export default async function getSocialMediaData(): Promise<TSocialMedia[]> {
   try {
     // Send an HTTP GET request to the API endpoint to fetch social media data.
     const response = await axios.get('http://localhost:5000/api/socialMedia/get');
