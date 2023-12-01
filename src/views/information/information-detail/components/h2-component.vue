@@ -1,5 +1,7 @@
 <template>
-  <h2 class="h2-title">{{ props.data?.text }}</h2>
+  <div>
+    <h2 class="h2-title">{{ props.data?.text }}</h2>
+  </div>
 </template>
 
 <script setup lang="ts">

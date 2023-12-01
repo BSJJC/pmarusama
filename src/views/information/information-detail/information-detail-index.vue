@@ -1,6 +1,6 @@
 <template>
   <div class="info-container">
-    <span>{{ date }}</span>
+    <span class="info-date">{{ date }}</span>
 
     <dynamicComponent
       v-for="(i, index) in components"

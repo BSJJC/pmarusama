@@ -103,4 +103,3 @@ onBeforeMount(async () => {
   transform: translateY(-10px);
 }
 </style>
-@/api/information/getInformationList

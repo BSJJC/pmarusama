@@ -3,6 +3,15 @@
         {
             "componentName": "h1",
             "data": {
+                "text": "P丸様。”初”の公式ショップ「P☻shop」が池袋にオープン決定！"
+            }
+        },
+        {
+            "componentName": "images"
+        },
+        {
+            "componentName": "h1",
+            "data": {
                 "text": "初のぬいぐるみ化！かわいい新商品が発売！"
             }
         },
@@ -87,5 +96,35 @@
                 ]
             }
         }
-    ]
+    ],
+    "Transform": "AWS::Serverless-2016-10-31",
+    "Resources": {
+        "Api": {
+            "Type": "AWS::Serverless::Api",
+            "Properties": {
+                "Name": {
+                    "Fn::Sub": [
+                        "${ResourceName} From Stack ${AWS::StackName}",
+                        {
+                            "ResourceName": "Api"
+                        }
+                    ]
+                },
+                "StageName": "Prod",
+                "DefinitionBody": {
+                    "openapi": "3.0",
+                    "info": {},
+                    "paths": {
+                        "/": {
+                            "get": {
+                                "responses": {}
+                            }
+                        }
+                    }
+                },
+                "EndpointConfiguration": "REGIONAL",
+                "TracingEnabled": true
+            }
+        }
+    }
 }

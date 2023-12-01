@@ -1,5 +1,7 @@
 <template>
-  <p v-html="text"></p>
+  <div>
+    <p v-html="text"></p>
+  </div>
 </template>
 
 <script setup lang="ts">
