@@ -12,10 +12,10 @@
         <li v-for="(i, index) in informationList" :key="index" class="flex mb-4 min-w-[300px] w-[70%] m-auto md:mb-8">
           <!-- informations pubulish date -->
           <div
-            class="fredoka-one flex justify-center items-center w-[30%] max-w-[140px] border-[#f60] border-x-[1px] text-[#f60] font-bold"
+            class="fredoka-one flex justify-center items-center w-[30%] max-w-[140px] border-[#f60] border-x-[1px] font-bold"
           >
             <div class="flex justify-center items-center flex-col text-[0.7rem]">
-              <span class="w-full text-right leading-3 md:text-[1rem] md:leading-4">
+              <span class="w-full text-right leading-3 md:text-[1rem] md:leading-4 text-[#f60]">
                 <!-- year -->
                 {{ i.date.toString().substring(0, 4) }}
                 <br />
@@ -24,7 +24,7 @@
               </span>
             </div>
 
-            <span class="text-[2rem] md:text-[2.5rem]">
+            <span class="text-[2rem] md:text-[2.5rem] text-[#f60]">
               <!-- day -->
               {{ i.date.toString().substring(6, 8) }}
             </span>
@@ -34,7 +34,7 @@
           <div
             class="m-plus-rounded-1c flex justify-start items-center w-[70%] border-r-[1px] border-[#f60] px-3 md:text-[1.3rem] md:w-full"
           >
-            <RouterLink :to="{ path: '/information/date', query: { date: i.date } }" class="text-[#3865e0] font-black">
+            <RouterLink :to="{ path: '/information/date', query: { date: i.date } }" class="text-[#f60] font-black">
               {{ i.title }}
             </RouterLink>
           </div>

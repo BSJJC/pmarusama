@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p v-html="text"></p>
+    <p v-html="text" class="text-center"></p>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col my-4 space-y-4 md:flex-row md:space-x-4 md:space-y-0">
+  <div class="flex flex-col justify-center items-center my-4 space-y-4 md:flex-row md:space-x-4 md:space-y-0">
     <img v-for="(i, index) in props.data?.images" :key="index" :src="i.url" :alt="i.alt" class="max-w-[300px]" />
   </div>
 </template>

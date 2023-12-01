@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="h1-title">{{ props.data?.text }}</h1>
+    <h1>{{ props.data?.text }}</h1>
   </div>
 </template>
 
@@ -15,5 +15,10 @@ const props = defineProps({
 </script>
 
 <style scoped>
-@import url('@/css/information.css');
+h1 {
+  font-size: 2rem;
+  color: var(--main-color);
+  font-weight: bold;
+  margin-bottom: 1.125rem;
+}
 </style>

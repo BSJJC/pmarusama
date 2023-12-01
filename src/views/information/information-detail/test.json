@@ -7,64 +7,50 @@
             }
         },
         {
-            "componentName": "images"
-        },
-        {
-            "componentName": "h1",
+            "componentName": "images-center",
             "data": {
-                "text": "初のぬいぐるみ化！かわいい新商品が発売！"
+                "images": [
+                    {
+                        "url": "http://localhost:5000/api/informationImage/20200913002-01",
+                        "alt": "p shop logo"
+                    }
+                ]
             }
         },
         {
             "componentName": "p",
             "data": {
                 "text": [
-                    "P丸様。初のぬいぐるみ化！ゆるふわ～なくまくんとうさぎさんのかわいい新商品の発売を開始します！",
-                    "動画でお馴染みの「くまくん」と「うさぎさん」が、遂にぬいぐるみになって登場します！",
-                    "P☻shopの他、アニメイトやヴィレッジヴァンガード（いずれも一部店舗）の店舗や、それぞれのオンラインショップでもお買い求めいただけます。お見逃しなく！"
+                    "2020年9月30日(水)に、P丸様。初の公式リアルショップ「 P☻Shop(ぴーまるしょっぷ）」が 、池袋サンシャインシティALTAにオープンすることが決定しました！",
+                    "P丸様。の動画でおなじみのキャラクターたちと一緒に写真を撮れるフォトスポットや、限定のショッパーも登場します。",
+                    "お近くにいらした際は、是非遊びに来てくださいね。",
+                    "P☻Shop（ぴーまるしょっぷ）の<a href='https://twitter.com/p_ma_ru_shop' target='_blank'>Twitter公式アカウント</a>もスタート！ショップの情報はこちらをチェックしてくださいね！"
+                ]
+            }
+        },
+        {
+            "componentName": "images-center",
+            "data": {
+                "images": [
+                    {
+                        "url": "http://localhost:5000/api/informationImage/20200913002-02",
+                        "alt": "p shop bag logo"
+                    }
+                ]
+            }
+        },
+        {
+            "componentName": "p-center",
+            "data": {
+                "text": [
+                    "限定ショッパー"
                 ]
             }
         },
         {
             "componentName": "h2",
             "data": {
-                "text": "◎大きいぬいぐるみ【全2種】価格：3,000円（税込）"
-            }
-        },
-        {
-            "componentName": "images",
-            "data": {
-                "images": [
-                    {
-                        "url": "http://localhost:5000/api/informationImage/20200913001-01",
-                        "alt": "white doll"
-                    },
-                    {
-                        "url": "http://localhost:5000/api/informationImage/20200913001-02",
-                        "alt": "brown doll"
-                    }
-                ]
-            }
-        },
-        {
-            "componentName": "h2",
-            "data": {
-                "text": "◎ぬいぐるみマスコット【全2種】価格：1,300円（税込）"
-            }
-        },
-        {
-            "componentName": "images",
-            "data": {
-                "images": [
-                    {
-                        "url": "http://localhost:5000/api/informationImage/20200913001-03",
-                        "alt": "small white doll"
-                    },
-                    {
-                        "url": "http://localhost:5000/api/informationImage/20200913001-04",
-                        "alt": "small brown doll"
-                    }
-                ]
+                "text": "【P☻Shop(ぴーまるしょっぷ)店舗情報】"
             }
         },
         {
@@ -73,58 +59,17 @@
                 "text": [
                     [
                         [
-                            "発売日："
+                            "住所："
                         ],
                         [
-                            "2020年9月30日(水)"
-                        ]
-                    ],
-                    [
-                        [
-                            "販売店舗："
-                        ],
-                        [
-                            "P☻shop(ぴーまるしょっぷ)並びに以下店舗",
-                            null,
-                            "[ヴィレッジヴァンガード]",
-                            "札幌エスタ店、新潟ビルボードプレイス店、横浜ワールドポーターズ店、ららぽーとTOKYO BAY店、PLUSイオンレイクタウンmori店、イオンモール高崎店、静岡パルコ店、イオンモール大高店、イオンモールKYOTO店、広島サンモール店、徳島クレメントプラザ店、オンラインストア",
-                            null,
-                            "[アニメイト]",
-                            "札幌店、仙台店、池袋本店、渋谷店、新宿ハルク店、秋葉原本館、町田店、横浜ビブレ店、名古屋店、長野店、梅田店、天王寺店、三宮店、姫路店、京都店、広島店、福岡パルコ店、小倉店、熊本店、那覇国際通り店、アニメイト通販"
+                            "池袋サンシャインシティALTA",
+                            "東京都豊島区東池袋3丁目1-3",
+                            "サンシャインシティ",
+                            "ワールドインポートマートビル1F"
                         ]
                     ]
                 ]
             }
         }
-    ],
-    "Transform": "AWS::Serverless-2016-10-31",
-    "Resources": {
-        "Api": {
-            "Type": "AWS::Serverless::Api",
-            "Properties": {
-                "Name": {
-                    "Fn::Sub": [
-                        "${ResourceName} From Stack ${AWS::StackName}",
-                        {
-                            "ResourceName": "Api"
-                        }
-                    ]
-                },
-                "StageName": "Prod",
-                "DefinitionBody": {
-                    "openapi": "3.0",
-                    "info": {},
-                    "paths": {
-                        "/": {
-                            "get": {
-                                "responses": {}
-                            }
-                        }
-                    }
-                },
-                "EndpointConfiguration": "REGIONAL",
-                "TracingEnabled": true
-            }
-        }
-    }
+    ]
 }

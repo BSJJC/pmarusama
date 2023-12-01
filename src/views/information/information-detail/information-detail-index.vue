@@ -1,6 +1,13 @@
 <template>
-  <div class="info-container">
-    <span class="info-date">{{ date }}</span>
+  <div class="w-[94%] max-w-[1000px] m-auto">
+    <span id="date">
+      <!-- year -->
+      {{ date.substring(0, 4) }}.
+      <!-- month -->
+      {{ date.substring(4, 6) }}.
+      <!-- day -->
+      {{ date.substring(6, 8) }}
+    </span>
 
     <dynamicComponent
       v-for="(i, index) in components"
@@ -17,6 +24,8 @@ import { useRoute } from 'vue-router';
 import getInformationDetail from '@/api/information/getInformationDetail';
 import dynamicComponent from './dynamic-component.vue';
 
+import json from './test.json';
+
 const route = useRoute();
 
 const date: Ref<string> = ref(route.query.date as string);
@@ -27,13 +36,22 @@ const components: Ref<
   }>
 > = ref([]);
 
-onBeforeMount(() => {
-  getInformationDetail(date.value).then((res) => {
-    components.value = res.components;
-  });
-});
+// onBeforeMount(() => {
+//   getInformationDetail(date.value).then((res) => {
+//     components.value = res.components;
+//   });
+// });
+
+components.value = json.components;
 </script>
 
 <style scoped>
-@import url('@/css/information.css');
+#date {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: var(--main-color);
+  font-family: 'Fredoka One', sans-serif;
+}
 </style>

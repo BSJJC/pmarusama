@@ -11,6 +11,10 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    color: #f60;
+}
+
 .lace-top::before {
     position: absolute;
     content: "";
@@ -63,4 +67,9 @@ html {
         height: 12px;
         background: url('../assets/imgs/section-bg-bottom.png') center bottom/auto 100%;
     }
+}
+
+::selection {
+    color: whitesmoke;
+    background: #f60;
 }

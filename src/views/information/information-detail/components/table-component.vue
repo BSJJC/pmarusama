@@ -53,5 +53,18 @@ const props = defineProps({
 </script>
 
 <style scoped>
-@import url('@/css/information.css');
+table {
+  word-break: break-all;
+  line-height: 1.8;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+tr td:first-child {
+  display: flex;
+  white-space: nowrap;
+  padding-right: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
 </style>
