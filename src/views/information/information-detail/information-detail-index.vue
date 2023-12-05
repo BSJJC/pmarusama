@@ -24,8 +24,6 @@ import { useRoute } from 'vue-router';
 import getInformationDetail from '@/api/information/getInformationDetail';
 import dynamicComponent from './dynamic-component.vue';
 
-import json from './test.json';
-
 const route = useRoute();
 
 const date: Ref<string> = ref(route.query.date as string);
@@ -36,13 +34,11 @@ const components: Ref<
   }>
 > = ref([]);
 
-// onBeforeMount(() => {
-//   getInformationDetail(date.value).then((res) => {
-//     components.value = res.components;
-//   });
-// });
-
-components.value = json.components;
+onBeforeMount(() => {
+  getInformationDetail(date.value).then((res) => {
+    components.value = res.components;
+  });
+});
 </script>
 
 <style scoped>

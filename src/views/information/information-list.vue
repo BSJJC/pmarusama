@@ -60,7 +60,7 @@ const footerStore = useFooter();
 onBeforeMount(async () => {
   footerStore.backToTop();
 
-  const sessionStorageInformations = sessionStorage.getItem('information-list');
+  const sessionStorageInformations = sessionStorage.getItem('information-listetcjrbhn');
 
   if (sessionStorageInformations) {
     informationList.value = JSON.parse(sessionStorageInformations);

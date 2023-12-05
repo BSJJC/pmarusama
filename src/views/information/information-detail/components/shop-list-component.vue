@@ -23,6 +23,4 @@ const props = defineProps({
 });
 </script>
 
-<style scoped>
-@import url('@/css/information.css');
-</style>
+<style scoped></style>
