@@ -1,13 +1,11 @@
 <template>
-  <div class="flex">
-    <div v-for="(i, index) in props.data?.ul" :key="index" class="w-1/2">
-      <p>
-        {{ i.label }}
-      </p>
+  <div v-for="(i, index) in props.data?.ul" :key="index" class="">
+    <p>
+      {{ i.label }}
+    </p>
 
-      <div v-if="i.children?.length !== 0" class="ml-[10px]">
-        <ulChilde :data="{ ul: i.children! }"></ulChilde>
-      </div>
+    <div v-if="i.children?.length !== 0" class="ml-[10px]">
+      <ulChilde :data="{ ul: i.children! }"></ulChilde>
     </div>
   </div>
 </template>
