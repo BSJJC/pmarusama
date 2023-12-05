@@ -1,11 +1,15 @@
 <template>
-  <div class="flex">
-    <div v-for="(i, index) in props.data?.ul" :key="index" class="w-1/2">
-      <p>
+  <div class="flex justify-center items-start flex-wrap w-full">
+    <div
+      v-for="(i, index) in props.data?.ul"
+      :key="index"
+      class="md:w-1/2 mt-10 transition-all duration-75 sm:w-full w-full"
+    >
+      <p class="font-bold">
         {{ i.label }}
       </p>
 
-      <div v-if="i.children?.length !== 0" class="ml-[10px]">
+      <div v-if="i.children?.length !== 0" class="ml-[30px]">
         <ulChilde :data="{ ul: i.children! }"></ulChilde>
       </div>
     </div>
@@ -33,5 +37,6 @@ const props = defineProps({
 p {
   line-height: 1.8;
   color: #787878;
+  font-size: large;
 }
 </style>

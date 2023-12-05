@@ -1,10 +1,10 @@
 <template>
-  <div v-for="(i, index) in props.data?.ul" :key="index" class="">
+  <div v-for="(i, index) in props.data?.ul" :key="index">
     <p>
       {{ i.label }}
     </p>
 
-    <div v-if="i.children?.length !== 0" class="ml-[10px]">
+    <div v-if="i.children?.length !== 0" class="ml-[30px]">
       <ulChilde :data="{ ul: i.children! }"></ulChilde>
     </div>
   </div>
@@ -31,5 +31,6 @@ const props = defineProps({
 p {
   line-height: 1.8;
   color: #787878;
+  font-size: large;
 }
 </style>
